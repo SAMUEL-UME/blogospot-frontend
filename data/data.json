@@ -1,0 +1,75 @@
+{
+  "state": true,
+  "data": [
+    {
+      "_id": "63babdea3d1cf3b6cb19d3d8",
+      "title": "A town hall different from bala blu, blue blu bulaba. broom broom broom brooooooooom. Bala blu blue blu bulaba.",
+      "description": "A town hall different from bala blu, blue blu bulaba. broom broom broom brooooooooom. Bala blu blue blu bulaba.",
+      "author": { "_id": "636573b53aefa9d448741d1c", "username": "mmmm" },
+      "state": "published",
+      "reading_time": 1,
+      "read_count": 0,
+      "tags": ["baba", "blublu"],
+      "body": "A town hall different from bala blu, blue blu bulaba. broom broom broom brooooooooom. Bala blu blue blu bulaba. The farmers will make more money. Your lunch will not be imported, cassava garri ewa and ehhh ehhhhnn. The farmer will make money, the dinner would be cassava, eba, ewa and everything.",
+      "createdAt": "2023-01-08T12:58:18.947Z",
+      "updatedAt": "2023-01-08T13:02:15.326Z",
+      "__v": 0
+    },
+    {
+      "_id": "6366f1a2fc2e695935c9a69c",
+      "title": "Driving The 2023 BMW 7 Series - Exceptional Luxury And Creeping Featuritis",
+      "description": "The 2023 BMW 7 series is now available with a choice of 6 or 8 cylinder mild hybrid drivetrains or as an all electric i7 with up to 318 miles of range. It drives better than its 3-ton mass would suggest, but perhaps has too many features",
+      "author": { "_id": "6364ab2ac194766c15931e95", "username": "sam" },
+      "state": "published",
+      "reading_time": 1,
+      "read_count": 3,
+      "tags": ["cars", "bmw", "luxury"],
+      "body": "2023 BMW i7 \r\nSam Abuelsamid\r\nThe seventh-generation of BMWs flagship 7 series sedan has arrived with lots of changes and many improvements. Its also the first iteration of 7 to be available with com… [+13369 chars]",
+      "createdAt": "2022-11-05T23:28:34.559Z",
+      "updatedAt": "2023-01-06T06:55:11.075Z",
+      "__v": 0
+    },
+    {
+      "_id": "6366efcafc2e695935c9a697",
+      "title": "Getting started with backend technologies",
+      "description": "Guide on starting web development",
+      "author": { "_id": "636573b53aefa9d448741d1c", "username": "mmmm" },
+      "state": "published",
+      "reading_time": 1,
+      "read_count": 2,
+      "tags": ["javascript", "nodejs", "backend"],
+      "body": "Nodejs is one of the most important framework in the entire world and plays a major part on the server side for mostly web application",
+      "createdAt": "2022-11-05T23:20:42.088Z",
+      "updatedAt": "2022-11-07T11:02:55.028Z",
+      "__v": 0
+    },
+    {
+      "_id": "6366ef2dfc2e695935c9a694",
+      "title": "Welocme to my blog",
+      "description": "Guide on starting web development",
+      "author": { "_id": "636573b53aefa9d448741d1c", "username": "mmmm" },
+      "state": "published",
+      "reading_time": 1,
+      "read_count": 7,
+      "tags": ["javascript", "reactjs", "frontend"],
+      "body": "A town hall different from bala blu, blue blu bulaba. broom broom broom brooooooooom. Bala blu blue blu bulaba. The farmers will make more money. Your lunch will not be imported, cassava garri ewa and ehhh ehhhhnn. The farmer will make money, the dinner would be cassava, eba, ewa and everything.",
+      "createdAt": "2022-11-05T23:18:05.702Z",
+      "updatedAt": "2023-01-08T12:48:48.710Z",
+      "__v": 0
+    },
+    {
+      "_id": "63660b8eb712e126c68023c3",
+      "title": "Coding like a pro",
+      "description": "Coding like a pro",
+      "author": { "_id": "636573b53aefa9d448741d1c", "username": "mmmm" },
+      "state": "published",
+      "reading_time": 1,
+      "read_count": 14,
+      "tags": ["look", "gooo", "coding"],
+      "body": "Since the early days of programming codes have always been something huge and hard to read sometimes so it as always been a good practice to always format your code properly and orderly using comments and structuring them in a easy to understand way",
+      "createdAt": "2022-11-05T07:06:54.792Z",
+      "updatedAt": "2022-11-08T14:51:05.793Z",
+      "__v": 0
+    }
+  ]
+}
