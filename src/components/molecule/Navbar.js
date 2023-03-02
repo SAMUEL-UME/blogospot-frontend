@@ -1,11 +1,57 @@
-import React from 'react'
-
-const Navbar = () => {
+import React, { useState } from "react";
+import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
+import styles from "@/styles/Navbar.module.css";
+export default function Navbar() {
+  const [toggleMenu, setToggleMenu] = useState(false);
   return (
-    <div>
-      <h1>Navbar</h1>
-    </div>
-  )
-}
+    <div className={styles.navbar_container}>
+      <div className={styles.navbar}>
+        <div className={styles.logo}>Blogospot</div>
+        <div className={styles.content}>
+          <ul>
+            <li>Home</li>
+            <li>Write</li>
+            <li>Dashboard</li>
+          </ul>
+          <div className={styles.desktop}>
+            <button>Login</button>
+            <button>Signup</button>
+          </div>
+        </div>
 
-export default Navbar
+        <div className={styles.mobile}>
+          {toggleMenu && (
+            <>
+              <div className={styles.navbar_content_mobile}>
+                <ul className={styles.navbar_list}>
+                  <li>Home</li>
+                  <li>Write</li>
+                  <li>Dashboard</li>
+                </ul>
+                <div className={styles.navbar_button_mobile}>
+                  <button>Login</button>
+                  <button>Signup</button>
+                </div>
+              </div>
+            </>
+          )}
+          <div className={styles.navbar_menu_mobile}>
+            {toggleMenu ? (
+              <RiCloseLine
+                color="#000"
+                size="2rem"
+                onClick={() => setToggleMenu(false)}
+              />
+            ) : (
+              <RiMenu3Line
+                color="#000"
+                size="2rem"
+                onClick={() => setToggleMenu(true)}
+              />
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
