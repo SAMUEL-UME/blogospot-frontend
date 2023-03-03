@@ -1,5 +1,8 @@
 .navbar_container {
-  background: var(--secondary-color);
+  width: 100vw;
+  position: sticky;
+  top: 0px;
+  z-index: 999;
 }
 .navbar {
   width: 100%;
@@ -9,9 +12,16 @@
   justify-content: space-between;
   align-items: center;
   color: #000;
+  background: var(--secondary-color);
   font-weight: 600;
   transition: 0.1s ease-in;
-  cursor:pointer;
+
+  box-shadow: 0px 10px 10px -10px rgba(0, 0, 0, 0.5);
+}
+
+.scrolled {
+  background-color: var(--sub-color);
+
 }
 
 .logo {
@@ -85,7 +95,9 @@
   overflow: hidden;
   border: none;
 }
-
+.scrolled .ani {
+  background: var(--secondary-color);
+}
 .ani:after {
   content: " ";
   width: 0%;
@@ -95,7 +107,9 @@
   transition: all 0.4s ease-in-out;
   right: 0;
 }
-
+.scrolled .ani:after {
+  background: var(--primary-color);
+}
 .ani:hover::after {
   right: auto;
   left: 0;

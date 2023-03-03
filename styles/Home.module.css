@@ -5,6 +5,7 @@
   overflow: hidden;
   position: relative;
   background: linear-gradient(0.25turn, #ed213a, 30%, #93291e);
+  z-index: -1;
 }
 .hero_image {
   height: 400px;

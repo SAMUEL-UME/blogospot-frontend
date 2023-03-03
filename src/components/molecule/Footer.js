@@ -9,6 +9,7 @@ const Footer = () => {
       <h3>fuck you 😂</h3>
       </div>
     </div>
+
     </div>
   )
 }
