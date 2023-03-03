@@ -1,12 +1,18 @@
 import React, { useState } from "react";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import styles from "@/styles/Navbar.module.css";
+import logo from "@/public/logo.png";
+import logo2 from "@/public/logo2.png";
+import Image from "next/image";
+
 export default function Navbar() {
   const [toggleMenu, setToggleMenu] = useState(false);
   return (
     <div className={styles.navbar_container}>
       <div className={styles.navbar}>
-        <div className={styles.logo}>Blogospot</div>
+        <div className={styles.logo}>
+          <Image src={logo2} width="170" height="100" alt="logo" />
+        </div>
         <div className={styles.content}>
           <ul>
             <li>Home</li>
@@ -15,7 +21,9 @@ export default function Navbar() {
           </ul>
           <div className={styles.desktop}>
             <button>Login</button>
-            <button>Signup</button>
+            <button className={styles.ani}>
+              <span>Signup</span>
+            </button>
           </div>
         </div>
 
@@ -30,7 +38,9 @@ export default function Navbar() {
                 </ul>
                 <div className={styles.navbar_button_mobile}>
                   <button>Login</button>
-                  <button>Signup</button>
+                  <button className={styles.ani}>
+                    <span>Signup</span>
+                  </button>
                 </div>
               </div>
             </>

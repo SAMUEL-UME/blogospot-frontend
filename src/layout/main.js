@@ -4,7 +4,7 @@ import Navbar from "../components/molecule/Navbar";
 
 const MainLayout = ({ children }) => {
   return (
-    <div>
+    <div className="container-class">
       <Navbar />
       <main>{children}</main>
       <Footer />
