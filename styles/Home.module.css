@@ -1,6 +1,10 @@
 .hero {
-  height: 80vh;
-  background: var(--sub-color);
+  width: 100%;
+  height: 60vh;
+  z-index: 999;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(0.25turn, #ed213a, 30%, #93291e);
 }
 .hero_image {
   height: 400px;
@@ -11,4 +15,47 @@
   .hero_image {
     height: 400px;
   }
+}
+.container_h1 {
+  font-weight: 400;
+  font-size: 2rem;
+  position: relative;
+  margin-bottom: 3.5rem;
+}
+.container_h1:after {
+  content: "";
+  width: 80px;
+  height: 5px;
+  position: absolute;
+  background: var(--sub-color);
+  bottom: -15px;
+  left: 0;
+}
+
+.blog {
+  margin: 2rem 0;
+  border-bottom: 1px solid;
+  padding-bottom: 2.5rem;
+}
+.blog span {
+  color: var(--sub-color);
+  font-weight: 400;
+  font-style: italic;
+  padding-left: .5rem;
+}
+.blog h1 {
+  font-size: 1.5rem;
+  padding: 1.5rem 0px 0px 0px;
+  font-weight: 600;
+}
+.blog p {
+  font-size: 15px;
+  color: rgb(75, 71, 71);
+}
+.meta_info {
+  display: flex;
+  gap: 2rem;
+}
+.meta_info div {
+  font-size: 18px;
 }
