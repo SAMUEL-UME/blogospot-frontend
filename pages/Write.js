@@ -1,9 +1,10 @@
 import React from "react";
+import CreateBlog from "../src/components/template/CreateBlog";
 
 const Write = () => {
   return (
     <div>
-      <h1>Create blog</h1>
+     <CreateBlog/>
     </div>
   );
 };
