@@ -3,6 +3,7 @@ import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import styles from "@/styles/Navbar.module.css";
 import logo2 from "@/public/logo2.png";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Navbar({ isScrolled }) {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -15,24 +16,43 @@ export default function Navbar({ isScrolled }) {
     >
       <div className={styles.navbar}>
         <div className={styles.logo}>
-          <Image
-            src={logo2}
-            width="150"
-            height="auto"
-            alt="auto"
-            priority="true"
-          />
+          <Link href="/" passHref>
+            <Image
+              src={logo2}
+              width="150"
+              height="auto"
+              alt="auto"
+              priority="true"
+            />
+          </Link>
         </div>
         <div className={styles.content}>
           <ul>
-            <li>Home</li>
-            <li>Write</li>
+            <li>
+              <Link href="/" passHref>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link href="/Write" passHref>
+                Write
+              </Link>
+            </li>
             <li>Dashboard</li>
           </ul>
           <div className={styles.desktop}>
-            <button>Login</button>
+            <button>
+              <Link href="/login" passHref>
+                Login
+              </Link>
+            </button>
+
             <button className={styles.ani}>
-              <span>Signup</span>
+              <span>
+                <Link href="/signup" passHref>
+                  Signup
+                </Link>
+              </span>
             </button>
           </div>
         </div>
@@ -42,14 +62,28 @@ export default function Navbar({ isScrolled }) {
             <>
               <div className={styles.navbar_content_mobile}>
                 <ul className={styles.navbar_list}>
-                  <li>Home</li>
-                  <li>Write</li>
-                  <li>Dashboard</li>
+                  <li>
+                    <Link href="/">Home</Link>
+                  </li>
+                  <li>
+                    <Link href="/Write">Write</Link>
+                  </li>
+                  <li>
+                    <Link href="/">Dashboard</Link>
+                  </li>
                 </ul>
                 <div className={styles.navbar_button_mobile}>
-                  <button>Login</button>
+                  <button>
+                    <Link href="/login" passHref>
+                      Login
+                    </Link>
+                  </button>
                   <button className={styles.ani}>
-                    <span>Signup</span>
+                    <span>
+                      <Link href="/signup" passHref>
+                        Signup
+                      </Link>
+                    </span>
                   </button>
                 </div>
               </div>
