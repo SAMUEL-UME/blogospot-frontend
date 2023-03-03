@@ -11,6 +11,7 @@
   color: #000;
   font-weight: 600;
   transition: 0.1s ease-in;
+  cursor:pointer;
 }
 
 .logo {
@@ -41,9 +42,11 @@
   flex-direction: column;
   gap: 0.7rem;
   list-style: none;
+  
 }
 .navbar_list li {
   font-size: 20px;
+ 
 }
 
 .navbar_button_mobile {
