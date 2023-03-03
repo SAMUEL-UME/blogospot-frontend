@@ -15,11 +15,13 @@
   background: var(--secondary-color);
   font-weight: 600;
   transition: 0.1s ease-in;
+
   box-shadow: 0px 10px 10px -10px rgba(0, 0, 0, 0.5);
 }
 
 .scrolled {
   background-color: var(--sub-color);
+
 }
 
 .logo {
@@ -50,9 +52,11 @@
   flex-direction: column;
   gap: 0.7rem;
   list-style: none;
+  
 }
 .navbar_list li {
   font-size: 20px;
+ 
 }
 
 .navbar_button_mobile {
