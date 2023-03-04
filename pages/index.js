@@ -3,6 +3,7 @@ import Image from "next/image";
 import styles from "@/styles/Home.module.css";
 import background from "@/public/background.jpg";
 import BlogBlock from "@/src/components/template/BlogBlock";
+import Signup from "@/src/components/template/Signup";
 
 export default function Home({ data }) {
   return (
@@ -18,6 +19,7 @@ export default function Home({ data }) {
         <div className="container w-full mx-auto py-9 px-5">
           <h1 className={styles.container_h1}>Featured Post</h1>
           <BlogBlock data={data} />
+          <Signup/>
         </div>
       </main>
     </>
