@@ -4,6 +4,7 @@ import styles from "@/styles/Home.module.css";
 import background from "@/public/background.jpg";
 import BlogBlock from "@/src/components/template/BlogBlock";
 import Signup from "@/src/components/template/Signup";
+import Login from "@/src/components/template/Login";
 
 export default function Home({ data }) {
   return (
@@ -20,6 +21,7 @@ export default function Home({ data }) {
           <h1 className={styles.container_h1}>Featured Post</h1>
           <BlogBlock data={data} />
           <Signup/>
+          <Login/>
         </div>
       </main>
     </>
