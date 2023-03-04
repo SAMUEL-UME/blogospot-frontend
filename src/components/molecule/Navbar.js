@@ -4,9 +4,23 @@ import styles from "@/styles/Navbar.module.css";
 import logo2 from "@/public/logo2.png";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Navbar({ isScrolled }) {
   const [toggleMenu, setToggleMenu] = useState(false);
+
+  const router = useRouter();
+
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      console.log("Navigating to", url);
+      return setToggleMenu(false);
+    };
+    router.events.on("routeChangeStart", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeStart", handleRouteChange);
+    };
+  }, [router.events]);
 
   return (
     <div

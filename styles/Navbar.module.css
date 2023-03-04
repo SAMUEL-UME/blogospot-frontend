@@ -1,5 +1,5 @@
 .navbar_container {
-  width: 100vw;
+  width: 100%;
   position: sticky;
   top: 0px;
   z-index: 999;
@@ -21,7 +21,6 @@
 
 .scrolled {
   background-color: var(--sub-color);
-
 }
 
 .logo {
@@ -38,7 +37,7 @@
   padding: 2rem;
   position: absolute;
   top: 49px;
-  right: 10px;
+  right: 20px;
   margin-top: 1rem;
   min-width: 210px;
   border-radius: 5px;
@@ -52,11 +51,9 @@
   flex-direction: column;
   gap: 0.7rem;
   list-style: none;
-  
 }
 .navbar_list li {
   font-size: 20px;
- 
 }
 
 .navbar_button_mobile {
