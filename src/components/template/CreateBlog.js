@@ -30,7 +30,7 @@ const CreateBlog = () => {
     <div className={styles.container}>
        <form className={styles.formmain} onSubmit={handleSubmit}>
         <div className={styles.formcontrol}>
-          <label >Title 🔻</label>
+          <label >Title </label>
           <input
             type="text"
             name="title"
@@ -39,7 +39,7 @@ const CreateBlog = () => {
           />
         
        
-          <label>Description 🔻</label>
+          <label>Description </label>
           <input
             type="text"
             name="description"
@@ -48,7 +48,7 @@ const CreateBlog = () => {
           />
        
        
-          <label>Tags 🔻</label>
+          <label>Tags </label>
           <input
             type="text"
             name="tags"
@@ -57,7 +57,7 @@ const CreateBlog = () => {
           />
         
         
-          <label>Post 🔻</label>
+          <label>Post </label>
           <input
             type="text"
             name="post"

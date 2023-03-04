@@ -1,0 +1,19 @@
+.head{
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 20px;
+
+}
+.content{
+    background-color: whitesmoke;
+    width: 80%;
+    font-size: 20px;
+    display: block;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+}
