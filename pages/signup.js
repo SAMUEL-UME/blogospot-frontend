@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import SignupPage from "../src/components/template/Signup";
 
-const signup = () => {
+const Signup = () => {
   const [state, setState] = useState({
     first_name: "",
     last_name: "",
@@ -26,4 +26,4 @@ const signup = () => {
   return <SignupPage handleInputChange={handleInputChange} state={state} />;
 };
 
-export default signup;
+export default Signup;

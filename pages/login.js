@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import LoginPage from "../src/components/template/Login";
 
-const login = () => {
+export default function Login() {
   const [state, setState] = useState({
     email: "",
     password: "",
@@ -21,6 +21,6 @@ const login = () => {
   };
 
   return <LoginPage handleInputChange={handleInputChange} state={state} />;
-};
+}
 
-export default login;
+
