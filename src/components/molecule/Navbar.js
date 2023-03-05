@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
-import styles from "@/styles/Navbar.module.css";
+import styles from "@/styles/molecules/Navbar.module.css";
 import logo2 from "@/public/logo2.png";
 import Image from "next/image";
 import Link from "next/link";

@@ -53,7 +53,7 @@
   background: var(--sub-color);
   color: #fff;
 }
-.thumb p{
+.thumb p {
   color: #fff !important;
 }
 .blog span {
@@ -83,11 +83,19 @@
   background: var(--sub-color);
   color: #fff;
 }
-@media (max-width: 400px) {
-  .meta_info div {
-    font-size: 14px;
+@media (max-width: 450px) {
+  .meta_info {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    padding-top: 1rem;
   }
-  .blog h1 {
-    font-size: 1rem;
+  .date,
+  .readTime,
+  .author {
+    font-size: 10px !important;
+  }
+  .date {
+    box-shadow: 0px 0px 5px 0.5px var(--primary-color);
   }
 }

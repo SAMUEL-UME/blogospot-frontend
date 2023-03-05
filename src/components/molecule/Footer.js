@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from "react";
-import styles from "@/styles/Footer.module.css";
+import styles from "@/styles/molecules/Footer.module.css";
 import Link from "next/link";
-import { useRouter } from "next/router";
-import Aboutus from "../../../pages/Aboutus";
-import Terms from "../../../pages/Terms";
-import Privacy from "../../../pages/Privacy";
 import logo from "@/public/logo3.png";
 import Image from "next/image";
 
@@ -49,7 +45,7 @@ const Footer = () => {
         </div>
         <div className={styles.term}>
           <div>
-            <p>@2023 Blogospot all right reserved &copy;</p>
+            <p>@2023 Blogospot all right &copy; reserved </p>
           </div>
           <div>
             <p>All system operational</p>

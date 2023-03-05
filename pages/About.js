@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "@/styles/Aboutus.module.css";
+import styles from "@/styles/template/About.module.css";
 
 const Aboutus = () => {
   return (

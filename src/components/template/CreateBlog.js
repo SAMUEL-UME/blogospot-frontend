@@ -1,7 +1,6 @@
-import React from "react"
-import styles from "@/styles/CreateBlog.module.css";
-import { useState } from "react";
-import ReactDOM from "react-dom/client";
+import React,{ useState } from "react"
+import styles from "@/styles/template/CreateBlog.module.css";
+
 
 const CreateBlog = () => {
   const [state, setState] = useState({
