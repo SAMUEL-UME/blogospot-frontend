@@ -37,12 +37,30 @@
   margin: 2rem 0;
   border-bottom: 1px solid;
   padding-bottom: 2.5rem;
+  position: relative;
+}
+.thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  background: var(--sub-color);
+  color: #fff;
+}
+.thumb p{
+  color: #fff !important;
 }
 .blog span {
   color: var(--sub-color);
   font-weight: 400;
   font-style: italic;
-  padding-left: .5rem;
+  padding-left: 0.5rem;
 }
 .blog h1 {
   font-size: 1.5rem;
@@ -56,7 +74,20 @@
 .meta_info {
   display: flex;
   gap: 2rem;
+  padding-top: 1rem;
 }
 .meta_info div {
   font-size: 18px;
+}
+.meta_info div:nth-of-type(3) {
+  background: var(--sub-color);
+  color: #fff;
+}
+@media (max-width: 400px) {
+  .meta_info div {
+    font-size: 14px;
+  }
+  .blog h1 {
+    font-size: 1rem;
+  }
 }
