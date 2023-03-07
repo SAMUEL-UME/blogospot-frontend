@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from "@/styles/Terms.module.css";
+import styles from "@/styles/policy/Terms.module.css";
 
 
 const Terms = () => {

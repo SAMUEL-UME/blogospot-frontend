@@ -1,8 +1,11 @@
 import React, { useState } from "react";
-import LoginPage from "../src/components/template/Login";
 
-export default function Login() {
+import SignupPage from "../src/components/template/Signup";
+
+const Signup = () => {
   const [state, setState] = useState({
+    first_name: "",
+    last_name: "",
     email: "",
     password: "",
   });
@@ -20,7 +23,7 @@ export default function Login() {
     console.log(state);
   };
 
-  return <LoginPage handleInputChange={handleInputChange} state={state} />;
-}
+  return <SignupPage handleInputChange={handleInputChange} state={state} />;
+};
 
-
+export default Signup;
