@@ -26,7 +26,7 @@ export default function SignupPage({ handleInputChange, state }) {
               value={state.last_name}
               onChange={handleInputChange}
             />
-            <label>Last Nane</label>
+            <label>Last Name</label>
           </div>
           <div className={styles.user_box}>
             <input
