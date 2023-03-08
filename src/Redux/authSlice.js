@@ -10,26 +10,32 @@ const initialState = {
 
 //*****************Singup users*****************//
 export const signupUser = createAsyncThunk("signupuser", async (body) => {
-  const res = await fetch("http://localhost:4000/api/v1/blogospot/signup", {
-    method: "post",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(body),
-  });
+  const res = await fetch(
+    "https://misty-cowboy-hat-crow.cyclic.app/api/v1/blogospot/signup",
+    {
+      method: "post",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
+    }
+  );
 
   return await res.json();
 });
 
 //*****************Singin user*****************//
 export const signinUser = createAsyncThunk("signinuser", async (body) => {
-  const res = await fetch("http://localhost:4000/api/v1/blogospot/login", {
-    method: "post",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(body),
-  });
+  const res = await fetch(
+    "https://misty-cowboy-hat-crow.cyclic.app/api/v1/blogospot/login",
+    {
+      method: "post",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
+    }
+  );
   return await res.json();
 });
 
@@ -92,7 +98,6 @@ const authSlice = createSlice({
     },
     [signupUser.rejected]: (state) => {
       state.loading = false;
-
     },
   },
 });
