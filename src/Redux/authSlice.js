@@ -37,15 +37,16 @@ const authSlice = createSlice({
   name: "user",
   initialState,
   reducers: {
-    addToken: (state, action) => {
+    addToken: (state) => {
       state.token = localStorage.getItem("token");
     },
-    addUser: (state, action) => {
+    addUser: (state) => {
       state.user = localStorage.getItem("user");
     },
-    logout: (state, action) => {
+    logout: (state) => {
       state.token = null;
       state.user = null;
+      state.msg = false;
       localStorage.clear();
     },
     cleanup: (state) => {
@@ -54,7 +55,7 @@ const authSlice = createSlice({
   },
   extraReducers: {
     //Signin user  *********************************
-    [signinUser.pending]: (state, action) => {
+    [signinUser.pending]: (state) => {
       state.loading = true;
     },
     [signinUser.fulfilled]: (state, { payload: { error, token, user } }) => {
@@ -69,25 +70,30 @@ const authSlice = createSlice({
         localStorage.setItem("token", token);
       }
     },
-    // [signinUser.rejected]: (state, action) => {
-    //   state.loading = true;
-    // },
-    // //signup user ************************
-    // [signupUser.pending]: (state, action) => {
-    //   state.loading = true;
-    // },
-    // [signupUser.fulfilled]: (state, { payload: { error, msg } }) => {
-    //   state.loading = false;
+    [signinUser.rejected]: (state) => {
+      state.loading = false;
+    },
+    //signup user ************************
+    [signupUser.pending]: (state) => {
+      state.loading = true;
+    },
+    [signupUser.fulfilled]: (state, { payload: { error, token, user } }) => {
+      state.loading = false;
 
-    //   if (error) {
-    //     state.error = error;
-    //   } else {
-    //     state.msg = msg;
-    //   }
-    // },
-    // [signupUser.rejected]: (state, action) => {
-    //   state.loading = true;
-    // },
+      if (error) {
+        state.error = error;
+      } else {
+        state.token = token;
+        state.user = user;
+        state.msg = true;
+        localStorage.setItem("user", JSON.stringify(user));
+        localStorage.setItem("token", token);
+      }
+    },
+    [signupUser.rejected]: (state) => {
+      state.loading = false;
+
+    },
   },
 });
 

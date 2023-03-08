@@ -7,7 +7,7 @@ import { useSelector, useDispatch } from "react-redux";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { logout, cleanup } from "../../Redux/authSlice";
-import checkUserAndToken from "../../utils/index";
+import { checkUserAndToken } from "../../utils/index";
 
 export default function Navbar() {
   const [getuser, setGetUser] = useState(null);
@@ -45,7 +45,7 @@ export default function Navbar() {
             <Image
               src={logo2}
               width="150"
-              height="auto"
+              height="150"
               alt="auto"
               priority="true"
             />
@@ -92,7 +92,11 @@ export default function Navbar() {
         <div className={styles.mobile}>
           {toggleMenu && (
             <>
-              <div className={styles.navbar_content_mobile}>
+              <div
+                className={`${styles.navbar_content_mobile} ${
+                  toggleMenu ? styles.open : styles.close
+                }`}
+              >
                 <ul className={styles.navbar_list}>
                   <li>
                     <Link href="/">Home</Link>
@@ -104,20 +108,26 @@ export default function Navbar() {
                     <Link href="/">Dashboard</Link>
                   </li>
                 </ul>
-                <div className={styles.navbar_button_mobile}>
-                  <button>
-                    <Link href="/login" passHref>
-                      Login
-                    </Link>
-                  </button>
-                  <button className={styles.ani}>
-                    <span>
-                      <Link href="/signup" passHref>
-                        Signup
+                {getuser && gettoken ? (
+                  <div className={styles.navbar_button_mobile}>
+                    <button onClick={handleLogout}>Logout</button>
+                  </div>
+                ) : (
+                  <div className={styles.navbar_button_mobile}>
+                    <button>
+                      <Link href="/login" passHref>
+                        Login
                       </Link>
-                    </span>
-                  </button>
-                </div>
+                    </button>
+                    <button className={styles.ani}>
+                      <span>
+                        <Link href="/signup" passHref>
+                          Signup
+                        </Link>
+                      </span>
+                    </button>
+                  </div>
+                )}
               </div>
             </>
           )}
@@ -126,6 +136,7 @@ export default function Navbar() {
               <RiCloseLine
                 color="#000"
                 size="2rem"
+                style={{zIndex: "9999"}}
                 onClick={() => setToggleMenu(false)}
               />
             ) : (

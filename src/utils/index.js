@@ -10,4 +10,8 @@ function checkUserAndToken(setGetUser, setGetToken) {
   }
 }
 
-export default checkUserAndToken;
+function removeQuotes(str) {
+  return str.replace(/['"]/g, "");
+}
+
+export { checkUserAndToken, removeQuotes };

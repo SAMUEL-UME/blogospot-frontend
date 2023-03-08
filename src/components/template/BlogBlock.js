@@ -10,8 +10,7 @@ const BlogBlock = ({ data }) => {
         <Link key={data._id} href={`post/${data._id}`}>
           <div className={styles.blog}>
             <div className={styles.thumb}>
-              {data.read_count}
-              <p>&#128065;</p>
+              {data.read_count > 0 ? <p>{data.read_count} views</p> : ""}
             </div>
             {data.tags?.map((tag) => (
               <span key={tag}>#{tag}</span>

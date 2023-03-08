@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "@/styles/home/Home.module.css";
 import BlogBlock from "@/src/components/template/BlogBlock";
 
@@ -31,3 +30,48 @@ export async function getServerSideProps() {
     },
   };
 }
+// import React, { useState } from 'react';
+
+// const Pagination = ({ itemsPerPage, totalItems, paginate }) => {
+//   const pageNumbers = [];
+
+//   // Calculate the number of pages
+//   for (let i = 1; i <= Math.ceil(totalItems / itemsPerPage); i++) {
+//     pageNumbers.push(i);
+//   }
+
+//   // Set the current page to 1
+//   const [currentPage, setCurrentPage] = useState(1);
+
+//   // Get the index of the last item on the current page
+//   const indexOfLastItem = currentPage * itemsPerPage;
+//   // Get the index of the first item on the current page
+//   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+//   // Get the current items
+//   const currentItems = items.slice(indexOfFirstItem, indexOfLastItem);
+
+//   const handleClick = (pageNumber) => {
+//     setCurrentPage(pageNumber);
+//     paginate(pageNumber);
+//   };
+
+//   return (
+//     <nav>
+//       <ul className='pagination'>
+//         {pageNumbers.map((number) => (
+//           <li key={number} className='page-item'>
+//             <a
+//               onClick={() => handleClick(number)}
+//               href='!#'
+//               className='page-link'
+//             >
+//               {number}
+//             </a>
+//           </li>
+//         ))}
+//       </ul>
+//     </nav>
+//   );
+// };
+
+// export default Pagination;

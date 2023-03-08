@@ -18,6 +18,7 @@ export default function Login() {
       router.push("/");
     }
   }, [msg]);
+  
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setState((prevProps) => ({
