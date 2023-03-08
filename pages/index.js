@@ -25,7 +25,6 @@ export default function Home({ data }) {
 
 export async function getServerSideProps() {
   const { data } = await import("/data/data.json");
-  console.log(data);
   return {
     props: {
       data,

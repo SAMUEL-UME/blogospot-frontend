@@ -92,9 +92,10 @@
   overflow: hidden;
   border: none;
 }
-.scrolled .ani {
-  background: var(--secondary-color);
+.ani a{
+  background: none !important;
 }
+
 .ani:after {
   content: " ";
   width: 0%;

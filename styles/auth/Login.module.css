@@ -28,6 +28,12 @@
 .login_box .user_box {
   position: relative;
 }
+.error {
+  color: var(--sub-color) !important;
+  font-size: 14px ;
+  padding: 0.5rem;
+  z-index: 999 !important;
+}
 
 .login_box .user_box input {
   width: 100%;
@@ -60,7 +66,7 @@
   font-size: 12px;
 }
 
-.login_box form a {
+.login_box form button {
   position: relative;
   display: inline-block;
   padding: 10px 20px;
@@ -71,22 +77,22 @@
   text-transform: uppercase;
   overflow: hidden;
   transition: 0.5s;
-  margin-top: 40px;
+  margin-top: 10px;
   letter-spacing: 3px;
 }
 
-.login_box a:hover {
+.login_box button:hover {
   background: var(--sub-color);
   color: #ffff;
   border-radius: 5px;
 }
 
-.login_box a span {
+.login_box button span {
   position: absolute;
   display: block;
 }
 
-.login_box a span:nth-child(1) {
+.login_box button span:nth-child(1) {
   top: 0;
   left: -100%;
   width: 100%;
@@ -106,7 +112,7 @@
   }
 }
 
-.login_box a span:nth-child(2) {
+.login_box button span:nth-child(2) {
   top: -100%;
   right: 0;
   width: 2px;
@@ -127,7 +133,7 @@
   }
 }
 
-.login_box a span:nth-child(3) {
+.login_box button span:nth-child(3) {
   bottom: 0;
   right: -100%;
   width: 100%;
@@ -148,7 +154,7 @@
   }
 }
 
-.login_box a span:nth-child(4) {
+.login_box button span:nth-child(4) {
   bottom: -100%;
   left: 0;
   width: 2px;
@@ -172,6 +178,7 @@
 .login_box p:last-child {
   color: #aaa;
   font-size: 14px;
+  padding-top: 1rem;
 }
 
 .login_box a.a2 {
@@ -186,7 +193,7 @@
 }
 @media (max-width: 450px) {
   .login_container {
-    margin: 0rem .25rem;
+    margin: 0rem 0.25rem;
   }
   .login_box {
     width: 350px;

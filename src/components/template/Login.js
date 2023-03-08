@@ -2,12 +2,17 @@ import React from "react";
 import styles from "@/styles/auth/Login.module.css";
 import Link from "next/link";
 
-export default function LoginPage({ handleInputChange, state }) {
+export default function LoginPage({
+  handleInputChange,
+  state,
+  handleSubmit,
+  error,
+}) {
   return (
     <div className={styles.login_container}>
       <div className={styles.login_box}>
-        <p>Login</p>
-        <form>
+        <p>Sign in</p>
+        <form onSubmit={handleSubmit}>
           <div className={styles.user_box}>
             <input
               required={true}
@@ -28,13 +33,14 @@ export default function LoginPage({ handleInputChange, state }) {
             />
             <label>Password</label>
           </div>
-          <a href="#">
+          {error && <p className={styles.error}>{error}</p>}
+          <button type="submit">
             <span></span>
             <span></span>
             <span></span>
             <span></span>
-            Login
-          </a>
+            Sign in
+          </button>
         </form>
         <p>
           Don&apos;t have an account?{" "}

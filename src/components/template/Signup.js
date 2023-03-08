@@ -2,7 +2,7 @@ import React from "react";
 import styles from "@/styles/auth/Signup.module.css";
 import Link from "next/link";
 
-export default function SignupPage({ handleInputChange, state }) {
+export default function SignupPage({ handleInputChange, state, handleSubmit }) {
   return (
     <div className={styles.login_container}>
       <div className={styles.login_box}>
@@ -48,7 +48,7 @@ export default function SignupPage({ handleInputChange, state }) {
             />
             <label>Password</label>
           </div>
-          <a href="#">
+          <a href="#" onClick={handleSubmit}>
             <span></span>
             <span></span>
             <span></span>

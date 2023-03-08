@@ -3,18 +3,25 @@ import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import styles from "@/styles/molecules/Navbar.module.css";
 import logo2 from "@/public/logo2.png";
 import Image from "next/image";
+import { useSelector, useDispatch } from "react-redux";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { logout, cleanup } from "../../Redux/authSlice";
+import checkUserAndToken from "../../utils/index";
 
-export default function Navbar({ isScrolled }) {
+export default function Navbar() {
+  const [getuser, setGetUser] = useState(null);
+  const [gettoken, setGetToken] = useState(null);
   const [toggleMenu, setToggleMenu] = useState(false);
+  const { user } = useSelector((state) => state.user);
 
   const router = useRouter();
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const handleRouteChange = (url) => {
-      console.log("Navigating to", url);
-      return setToggleMenu(false);
+      setToggleMenu(false);
+      return dispatch(cleanup());
     };
     router.events.on("routeChangeStart", handleRouteChange);
     return () => {
@@ -22,12 +29,16 @@ export default function Navbar({ isScrolled }) {
     };
   }, [router.events]);
 
+  useEffect(() => {
+    checkUserAndToken(setGetUser, setGetToken);
+  }, [user]);
+
+  const handleLogout = () => {
+    dispatch(logout());
+  };
+
   return (
-    <div
-      className={`${styles.navbar_container} ${
-        isScrolled ? styles.scrolled : ""
-      }`}
-    >
+    <div className={styles.navbar_container}>
       <div className={styles.navbar}>
         <div className={styles.logo}>
           <Link href="/" passHref>
@@ -54,21 +65,28 @@ export default function Navbar({ isScrolled }) {
             </li>
             <li>Dashboard</li>
           </ul>
-          <div className={styles.desktop}>
-            <button>
-              <Link href="/login" passHref>
-                Login
-              </Link>
-            </button>
 
-            <button className={styles.ani}>
-              <span>
-                <Link href="/signup" passHref>
-                  Signup
+          {getuser && gettoken ? (
+            <div className={styles.desktop}>
+              <button onClick={handleLogout}>Logout</button>
+            </div>
+          ) : (
+            <div className={styles.desktop}>
+              <button>
+                <Link href="/login" passHref>
+                  Login
                 </Link>
-              </span>
-            </button>
-          </div>
+              </button>
+
+              <button className={styles.ani}>
+                <span>
+                  <Link href="/signup" passHref>
+                    Signup
+                  </Link>
+                </span>
+              </button>
+            </div>
+          )}
         </div>
 
         <div className={styles.mobile}>
