@@ -6,7 +6,7 @@ const Privacy = () => {
   return (
     <div>
     <div className={styles.content}>
-        <h1 className={styles.head}>Privacy Policy for <span id="W_1">Blog 'O' Spot </span></h1>
+        <h1 className={styles.head}>Privacy Policy for <span id="W_1"><strong>Blogospot</strong></span></h1>
 
 <h5>One of our top priorities, which can be found at, is the privacy of our visitors. This paper outlines the types of information that collects and records, as well as how we use it.
     Please do not hesitate to contact us if you have any further questions or need additional details about our Privacy Policy.
@@ -14,7 +14,7 @@ const Privacy = () => {
 
 <h2>Consent</h2>
 
-<p>Through using our website <span id="W_URL">https://blogospot-frontend.vercel.app/</span>, you consent to and adhere to the terms of our Privacy Policy.</p>
+<p>Through using our website <span id="W_URL"><a href="https://blogospot-frontend.vercel.app/">click here</a></span>, you consent to and adhere to the terms of our Privacy Policy.</p>
 
 <h2>Information we collect</h2>
 
@@ -57,7 +57,7 @@ const Privacy = () => {
 
 <h2>Cookies and Web Beacons</h2>
 
-<p><span id="W_6">Blog 'O' Spot </span>, like every other website, uses 'cookies.' These cookies are used to save information such as visitor interests and which pages on the website they accessed or visited. We can enhance the user experience by customizing our web page content based on visitors' browser type and/or other information.</p>
+<p><span id="W_6"><strong>Blogospot</strong></span>, like every other website, uses 'cookies.' These cookies are used to save information such as visitor interests and which pages on the website they accessed or visited. We can enhance the user experience by customizing our web page content based on visitors' browser type and/or other information.</p>
 
 <p>Please read <a href="https://blogospot-frontend.vercel.app/">"What Are Cookies"</a> for more general information on cookies. from Consent to Cookies</p>
 
@@ -68,7 +68,7 @@ const Privacy = () => {
 
 <h2>Advertising Partners Privacy Policies</h2>
 
-<h5>You will find the Privacy Policies for each of <span id="W_7">Blog 'O' Spot </span>' advertisement partners in this list.</h5>
+<h5>You will find the Privacy Policies for each of <span id="W_7"><strong>Blogospot</strong></span>' advertisement partners in this list.</h5>
 
 <h5>Third-party ad servers or ad networks use technologies such as cookies, JavaScript, or Web Beacons in their ads and links, which are delivered directly to users' browsers. When this happens, the IP address is immediately sent to them. These tools are used by advertisers to evaluate the effectiveness of their advertisement campaigns and/or to customize the advertising content you see on websites you visit.</h5>
 
@@ -76,7 +76,7 @@ const Privacy = () => {
 
 <h5>Third-Party Privacy Policies</h5>
 
-<h5>Such ads or blogs are not covered by <span id="W_10">Blog 'O' Spot </span>' Privacy Policy. As a result, we recommend that you read the Privacy Policies of these third-party ad servers for more details. It may provide details about their operations as well as for instructions about how to opt out of them. </h5>
+<h5>Such ads or blogs are not covered by <span id="W_10"><strong>Blogospot</strong></span>' Privacy Policy. As a result, we recommend that you read the Privacy Policies of these third-party ad servers for more details. It may provide details about their operations as well as for instructions about how to opt out of them. </h5>
 
 <h5>By modifying the settings in your browser, you can disable cookies. On the websites of the different web browsers, you can find more detailed details about cookie management.</h5>
 
@@ -102,7 +102,7 @@ const Privacy = () => {
 
 <p>Our other top priority is to improve internet protection for children. Parents and guardians should keep an eye on, participate in, monitor, and guide their children's online activities.</p>
 
-<p><span id="W_11">Blog 'O' Spot </span> can not collect personally identifying information from children under the age of thirteen without their consent. If you think your child provided this kind of information on our website, please contact us immediately so that we can remove it from our records.</p>
+<p><span id="W_11"><strong>Blogospot</strong></span> can not collect personally identifying information from children under the age of thirteen without their consent. If you think your child provided this kind of information on our website, please contact us immediately so that we can remove it from our records.</p>
 
     </div>
     </div>
