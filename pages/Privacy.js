@@ -102,7 +102,7 @@ const Privacy = () => {
 
 <p>Our other top priority is to improve internet protection for children. Parents and guardians should keep an eye on, participate in, monitor, and guide their children's online activities.</p>
 
-<p><span id="W_11"><strong>Blogospot</strong></span> can not collect personally identifying information from children under the age of thirteen without their consent. If you think your child provided this kind of information on our website, please contact us immediately so that we can remove it from our records.</p>
+<p><span id="W_11"><strong></strong></span> can not collect personally identifying information from children under the age of thirteen without their consent. If you think your child provided this kind of information on our website, please contact us immediately so that we can remove it from our records.</p>
 
     </div>
     </div>
