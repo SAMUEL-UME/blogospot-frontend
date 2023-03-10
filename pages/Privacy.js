@@ -8,11 +8,9 @@ const Privacy = () => {
     <div className={styles.content}>
         <h1 className={styles.head}>Privacy Policy for <span id="W_1">Blog 'O' Spot </span></h1>
 
-<p>One of our top priorities, which can be found at, is the privacy of our visitors. This paper outlines the types of information that collects and records, as well as how we use it.</p>
-
-<p>Please do not hesitate to contact us if you have any further questions or need additional details about our Privacy Policy.</p>
-
-<p>This Privacy Policy only applies to our online activities and is applicable to information exchanged and/or collected by visitors to our website. This policy does not extend to data collected outside of this website or by other means. The <a href="https://blogospot-frontend.vercel.app/" > Privacy Policy Generator</a> was used to build our Privacy Policy.</p>
+<h5>One of our top priorities, which can be found at, is the privacy of our visitors. This paper outlines the types of information that collects and records, as well as how we use it.
+    Please do not hesitate to contact us if you have any further questions or need additional details about our Privacy Policy.
+    This Privacy Policy only applies to our online activities and is applicable to information exchanged and/or collected by visitors to our website. This policy does not extend to data collected outside of this website or by other means. The <a href="https://blogospot-frontend.vercel.app/" > Privacy Policy Generator</a> was used to build our Privacy Policy.</h5>
 
 <h2>Consent</h2>
 
@@ -20,23 +18,38 @@ const Privacy = () => {
 
 <h2>Information we collect</h2>
 
-<p>The personal information you are asked to provide, as well as the reasons for doing so, will be explained to you at the time you are asked to do so.</p>
-<p>If you contact us directly, we can obtain additional information about you, such as your name, email address, phone number, the contents of any message and/or attachments you send us, and any other information you choose to provide.</p>
-<p>We can ask for your contact information when you create an Account, such as your name, company name, address, email address, and phone number.</p>
+<h5>The personal information you are asked to provide, as well as the reasons for doing so, will be explained to you at the time you are asked to do so.</h5>
+<h5>If you contact us directly, we can obtain additional information about you, such as your name, email address, phone number, the contents of any message and/or attachments you send us, and any other information you choose to provide.</h5>
+<h5>We can ask for your contact information when you create an Account, such as your name, company name, address, email address, and phone number.</h5>
 
-<h2>How we use your information</h2>
 
-<p>We use the data we gather in a variety of ways, including:</p>
+<h2>What do we use your information for?</h2>
 
+<h5>Any of the information we collect from you may be used in one of the following ways:</h5>
 <ul>
 <li>Provide, operate, and maintain our website</li>
+          
 <li>Improve, personalize, and expand our website</li>
+
+          
 <li>Recognize and evaluate how you use our website.</li>
+          
 <li>Create new products, services, features, and capabilities.</li>
+          
 <li>Interact with you, either directly or through one of our partners, for a variety of reasons, including customer support, providing you with website updates and other material, and marketing and promotional purposes.</li>
+          
 <li>Send you emails</li>
+          
 <li>Find and prevent fraud</li>
+          
+<li>To personalize your experience(your information helps us to better respond to your individual needs)</li>
+
+<li>To improve customer service,(your information helps us to more effectively respond to your customer service requests and support needs),To process transactions</li>
+
+<li>Your information, whether public or private, will not be sold, exchanged, transferred, or given to any other company for any reason whatsoever, without your consent.</li>   
+
 </ul>
+        
 
 <h2>Log Files</h2>
 
@@ -55,35 +68,35 @@ const Privacy = () => {
 
 <h2>Advertising Partners Privacy Policies</h2>
 
-<p>You will find the Privacy Policies for each of <span id="W_7">Blog 'O' Spot </span>' advertisement partners in this list.</p>
+<h5>You will find the Privacy Policies for each of <span id="W_7">Blog 'O' Spot </span>' advertisement partners in this list.</h5>
 
-<p>Third-party ad servers or ad networks use technologies such as cookies, JavaScript, or Web Beacons in their ads and links, which are delivered directly to users' browsers. When this happens, the IP address is immediately sent to them. These tools are used by advertisers to evaluate the effectiveness of their advertisement campaigns and/or to customize the advertising content you see on websites you visit.</p>
+<h5>Third-party ad servers or ad networks use technologies such as cookies, JavaScript, or Web Beacons in their ads and links, which are delivered directly to users' browsers. When this happens, the IP address is immediately sent to them. These tools are used by advertisers to evaluate the effectiveness of their advertisement campaigns and/or to customize the advertising content you see on websites you visit.</h5>
 
-<p>It's important to note that has no access to or influence over these third-party cookies.</p>
+<h5>It's important to note that has no access to or influence over these third-party cookies.</h5>
 
-<h2>Third-Party Privacy Policies</h2>
+<h5>Third-Party Privacy Policies</h5>
 
-<p>Such ads or blogs are not covered by <span id="W_10">Blog 'O' Spot </span>' Privacy Policy. As a result, we recommend that you read the Privacy Policies of these third-party ad servers for more details. It may provide details about their operations as well as for instructions about how to opt out of them. </p>
+<h5>Such ads or blogs are not covered by <span id="W_10">Blog 'O' Spot </span>' Privacy Policy. As a result, we recommend that you read the Privacy Policies of these third-party ad servers for more details. It may provide details about their operations as well as for instructions about how to opt out of them. </h5>
 
-<p>By modifying the settings in your browser, you can disable cookies. On the websites of the different web browsers, you can find more detailed details about cookie management.</p>
+<h5>By modifying the settings in your browser, you can disable cookies. On the websites of the different web browsers, you can find more detailed details about cookie management.</h5>
 
 <h2>CCPA Privacy Rights (Please do not sell my personal data)</h2>
 
-<p>Consumers in California have the right, among other things, under the CCPA to:</p>
-<p>Request that a business that collects a consumer's personal data disclose the categories and specific pieces of data it has collected.</p>
-<p>Request that a company deletes all personal information about a customer that it has acquired.</p>
-<p>Request that a business that sells a customer's personal details refrain from doing so.</p>
-<p>If you submit a request, you will receive a response within one month. Please contact us if you wish to exercise any of these rights.</p>
+<h3>Consumers in California have the right, among other things, under the CCPA to: </h3> 
+<h5>Request that a business that collects a consumer's personal data disclose the categories and specific pieces of data it has collected.</h5>
+<h5>Request that a company deletes all personal information about a customer that it has acquired.</h5>
+<h5>Request that a business that sells a customer's personal details refrain from doing so.</h5>
+<h5>If you submit a request, you will receive a response within one month. Please contact us if you wish to exercise any of these rights.</h5>
 
 <h2>GDPR Data Protection Rights</h2>
 
-<p>We want to make sure you understand your data privacy rights fully. Any consumer has the following rights:</p>
-<p>The right to access information – You have the right to a copy of your personal information. For this service, we will charge you a small fee.</p>
-<p>The right to rectification – You have the right to request that any information that you feel is incorrect be corrected. You also have the option of asking us to fill in any information gaps you believe exist.</p>
-<p>The right to be forgotten – You have the right to request that we remove your personal data in some situations.</p>
-<p>The right to limit processing – Under certain circumstances, you have the right to request that we restrict the processing of your personal data.</p>
-<p>The right to data portability – You have the right to suggest that we send the data we've collected to another organization or directly to you under some situations.</p>
-<p>If you submit any request in this regard, you will receive a response within one month. If you wish to exercise any of these privileges, please contact us.</p>
+<h3>We want to make sure you understand your data privacy rights fully. Any consumer has the following rights:</h3>
+<h5>The right to access information – You have the right to a copy of your personal information. For this service, we will charge you a small fee.</h5>
+<h5>The right to rectification – You have the right to request that any information that you feel is incorrect be corrected. You also have the option of asking us to fill in any information gaps you believe exist.</h5>
+<h5>The right to be forgotten – You have the right to request that we remove your personal data in some situations.</h5>
+<h5>The right to limit processing – Under certain circumstances, you have the right to request that we restrict the processing of your personal data.</h5>
+<h5>The right to data portability – You have the right to suggest that we send the data we've collected to another organization or directly to you under some situations.</h5>
+<h5>If you submit any request in this regard, you will receive a response within one month. If you wish to exercise any of these privileges, please contact us.</h5>
 
 <h2>Children's Information</h2>
 
