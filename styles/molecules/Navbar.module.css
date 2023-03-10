@@ -15,7 +15,6 @@
   background: var(--secondary-color);
   font-weight: 600;
   transition: 0.1s ease-in;
-
   box-shadow: 0px 10px 10px -10px rgba(0, 0, 0, 0.5);
 }
 
@@ -154,7 +153,7 @@
 
 .content {
   display: none;
-  justify-content: space-between;
+  justify-content: flex-end;
   opacity: 1;
   max-width: 450px;
   transition: 0.5s ease-in-out;
@@ -169,7 +168,7 @@
 }
 .content .desktop {
   display: flex !important;
-  padding-left: 1rem;
+  padding-left: 2rem;
   align-items: center;
   justify-content: space-between;
   gap: 1.5rem;

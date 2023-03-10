@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "@/styles/auth/Signup.module.css";
 import Link from "next/link";
+import loader from "../../../public/loader.gif";
+import Image from "next/image";
 
 export default function SignupPage({
   handleInputChange,
@@ -41,7 +43,7 @@ export default function SignupPage({
             <input
               required={true}
               name="email"
-              type="email"
+              type="text"
               value={state.email}
               onChange={handleInputChange}
             />
@@ -69,13 +71,17 @@ export default function SignupPage({
 
             {error && <p className={styles.error}>{error}</p>}
           </div>
-          <button>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            Signup
-          </button>
+          {loading ? (
+            <Image src={loader} width={40} height={20} alt="loader" />
+          ) : (
+            <button type="submit" disabled={loading}>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Sign in
+            </button>
+          )}
         </form>
         <p>
           Have an account?{" "}

@@ -11,11 +11,14 @@ export default function Home({ data }) {
         <link rel="icon" href="/favicon.ico" width="100px" height="30px" />
         <title>Blogospot</title>
       </Head>
-      <main className={styles.main}>
+      <main className="bg-[#f5f5f5]">
         <div className={styles.hero}></div>
-        <div className="container w-full mx-auto py-9 px-5">
-          <h1 className={styles.container_h1}>Featured Post</h1>
-          <BlogBlock data={data} />
+        <div className="container m-auto flex flex-col md:flex-row-reverse justify-content-between mt-11 relative">
+          <div className={`${styles.main} md:w-8/12`}>
+            <h1 className={styles.container_h1}>Featured Post</h1>
+            <BlogBlock data={data} />
+          </div>
+          <div className="md:w-4/12 h-screen bg-[#a8201a] md:mr-6 rounded-lg hover:bg-[#000] transition-all ease-in-out delay-150"></div>
         </div>
       </main>
     </>
@@ -30,48 +33,3 @@ export async function getServerSideProps() {
     },
   };
 }
-// import React, { useState } from 'react';
-
-// const Pagination = ({ itemsPerPage, totalItems, paginate }) => {
-//   const pageNumbers = [];
-
-//   // Calculate the number of pages
-//   for (let i = 1; i <= Math.ceil(totalItems / itemsPerPage); i++) {
-//     pageNumbers.push(i);
-//   }
-
-//   // Set the current page to 1
-//   const [currentPage, setCurrentPage] = useState(1);
-
-//   // Get the index of the last item on the current page
-//   const indexOfLastItem = currentPage * itemsPerPage;
-//   // Get the index of the first item on the current page
-//   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-//   // Get the current items
-//   const currentItems = items.slice(indexOfFirstItem, indexOfLastItem);
-
-//   const handleClick = (pageNumber) => {
-//     setCurrentPage(pageNumber);
-//     paginate(pageNumber);
-//   };
-
-//   return (
-//     <nav>
-//       <ul className='pagination'>
-//         {pageNumbers.map((number) => (
-//           <li key={number} className='page-item'>
-//             <a
-//               onClick={() => handleClick(number)}
-//               href='!#'
-//               className='page-link'
-//             >
-//               {number}
-//             </a>
-//           </li>
-//         ))}
-//       </ul>
-//     </nav>
-//   );
-// };
-
-// export default Pagination;
