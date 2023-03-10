@@ -37,19 +37,15 @@
 }
 .footer_content_heading::before {
   content: "";
-  width: 0px;
-  height: 10px;
-  opacity: 0;
+  width: 30px;
+  height: 5px;
   position: absolute;
   background-color: var(--primary-color);
   bottom: -10px;
   left: 0px;
   transition: 0.3s ease-in;
 }
-.footer_content_heading:hover::before {
-  width: 60%;
-  opacity: 1;
-}
+
 .footer_content ul {
   padding-top: 1rem;
 }

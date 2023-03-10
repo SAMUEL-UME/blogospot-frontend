@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "@/styles/home/Home.module.css";
 import BlogBlock from "@/src/components/template/BlogBlock";
 
@@ -12,11 +11,14 @@ export default function Home({ data }) {
         <link rel="icon" href="/favicon.ico" width="100px" height="30px" />
         <title>Blogospot</title>
       </Head>
-      <main className={styles.main}>
+      <main className="bg-[#f5f5f5]">
         <div className={styles.hero}></div>
-        <div className="container w-full mx-auto py-9 px-5">
-          <h1 className={styles.container_h1}>Featured Post</h1>
-          <BlogBlock data={data} />
+        <div className="container m-auto flex flex-col md:flex-row-reverse justify-content-between mt-11 relative">
+          <div className={`${styles.main} md:w-8/12`}>
+            <h1 className={styles.container_h1}>Featured Post</h1>
+            <BlogBlock data={data} />
+          </div>
+          <div className="md:w-4/12 h-screen bg-[#a8201a] md:mr-6 rounded-lg hover:bg-[#000] transition-all ease-in-out delay-150"></div>
         </div>
       </main>
     </>
@@ -25,7 +27,6 @@ export default function Home({ data }) {
 
 export async function getServerSideProps() {
   const { data } = await import("/data/data.json");
-  console.log(data);
   return {
     props: {
       data,
