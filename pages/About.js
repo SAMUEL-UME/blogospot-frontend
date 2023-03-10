@@ -11,7 +11,6 @@ const Aboutus = () => {
         <div className={styles.middlecontent}>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-            <br />
             molestie massa in euismod porttitor. Praesent in consequat odio.
             <br />
             Nullam ac laoreet lorem, eget condimentum metus. Sed rutrum
