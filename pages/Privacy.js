@@ -26,9 +26,8 @@ const Privacy = () => {
           our website. This policy does not extend to data collected outside of
           this website or by other means. The{" "}
           <a href="https://blogospot-frontend.vercel.app/">
-            {" "}
             Privacy Policy Generator
-          </a>{" "}
+          </a>
           was used to build our Privacy Policy.
         </p>
 

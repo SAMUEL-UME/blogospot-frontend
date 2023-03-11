@@ -59,11 +59,11 @@ export default function Navbar() {
               </Link>
             </li>
             <li>
-              <Link href="/Write" passHref>
+              <Link href="/write" passHref>
                 Write
               </Link>
             </li>
-            <li>Dashboard</li>
+            {/* {getuser && gettoken ? <li>Dashboard</li> : ""} */}
           </ul>
 
           {getuser && gettoken ? (
@@ -102,7 +102,7 @@ export default function Navbar() {
                     <Link href="/">Home</Link>
                   </li>
                   <li>
-                    <Link href="/Write">Write</Link>
+                    <Link href="/write">Write</Link>
                   </li>
                   <li>
                     <Link href="/">Dashboard</Link>
@@ -136,7 +136,7 @@ export default function Navbar() {
               <RiCloseLine
                 color="#000"
                 size="2rem"
-                style={{zIndex: "9999"}}
+                style={{ zIndex: "9999" }}
                 onClick={() => setToggleMenu(false)}
               />
             ) : (
