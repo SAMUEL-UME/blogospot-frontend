@@ -1,11 +1,23 @@
 .content{
-    background-color: whitesmoke;
-    width: 80%;
-    font-size: 20px;
-    display: block;
-    display:block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: whitesmoke; */
+    width: 60%;
+    font-size: 18px;
+    /* display: block; */
+    margin-top: 150px;
+    margin-bottom: 50px;
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
+    text-align: left;
+    padding: 50px;
+    gap: 30px;
     font-family: "Montserrat", sans-serif;
+}
+
+@media (max-width: 580px){
+    .content{
+        width: 90%;
+    }
 }
