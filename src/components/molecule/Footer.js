@@ -21,31 +21,46 @@ const Footer = () => {
           <div>
             <h2 className={styles.footer_content_heading}>About</h2>
             <ul>
-              <li>Blog</li>
-              <li>Team</li>
-              <li></li>
-              <li>item 4</li>
+              <li>
+                <Link href={"/about"}>Blog</Link>
+              </li>
+              <li>
+                <Link href={"/"}>Team</Link>
+              </li>
+              <li>
+                <Link href={"/"}>item 4</Link>
+              </li>
             </ul>
           </div>
           <div>
             <h2 className={styles.footer_content_heading}>Social</h2>
             <ul>
-              <li>Linkedin</li>
-              <li>Twitter</li>
-              <li>Facebook</li>
+              <li>
+                <Link href={"/"}>Linkedin</Link>
+              </li>
+              <li>
+                <Link href={"/"}>Twitter</Link>
+              </li>
+              <li>
+                <Link href={"/"}>Facebook</Link>
+              </li>
             </ul>
           </div>
           <div>
             <h2 className={styles.footer_content_heading}>Privacy</h2>
             <ul>
-              <li>Terms & condition</li>
-              <li>Privacy policy</li>
+              <li>
+                <Link href={"/terms"}>Terms & condition</Link>
+              </li>
+              <li>
+                <Link href={"/privacy"}>Privacy policy</Link>
+              </li>
             </ul>
           </div>
         </div>
         <div className={styles.term}>
           <div>
-            <p>@2023 Blogospot all right &copy; reserved </p>
+            <p>@2023 Blogospot all &copy;copy right reserved </p>
           </div>
           <div>
             <p>All system operational</p>
