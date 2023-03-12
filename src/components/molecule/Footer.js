@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styles from "@/styles/molecules/Footer.module.css";
 import Link from "next/link";
 import logo from "@/public/logo3.png";
+import logo2 from "@/public/logo2.png";
 import Image from "next/image";
 
 const Footer = () => {
@@ -9,13 +10,16 @@ const Footer = () => {
     <div className={`${styles.footer}`}>
       <div className={styles.container_footer}>
         <div className={styles.footer_heading}>
-          <Image
-            src={logo}
-            width="200"
-            height="200"
-            alt="auto"
-            priority="true"
-          />
+        <Link href="/" passHref>
+            <Image
+              src={logo}
+              width="150"
+              height="150"
+              alt="auto"
+              priority="true"
+            />
+          </Link>
+      
         </div>
         <div className={styles.footer_content}>
           <div>
@@ -60,7 +64,7 @@ const Footer = () => {
         </div>
         <div className={styles.term}>
           <div>
-            <p>@2023 Blogospot all &copy;copy right reserved </p>
+            <p>@2023 Blogospot - all &copy;copy right reserved </p>
           </div>
           <div>
             <p>All system operational</p>

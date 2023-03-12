@@ -1,8 +1,12 @@
 import Head from "next/head";
 import styles from "@/styles/home/Home.module.css";
-import BlogBlock from "@/src/components/template/BlogBlock";
-import Signup from "@/src/components/template/Signup";
-import Login from "@/src/components/template/Login";
+
+import Posts from "@/src/components/template/Post/Posts.js";
+import { BsFacebook } from "react-icons/bs";
+import { FaPinterestP } from "react-icons/fa";
+import { AiTwotoneMail } from "react-icons/ai";
+import { BsTwitter } from "react-icons/bs";
+import { BsLinkedin } from "react-icons/bs";
 
 export default function Home({ data }) {
   return (
@@ -13,14 +17,55 @@ export default function Home({ data }) {
         <link rel="icon" href="/favicon.ico" width="100px" height="30px" />
         <title>Blogospot</title>
       </Head>
-      <main className="bg-[#f5f5f5]">
+      <main >
         <div className={styles.hero}></div>
-        <div className="container m-auto flex flex-col md:flex-row-reverse justify-content-between mt-11 relative">
-          <div className={`${styles.main} md:w-8/12`}>
+        <div className={`${styles.main} container m-auto`}>
+          {/* All post data  */}
+          <div className={`${styles.posts} `}>
             <h1 className={styles.container_h1}>Featured Post</h1>
-            <BlogBlock data={data} />
+            <Posts data={data} />
           </div>
-          <div className="md:w-4/12 h-screen bg-[#a8201a] md:mr-6 rounded-lg hover:bg-[#000] transition-all ease-in-out delay-150"></div>
+          {/* Aside (Filter post by tags, recent post, most viewed) */}
+          <div className={`${styles.aside}`}>
+            <div className={styles.social}>
+              <div className={styles.top}>
+                <div>
+                  <BsTwitter
+                    style={{ color: "#fff" }}
+                    className={styles.icon}
+                  />
+                </div>
+                <div>
+                  <BsFacebook
+                    style={{ color: "#fff" }}
+                    className={styles.icon}
+                  />
+                </div>
+                <div>
+                  <BsLinkedin
+                    style={{ color: "#fff" }}
+                    className={styles.icon}
+                  />
+                </div>
+                <div>
+                  <AiTwotoneMail
+                    style={{ color: "#444444" }}
+                    className={styles.icon}
+                  />
+                </div>
+              </div>
+              <div className={styles.bottom}>
+                <div>
+                  <FaPinterestP
+                    style={{ color: "#fff" }}
+                    className={styles.icon}
+                  />
+                </div>
+              </div>
+            </div>
+            <div></div>
+            <div></div>
+          </div>
         </div>
       </main>
     </>

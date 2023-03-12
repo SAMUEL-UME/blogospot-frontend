@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Footer from "../components/molecule/Footer";
 import Navbar from "../components/molecule/Navbar";
 import { Provider } from "react-redux";
-
 import store from "@/src/Redux/store";
 
 const MainLayout = ({ children }) => {
@@ -10,7 +9,7 @@ const MainLayout = ({ children }) => {
     <>
       <Provider store={store}>
         <Navbar />
-        <main>{children}</main>
+        <main className="main">{children}</main>
         <Footer />
       </Provider>
     </>
