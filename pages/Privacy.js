@@ -24,7 +24,7 @@ const Privacy = () => {
           This Privacy Policy only applies to our online activities and is
           applicable to information exchanged and/or collected by visitors to
           our website. This policy does not extend to data collected outside of
-          this website or by other means. The{" "}
+          this website or by other means. The {" "}
           <a href="https://blogospot-frontend.vercel.app/">
             Privacy Policy Generator
           </a>

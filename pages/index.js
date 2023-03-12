@@ -1,5 +1,6 @@
 import Head from "next/head";
 import styles from "@/styles/home/Home.module.css";
+
 import Posts from "@/src/components/template/Post/Posts.js";
 import { BsFacebook } from "react-icons/bs";
 import { FaPinterestP } from "react-icons/fa";
