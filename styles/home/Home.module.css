@@ -15,6 +15,7 @@
 }
 .aside {
   width: 28%;
+  display: none;
 }
 .posts {
   width: 70%;
@@ -50,7 +51,6 @@
 
 .social {
   width: 300px;
-  border: 1px solid;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -67,7 +67,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid blue;
 }
 .social .top div {
   width: 60px;
