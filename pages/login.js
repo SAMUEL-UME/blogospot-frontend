@@ -1,5 +1,5 @@
 import React, { use, useState, useEffect } from "react";
-import LoginPage from "../src/components/template/Login";
+import LoginPage from "../src/components/template/Auth/Signin";
 import { useDispatch, useSelector } from "react-redux";
 import { signinUser } from "../src/Redux/authSlice";
 import { useRouter } from "next/router";
@@ -18,7 +18,7 @@ export default function Login() {
       router.push("/");
     }
   }, [msg]);
-  
+
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setState((prevProps) => ({

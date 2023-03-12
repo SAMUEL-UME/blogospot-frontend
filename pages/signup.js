@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
+import SignupPage from "../src/components/template/Auth/Signup";
 import { useDispatch, useSelector } from "react-redux";
 import { signupUser } from "../src/Redux/authSlice";
 import { useRouter } from "next/router";
 import { removeQuotes } from "../src/utils";
-
-import SignupPage from "../src/components/template/Signup";
 
 const Signup = () => {
   const [state, setState] = useState({

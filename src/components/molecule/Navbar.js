@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import styles from "@/styles/molecules/Navbar.module.css";
 import logo2 from "@/public/logo2.png";
+import logo from "@/public/logo3.png";
 import Image from "next/image";
 import { useSelector, useDispatch } from "react-redux";
 import Link from "next/link";
@@ -43,7 +44,7 @@ export default function Navbar() {
         <div className={styles.logo}>
           <Link href="/" passHref>
             <Image
-              src={logo2}
+              src={logo}
               width="150"
               height="150"
               alt="auto"

@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "@/styles/auth/Login.module.css";
 import Link from "next/link";
-import loader from "../../../public/loader.gif";
+import loader from "@/public/loader.gif";
 import Image from "next/image";
 
-export default function LoginPage({
+export default function SigninPage({
   handleInputChange,
   state,
   handleSubmit,

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import CreateBlog from "../src/components/template/CreateBlog";
+import CreateBlog from "../src/components/template/CreatePost";
 import { useRouter } from "next/router";
 
 const Write = () => {
