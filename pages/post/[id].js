@@ -1,7 +1,12 @@
 import React from "react";
+import Post from "../../src/components/template/Post/Post";
 
 export default function BlogPost({ data }) {
-  return <div>{data.title}</div>;
+  return (
+    <div>
+      <Post data={data} />
+    </div>
+  );
 }
 
 export async function getStaticPaths() {
@@ -27,5 +32,3 @@ export async function getStaticProps(context) {
     props: { data: postData },
   };
 }
-
-

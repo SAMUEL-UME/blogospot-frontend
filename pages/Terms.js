@@ -3,7 +3,7 @@ import styles from "@/styles/policy/Terms.module.css";
 
 const Terms = () => {
   return (
-    <div>
+    <div className={styles.container}>
       <div className={styles.content}>
         <h2>
           <strong>Terms and Conditions</strong>

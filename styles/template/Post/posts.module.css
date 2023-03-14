@@ -1,3 +1,9 @@
+.dark {
+  background: var(--dark-mode);
+}
+.light {
+  background: var(--light-mode);
+}
 .blog {
   display: block;
   width: 100%;
@@ -6,6 +12,12 @@
   margin: 0.5rem 0px;
   border-radius: 6px;
   padding: 1rem;
+}
+.dark .blog {
+  background: var(--secondary-color);
+}
+.light .blog {
+  background: var(--primary-color);
 }
 .user {
   display: flex;
@@ -30,12 +42,17 @@
   /* line-height: 20px; */
   font-size: 17px !important;
   font-weight: bold;
-  color: var(--primary-color);
   text-transform: capitalize;
   line-height: 15px;
   width: fit-content;
   padding: 5px 2px;
   transition: 1px solid;
+}
+.dark .user div h2 {
+  color: var(--primary-color);
+}
+.light .blog {
+  color: var(--secondary-color);
 }
 .user div h2:hover {
   background: #932a1e3c;
@@ -46,8 +63,13 @@
   font-size: 14px;
   font-weight: 600;
   line-height: 13px;
-  color: var(--primary-color);
   text-transform: capitalize;
+}
+.dark .user div p:nth-of-type(1) {
+  color: var(--primary-color);
+}
+.light .user div p:nth-of-type(1) {
+  color: var(--secondary-color);
 }
 .content {
   padding: 0 0 0 40px;
@@ -63,6 +85,12 @@
   cursor: pointer;
   transition: color 0.3s ease;
 }
+.dark .content h1 {
+  color: var(--primary-color);
+}
+.light .content h1 {
+  color: var(--secondary-color);
+}
 .content h1:hover {
   color: #932a1eb3;
 }
@@ -71,6 +99,12 @@
   color: var(--sub-color);
   display: flex;
   gap: 0.8rem;
+}
+.dark .content_tag {
+  color: var(--primary-color);
+}
+.light .content_tag {
+  color: var(--secondary-color);
 }
 .content_tag span {
   cursor: pointer;
@@ -102,14 +136,27 @@
   transition: all 0.33s ease;
   cursor: pointer;
 }
-.react_icon {
+
+.dark .react_icon {
   color: var(--primary-color);
-  /* background: var(--primary-color); */
+}
+.light .react_icon {
+  color: var(--secondary-color);
 }
 .int_one div p {
   font-weight: 550;
   color: var(--primary-color);
 }
+
+/************ dark theme ***************/
+.dark .int_one div p {
+  color: var(--primary-color);
+}
+.light .int_one div p {
+  color: var(--secondary-color);
+}
+/* ************************************** */
+
 .int_one div:hover {
   background: #a8211a0e;
   transition: all 0.003s ease-in-out;
@@ -125,7 +172,12 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 15px;
+}
+.dark .int_two p {
   color: var(--primary-color);
+}
+.light .int_one p {
+  color: var(--secondary-color);
 }
 .int_two .save {
   line-height: 15px;

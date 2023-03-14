@@ -10,8 +10,17 @@ function checkUserAndToken(setGetUser, setGetToken) {
   }
 }
 
+function getTheme(setDarkTheme) {
+  const theme = localStorage.getItem("theme");
+  if (theme === "true") {
+    setDarkTheme(true);
+  } else {
+    setDarkTheme(false);
+  }
+}
+
 function removeQuotes(str) {
   return str.replace(/['"]/g, "");
 }
 
-export { checkUserAndToken, removeQuotes };
+export { checkUserAndToken, removeQuotes, getTheme };
