@@ -77,7 +77,7 @@ const Posts = ({ data, darktheme }) => {
       {Array(12)
         .fill(0)
         .map((_, i) => (
-            <div key={i} className="flex flex-col bg-[#171717] mb-4 rounded-lg shadow-sm animate-pulse">
+            <div key={i} className={`${styles.blog} flex flex-col bg-[#171717] mb-4 rounded-lg shadow-sm animate-pulse`}>
                 <div className="flex flex-row p-4 pb-1">
                    <div className="bg-[#a8201a]/20 rounded-full h-[40px] w-[40px] flex justify-center items-center">  
                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 text-gray-400">
