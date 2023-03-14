@@ -77,10 +77,10 @@ const Posts = ({ data, darktheme }) => {
       {Array(12)
         .fill(0)
         .map((_, i) => (
-            <div key={i} className="flex flex-col border border-gray-600 mb-4 rounded-lg shadow-sm animate-pulse">
-                <div className="bg-gray-600 flex flex-row p-4 pb-1">
-                   <div className="bg-gray-500 rounded-full h-24 w-24 aspect-video flex justify-center items-center">  
-                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-10 text-gray-400">
+            <div key={i} className="flex flex-col bg-[#171717] mb-4 rounded-lg shadow-sm animate-pulse">
+                <div className="flex flex-row p-4 pb-1">
+                   <div className="bg-[#a8201a]/20 rounded-full h-[40px] w-[40px] flex justify-center items-center">  
+                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 text-gray-400">
                    <path
                        strokeLinecap="round"
                        strokeLinejoin="round"
@@ -89,19 +89,24 @@ const Posts = ({ data, darktheme }) => {
                    </svg>                 
                    </div>
                    <div className="flex flex-col space-x-2 space-y-2">
-                   <div className="bg-gray-500 w-32 h-4 mt-6 ml-2 rounded-lg"></div>
-                   <div className="bg-gray-500 w-64 h-2 rounded-lg"></div>
+                   <div className="bg-[#a8201a]/20 w-32 h-3 mt-2 ml-2 rounded-lg"></div>
+                   <div className="bg-[#a8201a]/20 w-64 h-2 rounded-lg"></div>
                    </div>
                 </div>
-                <div className="bg-gray-600 p-6 pt-0 space-y-4 justify-center items-center m-0">
-                  <div className="bg-gray-500 w-4/5 h-4 ml-20 pt-0 rounded-lg"></div>
-                  <div className="bg-gray-500 w-64 h-4 ml-20 pt-0 rounded-lg"></div>
-                  <div className="bg-gray-500 w-32 h-4 ml-20 pt-0  rounded-lg"></div>
-                  <div className="bg-gray-500 w-24 h-4 ml-20 pt-0  rounded-lg"></div>
+                <div className="p-6 pt-3 space-y-4 justify-center items-center">
+                  <div className="bg-[#a8201a]/20 w-4/5 h-4 ml-10 pt-0 rounded-lg"></div>
+                  <div className="bg-[#a8201a]/20 w-4/5 h-4 ml-10 pt-0 rounded-lg"></div>
+                <div className="p-6 ml-5 mt-10 pt-6 flex justify-between items-center w-1/2">
+                  <div className="bg-[#a8201a]/20 w-24 h-2 rounded-lg items-end"></div>
+                  <div className="bg-[#a8201a]/20 w-24 h-2 rounded-lg items-end"></div>
+                </div>
+                </div>
+                <div className="flex justify-between p-6 pt-1">
+                <div className="pt-0 flex justify-start gap-14 items-center w-[50%]">
+                  <div className="bg-[#a8201a]/20 w-24 h-5 ml-10 rounded-lg items-end"></div>
+                  <div className="bg-[#a8201a]/20 w-24 h-5 rounded-lg items-end"></div>
                   </div>
-                  <div className="bg-gray-600 p-6 pt-0 justify-center items-center w-[100%]">
-                  <div className="bg-gray-500 w-24 h-2 ml-20 rounded-lg items-end"></div>
-                
+                  <div className="bg-[#a8201a]/20 w-16 h-5 rounded-lg items-end pr-10"></div>
                 </div>
               </div>
             ))}
