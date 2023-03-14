@@ -7,7 +7,8 @@ import { TfiTag } from "react-icons/tfi";
 import { RiHeart2Line } from "react-icons/ri";
 import { TbMessageCircle2 } from "react-icons/tb";
 
-const Posts = ({ data }) => {
+
+const Posts = ({ data, darktheme }) => {
   const [loading, setLoading] = React.useState(true);
 
     React.useEffect(() => {
@@ -16,7 +17,7 @@ const Posts = ({ data }) => {
         }, 5000);
     }, []);
   return (
-    <div>
+ <div className={`${darktheme ? styles.dark : styles.light}`}>
     {!loading ? (
       <React.Fragment>
       {data?.map((data) => (
@@ -51,7 +52,10 @@ const Posts = ({ data }) => {
                   </p>
                 </div>
                 <div>
-                  <TbMessageCircle2 size="1.5rem" className={styles.react_icon} />
+                  <TbMessageCircle2
+                    size="1.5rem"
+                    className={styles.react_icon}
+                  />
                   <p>
                     3 <span>Comment</span>
                   </p>
@@ -60,7 +64,7 @@ const Posts = ({ data }) => {
               <div className={styles.int_two}>
                 <p>{data.reading_time} min read</p>
                 <div>
-                  <TfiTag size="2.5rem" className={styles.save} />
+                  <TfiTag size="2rem" className={styles.save} />
                 </div>
               </div>
             </div>

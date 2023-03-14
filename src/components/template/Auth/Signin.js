@@ -10,9 +10,14 @@ export default function SigninPage({
   handleSubmit,
   error,
   loading,
+  darktheme,
 }) {
   return (
-    <div className={styles.login_container}>
+    <div
+      className={`${styles.login_container}  ${
+        darktheme ? styles.dark : styles.light
+      }`}
+    >
       <div className={styles.login_box}>
         <p>Sign in</p>
         <form onSubmit={handleSubmit}>

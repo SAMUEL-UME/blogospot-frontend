@@ -1,14 +1,22 @@
 import Head from "next/head";
 import styles from "@/styles/home/Home.module.css";
-
+import React, { useState, useEffect } from "react";
 import Posts from "@/src/components/template/Post/Posts.js";
 import { BsFacebook } from "react-icons/bs";
 import { FaPinterestP } from "react-icons/fa";
 import { AiTwotoneMail } from "react-icons/ai";
 import { BsTwitter } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
+import { useSelector } from "react-redux";
+import { getTheme } from "../src/utils";
 
 export default function Home({ data }) {
+  const [darktheme, setDarkTheme] = useState(false);
+  const { theme } = useSelector((state) => state.theme);
+
+  useEffect(() => {
+    getTheme(setDarkTheme);
+  }, [theme, darktheme]);
   return (
     <>
       <Head>
@@ -17,13 +25,17 @@ export default function Home({ data }) {
         <link rel="icon" href="/favicon.ico" width="100px" height="30px" />
         <title>Blogospot</title>
       </Head>
-      <main >
+      <main
+        className={`${styles.navbar_container} ${
+          darktheme ? styles.dark : styles.light
+        }`}
+      >
         <div className={styles.hero}></div>
         <div className={`${styles.main} container m-auto`}>
           {/* All post data  */}
           <div className={`${styles.posts} `}>
             <h1 className={styles.container_h1}>Featured Post</h1>
-            <Posts data={data} />
+            <Posts data={data} darktheme={darktheme} />
           </div>
           {/* Aside (Filter post by tags, recent post, most viewed) */}
           <div className={`${styles.aside}`}>
