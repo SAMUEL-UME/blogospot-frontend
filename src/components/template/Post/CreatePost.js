@@ -1,26 +1,7 @@
 import React, { useState } from "react";
-import styles from "@/styles/template/CreateBlog.module.css";
+import styles from "@/styles/template/Post/CreateBlog.module.css";
 
-const CreateBlog = () => {
-  const [state, setState] = useState({
-    title: "",
-    description: "",
-    post: "",
-    tags: "",
-  });
-
-  const handleInputChange = (event) => {
-    const { name, value } = event.target;
-    setState((prevProps) => ({
-      ...prevProps,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-  };
-
+const CreateBlog = ({ state, handleInputChange, handleSubmit }) => {
   return (
     <div className={styles.container}>
       <form className={styles.formmain} onSubmit={handleSubmit}>
@@ -53,12 +34,11 @@ const CreateBlog = () => {
           <input
             type="text"
             name="post"
-            value={state.post}
+            value={state.body}
             onChange={handleInputChange}
           />
 
           <div className={styles.button}>
-            <label></label>
             <button type="submit">submit</button>
           </div>
         </div>

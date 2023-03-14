@@ -1,11 +1,21 @@
-import React, { useEffect } from "react";
-import CreateBlog from "../src/components/template/CreatePost";
+import React, { useEffect, useState } from "react";
+import CreateBlog from "../src/components/template/Post/CreatePost";
 import { useRouter } from "next/router";
+import { useSelector } from "react-redux";
+import { checkUserAndToken } from "../src/utils";
 
 const Write = () => {
-  const router = useRouter();
+  const [getUser, setGetUser] = useState(null);
+  const [getToken, setGetToken] = useState(null);
+  const { user } = useSelector((state) => state.user);
+  const [state, setState] = useState({
+    title: "",
+    description: "",
+    body: "",
+    tags: "",
+  });
 
-  function checkUserAndToken() {
+  function getUserAndToken() {
     const user = localStorage.getItem("user");
     const token = localStorage.getItem("token");
     if (!user || !token) {
@@ -13,11 +23,35 @@ const Write = () => {
     }
   }
   useEffect(() => {
-    checkUserAndToken();
+    getUserAndToken();
   });
+  useEffect(() => {
+    checkUserAndToken(setGetUser, setGetToken);
+  }, [user]);
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setState((prevProps) => ({
+      ...prevProps,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    
+
+    
+  };
+  const router = useRouter();
+
   return (
     <div>
-      <CreateBlog />
+      <CreateBlog
+        handleSubmit={handleSubmit}
+        handleInputChange={handleInputChange}
+        state={state}
+      />
     </div>
   );
 };
