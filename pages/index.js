@@ -31,7 +31,7 @@ export default function Home({ data }) {
         }`}
       >
         <div className={styles.hero}></div>
-        <div className={`${styles.main} container m-auto`}>
+        <div className={`${styles.main} m-auto`}>
           {/* All post data  */}
           <div className={`${styles.posts} `}>
             <h1 className={styles.container_h1}>Featured Post</h1>

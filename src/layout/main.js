@@ -1,20 +1,22 @@
 import React, { useState, useEffect } from "react";
 import Footer from "../components/molecule/Footer";
 import Navbar from "../components/molecule/Navbar";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { getTheme, deleteItem } from "../utils";
+import { addTheme } from "../Redux/themeSlice";
 
 const MainLayout = ({ children }) => {
-  const [darktheme, setDarkTheme] = useState(false);
-  const { theme } = useSelector((state) => state.theme);
+  const { theme } = useSelector((state) => state);
+
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    getTheme(setDarkTheme);
+    dispatch(addTheme());
     deleteItem();
-  }, [theme, darktheme]);
+  }, [theme]);
 
   return (
-    <div className={`${darktheme ? "dark" : "light"}`}>
+    <div className={`${theme ? "dark" : "light"}`}>
       <Navbar />
       <main className="main">{children}</main>
       <Footer />

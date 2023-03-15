@@ -21,7 +21,6 @@ export default function Navbar() {
   const [getuser, setGetUser] = useState(null);
   const [gettoken, setGetToken] = useState(null);
   const [toggleMenu, setToggleMenu] = useState(false);
-  const [darktheme, setDarkTheme] = useState(false);
   const { user } = useSelector((state) => state.user);
   const { theme } = useSelector((state) => state.theme);
 
@@ -43,13 +42,7 @@ export default function Navbar() {
   // checks if a authenticated by getting the user Credential and token from localStorage
   useEffect(() => {
     checkUserAndToken(setGetUser, setGetToken);
-  }, [user]);
-
-  // Get the theme from localStorage
-  useEffect(() => {
-    console.log(toggleMenu);
-    getTheme(setDarkTheme);
-  }, [theme, darktheme]);
+  }, [user, theme]);
 
   // handle the toggle dispatch to change theme
   const handleTheme = () => {
@@ -72,13 +65,13 @@ export default function Navbar() {
   return (
     <div
       className={`${styles.navbar_container} ${
-        darktheme ? styles.dark : styles.light
+        theme ? styles.dark : styles.light
       }`}
     >
       <div className={styles.navbar}>
         <div className={styles.navbar_logo}>
           <Link href="/" passHref>
-            {darktheme ? (
+            {theme ? (
               <Image
                 src={logo}
                 width="150"
@@ -152,7 +145,7 @@ export default function Navbar() {
                 <Link href={"/login"}>Sign in</Link>
               </li>
               <li onClick={handleTheme}>
-                {darktheme ? (
+                {theme ? (
                   <RiSunFill className={styles.sun} />
                 ) : (
                   <RiMoonFill className={styles.moon} />

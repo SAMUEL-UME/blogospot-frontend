@@ -17,8 +17,11 @@ const themeSlice = createSlice({
         localStorage.setItem("theme", state.theme);
       }
     },
+    addTheme: (state) => {
+      state.theme = localStorage.getItem("theme");
+    },
   },
 });
 
-export const { toggle } = themeSlice.actions;
+export const { toggle, addTheme } = themeSlice.actions;
 export default themeSlice.reducer;

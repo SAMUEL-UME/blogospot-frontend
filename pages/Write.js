@@ -39,9 +39,6 @@ const Write = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    
-
-    
   };
   const router = useRouter();
 
