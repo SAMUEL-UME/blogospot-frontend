@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "@/styles/template/Post/CreateBlog.module.css";
+import Tiptap from '../components/Tiptap'
 
 const CreateBlog = ({ state, handleInputChange, handleSubmit }) => {
   return (
@@ -37,6 +38,7 @@ const CreateBlog = ({ state, handleInputChange, handleSubmit }) => {
             value={state.body}
             onChange={handleInputChange}
           />
+          <Tiptap />
 
           <div className={styles.button}>
             <button type="submit">submit</button>
