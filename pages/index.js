@@ -1,6 +1,5 @@
 import Head from "next/head";
 import styles from "@/styles/home/Home.module.css";
-import React, { useState, useEffect } from "react";
 import Posts from "@/src/components/template/Post/Posts.js";
 import { BsFacebook } from "react-icons/bs";
 import { FaPinterestP } from "react-icons/fa";
@@ -8,15 +7,9 @@ import { AiTwotoneMail } from "react-icons/ai";
 import { BsTwitter } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
 import { useSelector } from "react-redux";
-import { getTheme } from "../src/utils";
 
 export default function Home({ data }) {
-  const [darktheme, setDarkTheme] = useState(false);
-  const { theme } = useSelector((state) => state.theme);
-
-  useEffect(() => {
-    getTheme(setDarkTheme);
-  }, [theme, darktheme]);
+  const { theme, menu } = useSelector((state) => state.theme);
   return (
     <>
       <Head>
@@ -27,7 +20,7 @@ export default function Home({ data }) {
       </Head>
       <main
         className={`${styles.navbar_container} ${
-          darktheme ? styles.dark : styles.light
+          theme === "true" ? styles.dark : styles.light
         }`}
       >
         <div className={styles.hero}></div>
@@ -35,10 +28,12 @@ export default function Home({ data }) {
           {/* All post data  */}
           <div className={`${styles.posts} `}>
             <h1 className={styles.container_h1}>Featured Post</h1>
-            <Posts data={data} darktheme={darktheme} />
+            <Posts data={data} theme={theme} />
           </div>
           {/* Aside (Filter post by tags, recent post, most viewed) */}
-          <div className={`${styles.aside}`}>
+          <div
+            className={`${styles.aside} ${menu === "open" ? styles.open : ""}`}
+          >
             <div className={styles.social}>
               <div className={styles.top}>
                 <div>
@@ -61,7 +56,7 @@ export default function Home({ data }) {
                 </div>
                 <div>
                   <AiTwotoneMail
-                    style={{ color: "#444444" }}
+                    style={{ color: "#f4f4f4" }}
                     className={styles.icon}
                   />
                 </div>

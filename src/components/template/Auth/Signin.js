@@ -10,12 +10,12 @@ export default function SigninPage({
   handleSubmit,
   error,
   loading,
-  darktheme,
+  theme,
 }) {
   return (
     <div
       className={`${styles.login_container}  ${
-        darktheme ? styles.dark : styles.light
+        theme === "true" ? styles.dark : styles.light
       }`}
     >
       <div className={styles.login_box}>
@@ -55,7 +55,7 @@ export default function SigninPage({
           )}
         </form>
         <p>
-          Don&apos;t have an account?{" "}
+          Don&apos;t have an account?
           <Link href="/signup" className={styles.a2}>
             Sign up!
           </Link>

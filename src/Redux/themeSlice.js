@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   theme: "false",
+  menu: "close",
 };
 
 const themeSlice = createSlice({
@@ -20,8 +21,20 @@ const themeSlice = createSlice({
     addTheme: (state) => {
       state.theme = localStorage.getItem("theme");
     },
+
+    sideBar: (state, action) => {
+      if (action.payload === "close") {
+        state.menu = "close";
+      } else {
+        if (state.menu === "close") {
+          state.menu = "open";
+        } else {
+          state.menu = "close";
+        }
+      }
+    },
   },
 });
 
-export const { toggle, addTheme } = themeSlice.actions;
+export const { toggle, addTheme, sideBar } = themeSlice.actions;
 export default themeSlice.reducer;
