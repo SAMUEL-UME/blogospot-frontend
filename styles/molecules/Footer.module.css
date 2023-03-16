@@ -32,6 +32,11 @@
   width: 100%;
   text-align: left;
 }
+.footer_heading img {
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
 .footer_content_heading {
   font-size: 20px;
   color: var(--primary-color);

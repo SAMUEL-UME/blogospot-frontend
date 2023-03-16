@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { signupUser } from "../src/Redux/authSlice";
 import { useRouter } from "next/router";
 import { removeQuotes } from "../src/utils";
-import { getTheme } from "../src/utils";
 
 const Signup = () => {
   const [state, setState] = useState({
@@ -15,16 +14,10 @@ const Signup = () => {
     password: "",
   });
 
-  const [darktheme, setDarkTheme] = useState(false);
   const { theme } = useSelector((state) => state.theme);
   const dispatch = useDispatch();
   const router = useRouter();
   const { error, loading, msg } = useSelector((state) => state.user);
-
-  // set theme form localStorage if it exist
-  useEffect(() => {
-    getTheme(setDarkTheme);
-  }, [theme, darktheme]);
 
   if (error) {
     removeQuotes(error);
@@ -34,7 +27,7 @@ const Signup = () => {
     if (msg) {
       router.push("/");
     }
-  }, [msg]);
+  }, [msg, theme]);
 
   //Handle user input
   const handleInputChange = (event) => {
@@ -58,7 +51,7 @@ const Signup = () => {
       state={state}
       error={error}
       loading={loading}
-      darktheme={darktheme}
+      theme={theme}
     />
   );
 };

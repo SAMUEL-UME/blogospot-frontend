@@ -1,9 +1,15 @@
 import React from "react";
 import styles from "@/styles/template/About.module.css";
+import { useSelector } from "react-redux";
 
 const Aboutus = () => {
+  const { theme } = useSelector((state) => state.theme);
   return (
-    <div className={styles.main}>
+    <div
+      className={`${styles.main} ${
+        theme === "true" ? styles.dark : styles.light
+      }`}
+    >
       <div className={styles.content}>
         <div className={styles.head}>
           <h2>About page </h2>

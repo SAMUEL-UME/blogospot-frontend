@@ -10,13 +10,12 @@ export default function SignupPage({
   handleSubmit,
   error,
   loading,
-  darktheme,
+ theme,
 }) {
-  console.log(error);
   return (
     <div
       className={`${styles.login_container}   ${
-        darktheme ? styles.dark : styles.light
+        theme === "true"? styles.dark : styles.light
       }`}
     >
       <div className={styles.login_box}>

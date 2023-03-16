@@ -20,17 +20,53 @@ function deleteItem() {
   }
 }
 
-function getTheme(setDarkTheme) {
-  const theme = localStorage.getItem("theme");
-  if (theme === "true") {
-    setDarkTheme(true);
-  } else {
-    setDarkTheme(false);
-  }
-}
+
 
 function removeQuotes(str) {
   return str.replace(/['"]/g, "");
 }
 
-export { checkUserAndToken, removeQuotes, getTheme, deleteItem };
+export { checkUserAndToken, removeQuotes, deleteItem };
+  
+  
+// import React, { useState } from "react";
+
+// function ImageUploader() {
+//   const [selectedFile, setSelectedFile] = useState(null);
+//   const [uploadStatus, setUploadStatus] = useState("");
+
+//   const handleFileChange = (event) => {
+//     setSelectedFile(event.target.files[0]);
+//   };
+
+//   const handleSubmit = (event) => {
+//     event.preventDefault();
+
+//     const formData = new FormData();
+//     formData.append("image", selectedFile);
+
+//     fetch("https://example.com/api/upload", {
+//       method: "POST",
+//       body: formData
+//     })
+//       .then(response => {
+//         if (response.ok) {
+//           setUploadStatus("Upload successful!");
+//         } else {
+//           setUploadStatus("Upload failed.");
+//         }
+//       })
+//       .catch(error => {
+//         console.error(error);
+//         setUploadStatus("Upload failed.");
+//       });
+//   };
+
+//   return (
+//     <form onSubmit={handleSubmit}>
+//       <input type="file" onChange={handleFileChange} />
+//       <button type="submit">Upload Image</button>
+//       {uploadStatus && <p>{uploadStatus}</p>}
+//     </form>
+//   );
+// }

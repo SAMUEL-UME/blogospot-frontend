@@ -5,37 +5,32 @@ import logo from "@/public/logo3.png";
 import logo2 from "@/public/logo2.png";
 import Image from "next/image";
 import { useSelector } from "react-redux";
-import { getTheme } from "../../utils/index";
 
 const Footer = () => {
-  const [darktheme, setDarkTheme] = useState(false);
   const { theme } = useSelector((state) => state.theme);
-
-  // Get the theme from localStorage
-  useEffect(() => {
-    getTheme(setDarkTheme);
-  }, [theme, darktheme]);
 
   return (
     <div
-      className={`${styles.footer}  ${darktheme ? styles.dark : styles.light}`}
+      className={`${styles.footer}  ${
+        theme === "true" ? styles.dark : styles.light
+      }`}
     >
       <div className={styles.container_footer}>
         <div className={styles.footer_heading}>
           <Link href="/" passHref>
-            {darktheme ? (
+            {theme === "true" ? (
               <Image
                 src={logo}
-                width="150"
-                height="150"
+                width="120"
+                height="120"
                 alt="auto"
                 priority="true"
               />
             ) : (
               <Image
                 src={logo2}
-                width="150"
-                height="150"
+                width="120"
+                height="120"
                 alt="auto"
                 priority="true"
               />

@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import styles from "@/styles/template/Post/CreateBlog.module.css";
 import Tiptap from '../components/Tiptap'
 
