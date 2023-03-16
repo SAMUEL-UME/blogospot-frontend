@@ -5,9 +5,8 @@ import { useRouter } from "next/router";
 import { cleanup } from "../Redux/authSlice";
 import { useSelector, useDispatch } from "react-redux";
 import { deleteItem } from "../utils";
-import { addTheme } from "../Redux/themeSlice";
-import { toggle } from "../Redux/themeSlice";
-import { sideBar } from "@/src/Redux/themeSlice";
+import { addTheme, toggle, sideBar } from "../Redux/themeSlice";
+import { logout } from "../Redux/authSlice";
 
 const MainLayout = ({ children }) => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -19,8 +18,6 @@ const MainLayout = ({ children }) => {
     dispatch(addTheme());
     deleteItem();
   }, [theme, menu]);
-
-  
 
   // Closes navbar menu or page reload or navigate
   useEffect(() => {

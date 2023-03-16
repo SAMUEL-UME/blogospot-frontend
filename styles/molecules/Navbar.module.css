@@ -36,6 +36,7 @@
   align-items: center;
   gap: 0.4rem;
   justify-content: center;
+  padding-left: 1rem;
 }
 .navbar_logo_sidemenu {
   transition: all 0.035s ease;
@@ -49,11 +50,12 @@
 }
 
 .navbar_logo_menu {
-  font-size: 1.5rem;
+  font-size: 2rem !important;
   font-weight: 600;
   display: none;
   opacity: 0;
   color: var(--sub-color);
+  padding-right: 0.5rem;
 }
 .navbar_logo_sidemenu .display {
   transition: all 23s ease;

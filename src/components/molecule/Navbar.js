@@ -9,6 +9,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useSelector } from "react-redux";
+
 import { checkUserAndToken } from "../../utils/index";
 
 export default function Navbar({
@@ -73,7 +74,7 @@ export default function Navbar({
             )}
           </Link>
         </div>
-        {!getuser && !gettoken ? (
+        {getuser && gettoken ? (
           <div className={styles.navbar_signed}>
             <ul>
               <li>
