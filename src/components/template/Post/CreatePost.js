@@ -1,5 +1,5 @@
 import styles from "@/styles/template/Post/CreateBlog.module.css";
-import Tiptap from '../components/Tiptap'
+import Tiptap from "../../Tiptap";
 
 const CreateBlog = ({ state, handleInputChange, handleSubmit }) => {
   return (
