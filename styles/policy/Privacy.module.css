@@ -7,13 +7,25 @@
 
 }
 .content{
-    background-color: whitesmoke;
-    width: 80%;
-    font-size: 20px;
-    display: block;
-    display:block;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /* background-color: #f2e6fe; */
+    /* background-color: #f5f5f5; */
+    background-color: #fcfcfcda;
+    border: 1px solid #dedede;
+    gap: 20px;
+    width: 60%;
+    font-size: 19px;
+    /* display: block; */
+    margin: 100px auto 30px;
+    text-align: left;
     font-family: "Montserrat", sans-serif;
+    padding: 60px 80px;
+}
+
+@media (max-width: 988px){
+    .content{
+        width: 80%;
+        padding: 60px 50px;
+    }
 }

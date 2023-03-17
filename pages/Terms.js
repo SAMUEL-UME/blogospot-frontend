@@ -11,7 +11,7 @@ const Terms = () => {
       }`}
     >
       <div className={styles.content}>
-        <h2>
+        <h2 className={styles.heading}>
           <strong>Terms and Conditions</strong>
         </h2>
 
