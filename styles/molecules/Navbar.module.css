@@ -265,10 +265,25 @@
   border-color: var(--secondary-color);
 }
 .center a {
-  padding: 8px 16px;
+  padding: 8px 16px 8px 5px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   font-size: 16px;
   transition: all 0.3s ease;
 }
+.center_icon {
+  color: var(--sub-color);
+}
+.dark a:hover > .center_icon,
+span:hover > .center_icon {
+  color: var(--primary-color) !important  ;
+}
+.light a:hover > .center_icon,
+span:hover > .center_icon {
+  color: var(--secondary-color) !important;
+}
+
 .center a:hover {
   background: #932a1e3c;
   text-decoration: underline;
@@ -284,10 +299,16 @@
 }
 .bottom span {
   width: 100%;
-  padding: 8px 16px;
-  display: block;
+  padding: 8px 16px 8px 5px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   cursor: pointer;
 }
+.dark span:hover > .center_icon {
+  color: var(--primary-color) !important;
+}
+j
 .bottom span:hover {
   background: #932a1e3c;
   text-decoration: underline;

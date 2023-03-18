@@ -10,6 +10,7 @@ import { useSelector } from "react-redux";
 
 export default function Home({ data }) {
   const { theme, menu } = useSelector((state) => state.theme);
+  
   return (
     <>
       <Head>

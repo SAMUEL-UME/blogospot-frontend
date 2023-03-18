@@ -27,19 +27,12 @@ export default function Loading() {
                   </div>
                 </div>
                 <div className="px-10 py-3 space-y-2 justify-center items-center">
+                  <div className="bg-[#a8201a]/20 w-5/5 h-4 rounded-lg"></div>
                   <div className="bg-[#a8201a]/20 w-4/5 h-4 rounded-lg"></div>
-                  <div className="bg-[#a8201a]/20 w-3/5 h-4 rounded-lg"></div>
                   <div className="flex gap-5 items-center w-2/3 pt-4">
                     <div className="bg-[#a8201a]/20 w-20 h-3 rounded-sm items-end"></div>
                     <div className="bg-[#a8201a]/20 w-20 h-3 rounded-sm px-5 items-end"></div>
                   </div>
-                </div>
-                <div className="flex justify-between px-12 py-3 ">
-                  <div className="pt-0 flex justify-start gap-14 items-center w-[50%]">
-                    <div className="bg-[#a8201a]/20 w-24 h-4 rounded-lg items-end"></div>
-                    <div className="bg-[#a8201a]/20 w-24 h-4 rounded-lg items-end"></div>
-                  </div>
-                  <div className="bg-[#a8201a]/20 w-16 h-5 rounded-lg items-end pr-10"></div>
                 </div>
               </div>
     );

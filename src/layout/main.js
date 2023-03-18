@@ -2,22 +2,27 @@ import React, { useState, useEffect } from "react";
 import Footer from "../components/molecule/Footer";
 import Navbar from "../components/molecule/Navbar";
 import { useRouter } from "next/router";
-import { cleanup } from "../Redux/authSlice";
 import { useSelector, useDispatch } from "react-redux";
 import { deleteItem } from "../utils";
 import { addTheme, toggle, sideBar } from "../Redux/themeSlice";
-import { logout } from "../Redux/authSlice";
+import { logout, addToken, addUser, cleanup } from "../Redux/authSlice";
+
+
+
 
 const MainLayout = ({ children }) => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const { theme, menu } = useSelector((state) => state.theme);
+
   const router = useRouter();
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(addTheme());
+    dispatch(addToken());
+    dispatch(addUser());
     deleteItem();
-  }, [theme, menu]);
+  });
 
   // Closes navbar menu or page reload or navigate
   useEffect(() => {
@@ -58,7 +63,7 @@ const MainLayout = ({ children }) => {
     }
   };
   return (
-    <div className={`${theme === "true" ? "dark" : "light"}`}>
+    <div className={`${theme === "true" ? "dark" : "light"} pb-8`}>
       <Navbar
         handleTheme={handleTheme}
         handleLogout={handleLogout}
@@ -67,7 +72,7 @@ const MainLayout = ({ children }) => {
         sideMenu={sideMenu}
       />
       <main className="main">{children}</main>
-      <Footer />
+      <Footer className="px-3" />
     </div>
   );
 };

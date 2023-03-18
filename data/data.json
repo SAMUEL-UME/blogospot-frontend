@@ -496,5 +496,44 @@
       "image": "https://th.bing.com/th/id/OIP.c8JgHsO0ZNgnF5JUcTmO3AHaE5?pid=ImgDet&rs=1",
       "__v": 0
     }
+  ],
+  "users": [
+    {
+      "_id": "6361e76d78479e4dbc3b32b3",
+      "first_name": "Bello",
+      "last_name": "sam",
+      "username": "user20011",
+      "email": "bello11@gmail.com",
+      "password": "$2b$10$On9rXdBLjSsgMpARpVwyuuK1LDplYt5a9Zb5pXo530HikrRTr9pty",
+      "__v": 0
+    },
+    {
+      "_id": "641340a7ac807f207fde6948",
+      "first_name": "Me",
+      "last_name": "Stack",
+      "username": "Mern-stack",
+      "email": "Mern@gmail.com",
+      "password": "$2b$10$qd.9DTaI0fTpas4DoWLW7OZZlFHGpkobonJ7Tl9Mv28XKLj/daKO.",
+      "__v": 0
+    },
+    {
+      "_id": "641344379f290e3cd6e466e2",
+      "first_name": "Aro",
+      "last_name": "Fawaz",
+      "username": "Arofawaz",
+      "email": "arofawaz2123@gmail.com",
+      "password": "$2b$10$tPvVOyrsF8niN9haCOrAIuYpuZd7VV1S7NdxhAYN1/cAnoX/4Vxfe",
+      "__v": 0
+    },
+    {
+      "_id": "6364ab2ac194766c15931e95",
+      "first_name": "Samuel",
+      "last_name": "Ume",
+      "username": "sam",
+      "email": "cume357@gmail.com",
+      "createdAt": "2022-11-04T06:03:22.899Z",
+      "updatedAt": "2022-11-04T06:03:22.899Z",
+      "__v": 0
+    }
   ]
 }
