@@ -3,9 +3,10 @@
   padding: 4rem 2rem 1rem 2rem;
   margin: auto;
   border-radius: 30px;
- 
 }
-
+.hide {
+  display: none;
+}
 .dark {
   background: var(--secondary-color);
   color: var(--primary-color);

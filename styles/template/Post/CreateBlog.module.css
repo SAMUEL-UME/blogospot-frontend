@@ -1,6 +1,5 @@
 .create_blog {
   width: 100%;
-  margin-bottom: 3rem;
 }
 .dark .create_blog {
 }
@@ -109,7 +108,7 @@
   width: 100%;
   background: var(--secondary-color);
   padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-bottom: 3rem;
   /* padding-bottom: 3rem; */
 }
 .write::-webkit-scrollbar {

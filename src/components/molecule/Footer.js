@@ -4,16 +4,18 @@ import Link from "next/link";
 import logo from "@/public/logo3.png";
 import logo2 from "@/public/logo2.png";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import { useSelector } from "react-redux";
 
 const Footer = () => {
   const { theme } = useSelector((state) => state.theme);
+  const router = useRouter();
 
   return (
     <div
       className={`${styles.footer}  ${
         theme === "true" ? styles.dark : styles.light
-      }`}
+      } ${router.pathname === "/write" ? styles.hide : ""}`}
     >
       <div className={styles.container_footer}>
         <div className={styles.footer_heading}>
