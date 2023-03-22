@@ -42,7 +42,9 @@ export default function Navbar({
     <div
       className={`${styles.navbar_container} ${
         theme === "true" ? styles.dark : styles.light
-      } animate__animated animate__backInDown`}
+      } animate__animated animate__backInDown ${
+        router.pathname === "/write" ? "hidden" : ""
+      } `}
     >
       <div className={styles.navbar}>
         <div className={styles.navbar_logo}>
@@ -127,13 +129,13 @@ export default function Navbar({
                           Dashboard
                         </Link>
                         <Link href={"/write"}>
-                          <FaPenSquare className={`${styles.center_icon} `} />{" "}
+                          <FaPenSquare className={`${styles.center_icon} `} />
                           Create post
                         </Link>
                         <Link href={"/savedlist"}>
                           <BsFillJournalBookmarkFill
                             className={`${styles.center_icon} `}
-                          />{" "}
+                          />
                           Reading list
                         </Link>
                         <Link href={"/settings"}>

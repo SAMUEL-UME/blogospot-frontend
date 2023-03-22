@@ -1,45 +1,378 @@
 import styles from "@/styles/template/Post/CreateBlog.module.css";
-import Tiptap from "../../Tiptap";
-import { useState } from "react";
+import React, { useState, useRef } from "react";
+import logo from "../../../../public/blogospot-red.png";
+import dynamic from "next/dynamic";
+import Image from "next/image";
+import Link from "next/link";
 
-const CreateBlog = ({ state, handleInputChange, handleSubmit }) => {
-  const [desc, setDesc] = useState("");
+const CreateBlog = () => {
+  const importJodit = () => import("jodit-react");
+  const JoditEditor = dynamic(importJodit, {
+    ssr: false,
+  });
+  const editor = useRef(null);
+  const [content, setContent] = useState("");
+  var config = {
+    zIndex: 0,
+    readonly: false,
+    activeButtonsInReadOnly: ["fullsize", "dots"],
+    toolbarButtonSize: "middle",
+    enableDragAndDropFileToEditor: true,
+    theme: "dark",
+    saveModeInCookie: false,
+    spellcheck: true,
+    editorCssClass: false,
+    triggerChangeEvent: true,
+    width: "auto",
+    height: "auto",
+    language: "auto",
+    i18n: "en",
+    tabIndex: -1,
+    enter: "P",
+    useSplitMode: false,
+    colors: {
+      greyscale: [
+        "#000000",
+        "#434343",
+        "#666666",
+        "#999999",
+        "#B7B7B7",
+        "#CCCCCC",
+        "#D9D9D9",
+        "#EFEFEF",
+        "#F3F3F3",
+        "#FFFFFF",
+      ],
+      palette: [
+        "#980000",
+        "#FF0000",
+        "#FF9900",
+        "#FFFF00",
+        "#00F0F0",
+        "#00FFFF",
+        "#4A86E8",
+        "#0000FF",
+        "#9900FF",
+        "#FF00FF",
+      ],
+      full: [
+        "#E6B8AF",
+        "#F4CCCC",
+        "#FCE5CD",
+        "#FFF2CC",
+        "#D9EAD3",
+        "#D0E0E3",
+        "#C9DAF8",
+        "#CFE2F3",
+        "#D9D2E9",
+        "#EAD1DC",
+        "#DD7E6B",
+        "#EA9999",
+        "#F9CB9C",
+        "#FFE599",
+        "#B6D7A8",
+        "#A2C4C9",
+        "#A4C2F4",
+        "#9FC5E8",
+        "#B4A7D6",
+        "#D5A6BD",
+        "#CC4125",
+        "#E06666",
+        "#F6B26B",
+        "#FFD966",
+        "#93C47D",
+        "#76A5AF",
+        "#6D9EEB",
+        "#6FA8DC",
+        "#8E7CC3",
+        "#C27BA0",
+        "#A61C00",
+        "#CC0000",
+        "#E69138",
+        "#F1C232",
+        "#6AA84F",
+        "#45818E",
+        "#3C78D8",
+        "#3D85C6",
+        "#674EA7",
+        "#A64D79",
+        "#85200C",
+        "#990000",
+        "#B45F06",
+        "#BF9000",
+        "#38761D",
+        "#134F5C",
+        "#1155CC",
+        "#0B5394",
+        "#351C75",
+        "#733554",
+        "#5B0F00",
+        "#660000",
+        "#783F04",
+        "#7F6000",
+        "#274E13",
+        "#0C343D",
+        "#1C4587",
+        "#073763",
+        "#20124D",
+        "#4C1130",
+      ],
+    },
+    colorPickerDefaultTab: "background",
+    imageDefaultWidth: "auto",
+    removeButtons: [],
+    disablePlugins: [],
+    extraButtons: [],
+    sizeLG: 900,
+    sizeMD: 700,
+    sizeSM: 400,
+    sizeSM: 400,
+    buttons: [
+      "bold",
+      "strikethrough",
+      "underline",
+      "italic",
+      "|",
+      "ul",
+      "ol",
+      "|",
+      "outdent",
+      "indent",
+      "|",
+      "font",
+      "fontsize",
+      "brush",
+      "paragraph",
+      "|",
+      "image",
+      "table",
+      "link",
+      "|",
+      "align",
+      "undo",
+      "redo",
+      "|",
+      "hr",
+      "eraser",
+      "copyformat",
+      "|",
+      "fullsize",
+    ],
+    buttonsXS: [
+      "bold",
+      "image",
+      "|",
+      "brush",
+      "paragraph",
+      "|",
+      "align",
+      "|",
+      "undo",
+      "redo",
+      "|",
+      "eraser",
+      "dots",
+    ],
+    style: {
+      background: "#171717",
+      color: "#f3f1f1",
+    },
+    events: {},
+    textIcons: false,
+  };
+
+  // const config = {
+  //   readonly: false,
+  //   height: "auto",
+  //   width: "auto",
+  //   theme: "dark",
+  //   enableDragAndDropFileToEditor: true,
+  //   buttons: [
+  //     "|",
+  //     "bold",
+  //     "strikethrough",
+  //     "underline",
+  //     "italic",
+  //     "|",
+  //     "ul",
+  //     "ol",
+  //     "|",
+  //     "outdent",
+  //     "indent",
+  //     "|",
+  //     "font",
+  //     "fontsize",
+  //     "brush",
+  //     "paragraph",
+  //     "|",
+  //     "image",
+  //     "table",
+  //     "link",
+  //     "|",
+  //     "align",
+  //     "undo",
+  //     "redo",
+  //     "|",
+  //     "hr",
+  //     "eraser",
+  //     "copyformat",
+  //     "|",
+  //     "fullsize",
+
+  //   ],
+  //   buttonsXS: [
+  //     "bold",
+  //     "image",
+  //     "|",
+  //     "brush",
+  //     "paragraph",
+  //     "|",
+  //     "align",
+  //     "|",
+  //     "undo",
+  //     "redo",
+  //     "|",
+  //     "eraser",
+  //     "dots",
+  //   ],
+  //   colors: {
+  //     greyscale: [
+  //       "#000000",
+  //       "#434343",
+  //       "#666666",
+  //       "#999999",
+  //       "#B7B7B7",
+  //       "#CCCCCC",
+  //       "#D9D9D9",
+  //       "#EFEFEF",
+  //       "#F3F3F3",
+  //       "#FFFFFF",
+  //     ],
+  //     palette: [
+  //       "#980000",
+  //       "#FF0000",
+  //       "#FF9900",
+  //       "#FFFF00",
+  //       "#00F0F0",
+  //       "#00FFFF",
+  //       "#4A86E8",
+  //       "#0000FF",
+  //       "#9900FF",
+  //       "#FF00FF",
+  //     ],
+  //     full: [
+  //       "#E6B8AF",
+  //       "#F4CCCC",
+  //       "#FCE5CD",
+  //       "#FFF2CC",
+  //       "#D9EAD3",
+  //       "#D0E0E3",
+  //       "#C9DAF8",
+  //       "#CFE2F3",
+  //       "#D9D2E9",
+  //       "#EAD1DC",
+  //       "#DD7E6B",
+  //       "#EA9999",
+  //       "#F9CB9C",
+  //       "#FFE599",
+  //       "#B6D7A8",
+  //       "#A2C4C9",
+  //       "#A4C2F4",
+  //       "#9FC5E8",
+  //       "#B4A7D6",
+  //       "#D5A6BD",
+  //       "#CC4125",
+  //       "#E06666",
+  //       "#F6B26B",
+  //       "#FFD966",
+  //       "#93C47D",
+  //       "#76A5AF",
+  //       "#6D9EEB",
+  //       "#6FA8DC",
+  //       "#8E7CC3",
+  //       "#C27BA0",
+  //       "#A61C00",
+  //       "#CC0000",
+  //       "#E69138",
+  //       "#F1C232",
+  //       "#6AA84F",
+  //       "#45818E",
+  //       "#3C78D8",
+  //       "#3D85C6",
+  //       "#674EA7",
+  //       "#A64D79",
+  //       "#85200C",
+  //       "#990000",
+  //       "#B45F06",
+  //       "#BF9000",
+  //       "#38761D",
+  //       "#134F5C",
+  //       "#1155CC",
+  //       "#0B5394",
+  //       "#351C75",
+  //       "#733554",
+  //       "#5B0F00",
+  //       "#660000",
+  //       "#783F04",
+  //       "#7F6000",
+  //       "#274E13",
+  //       "#0C343D",
+  //       "#1C4587",
+  //       "#073763",
+  //       "#20124D",
+  //       "#4C1130",
+  //     ],
+  //   },
+  //   colorPickerDefaultTab: "background",
+  //   uploader: { insertImageAsBase64URI: true },
+  //   removeButtons: ["brush", "file"],
+  //   showXPathInStatusbar: false,
+  //   showCharsCounter: false,
+  //   showWordsCounter: false,
+  //   toolbarAdaptive: true,
+  //   toolbarSticky: true,
+  //   imageDefaultWidth: "100%",
+  //   style: {
+  //     background: "#171717",
+  //     color: "#f3f1f1",
+  //   },
+  // };
   return (
-    <div className={styles.container}>
-      <form className={styles.formmain} onSubmit={handleSubmit}>
-        <div className={styles.formcontrol}>
-          <label>Title </label>
-          <input
-            type="text"
-            name="title"
-            value={state.title}
-            onChange={handleInputChange}
-          />
-
-          <label>Description </label>
-          <input
-            type="text"
-            name="description"
-            value={state.description}
-            onChange={handleInputChange}
-          />
-
-          <label>Tags </label>
-          <input
-            type="text"
-            name="tags"
-            value={state.tags}
-            onChange={handleInputChange}
-          />
-
-          <label>Post </label>
-          <Tiptap setDesc={setDesc} />
-
-          <div className={styles.button}>
-            <button type="submit">submit</button>
+    <div className={styles.create_blog}>
+      <div className={styles.crt_nav}>
+        <Link href={"/"}>
+          <Image src={logo} width="70" height="50" alt="logo" />
+        </Link>
+        <div>
+          <ul>
+            <li>Preview</li>
+            <li className={styles.ani}>
+              <span>Publish</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div className={styles.container}>
+        <div className={styles.write}>
+          <div className={styles.manual}>
+            <label htmlFor="image">Select Image</label>
+            <input type="file" className={styles.custom} id="image" hidden />
+            <textarea placeholder="Add Title..."></textarea>
+          </div>
+          <div className={styles.rich_text}>
+            <JoditEditor
+              ref={editor}
+              value={content}
+              config={config}
+              onBlur={(newContent) => setContent(newContent)} // preferred to use only this option to update the content for performance reasons
+              onChange={(newContent) => {}}
+            />
+          </div>
+          <div className={styles.submit}>
+            <button>Save as draft</button>
           </div>
         </div>
-      </form>
+      </div>
     </div>
   );
 };

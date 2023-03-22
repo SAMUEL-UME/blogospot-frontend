@@ -308,9 +308,8 @@ span:hover > .center_icon {
 .dark span:hover > .center_icon {
   color: var(--primary-color) !important;
 }
-j
 .bottom span:hover {
-  background: #932a1e3c;
+  background: #932a1e3c !important;
   text-decoration: underline;
   border-radius: 5px;
 }

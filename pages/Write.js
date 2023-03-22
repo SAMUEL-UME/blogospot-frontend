@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
-import CreateBlog from "../src/components/template/Post/CreatePost";
+import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
-import { useSelector } from "react-redux";
-import { checkUserAndToken } from "../src/utils";
 
 const Write = () => {
-  const [getUser, setGetUser] = useState(null);
-  const [getToken, setGetToken] = useState(null);
-  const { user } = useSelector((state) => state.user);
+  const CreateBlog = dynamic(
+    () => import("../src/components/template/Post/CreatePost"),
+    {
+      ssr: false,
+    }
+  );
+
   const [state, setState] = useState({
     title: "",
     description: "",
@@ -25,10 +27,6 @@ const Write = () => {
   useEffect(() => {
     getUserAndToken();
   });
-  useEffect(() => {
-    checkUserAndToken(setGetUser, setGetToken);
-  }, [user]);
-
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setState((prevProps) => ({

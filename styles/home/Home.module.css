@@ -4,13 +4,15 @@
 .light {
   background: var(--light-mode);
 }
+.navbar_container {
+  padding-top: 4.5rem !important;
+}
 
 .hero {
   width: 100% !important;
   height: 60vh;
   z-index: 999;
   overflow: hidden;
-  margin-top: 4.6rem;
   background: linear-gradient(0.25turn, #ed213a, 30%, #93291e);
   z-index: -1;
 }

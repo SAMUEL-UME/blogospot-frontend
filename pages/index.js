@@ -1,16 +1,13 @@
 import Head from "next/head";
 import styles from "@/styles/home/Home.module.css";
-import Posts from "@/src/components/template/Post/Posts.js";
-import { BsFacebook } from "react-icons/bs";
-import { FaPinterestP } from "react-icons/fa";
-import { AiTwotoneMail } from "react-icons/ai";
-import { BsTwitter } from "react-icons/bs";
-import { BsLinkedin } from "react-icons/bs";
+import Posts from "@/src/components/template/Post/Posts";
+import Aside from "@/src/components/Aside";
 import { useSelector } from "react-redux";
 
+
 export default function Home({ data }) {
-  const { theme, menu } = useSelector((state) => state.theme);
-  
+  const { theme } = useSelector((state) => state.theme);
+
   return (
     <>
       <Head>
@@ -32,48 +29,7 @@ export default function Home({ data }) {
             <Posts data={data} theme={theme} />
           </div>
           {/* Aside (Filter post by tags, recent post, most viewed) */}
-          <div
-            className={`${styles.aside} ${menu === "open" ? styles.open : ""}`}
-          >
-            <div className={styles.social}>
-              <div className={styles.top}>
-                <div>
-                  <BsTwitter
-                    style={{ color: "#fff" }}
-                    className={styles.icon}
-                  />
-                </div>
-                <div>
-                  <BsFacebook
-                    style={{ color: "#fff" }}
-                    className={styles.icon}
-                  />
-                </div>
-                <div>
-                  <BsLinkedin
-                    style={{ color: "#fff" }}
-                    className={styles.icon}
-                  />
-                </div>
-                <div>
-                  <AiTwotoneMail
-                    style={{ color: "#f4f4f4" }}
-                    className={styles.icon}
-                  />
-                </div>
-              </div>
-              <div className={styles.bottom}>
-                <div>
-                  <FaPinterestP
-                    style={{ color: "#fff" }}
-                    className={styles.icon}
-                  />
-                </div>
-              </div>
-            </div>
-            <div></div>
-            <div></div>
-          </div>
+          <Aside />
         </div>
       </main>
     </>
