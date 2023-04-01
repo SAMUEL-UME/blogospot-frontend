@@ -9,6 +9,7 @@ import {
 import { BsFillJournalBookmarkFill } from "react-icons/bs";
 import { FaPenSquare } from "react-icons/fa";
 import { FiMenu, FiSettings, FiLogOut } from "react-icons/fi";
+import { FaUserCircle } from "react-icons/fa";
 import styles from "@/styles/molecules/Navbar.module.css";
 import logo2 from "@/public/logo2.png";
 import logo from "@/public/logo3.png";
@@ -33,6 +34,7 @@ export default function Navbar({
   const { theme, menu } = useSelector((state) => state.theme);
   const router = useRouter();
 
+  console.log(user);
   // checks if a authenticated by getting the user Credential and token from localStorage
   useEffect(() => {
     checkUserAndToken(setGetUser, setGetToken);
@@ -108,7 +110,15 @@ export default function Navbar({
 
               <li className={styles.user} onClick={handleBurger}>
                 <div className={styles.image_container}>
-                  <Image src={profile} alt="profile" className={styles.image} />
+                  {user.image ? (
+                    <Image
+                      src={profile}
+                      alt="profile"
+                      className={styles.image}
+                    />
+                  ) : (
+                    <FaUserCircle className={styles.image} />
+                  )}
                 </div>
                 {toggleMenu ? (
                   <div
@@ -117,8 +127,10 @@ export default function Navbar({
                     <div className={styles.menu_con}>
                       <div className={styles.top}>
                         <Link href={`/${JSON.parse(user).username}`}>
-                          <span>Samuel Ume</span>
-                          <span>@samuelume</span>
+                          <span>{`${JSON.parse(user).first_name} ${
+                            JSON.parse(user).last_name
+                          }`}</span>
+                          <span>@{JSON.parse(user).username}</span>
                         </Link>
                       </div>
                       <div className={styles.center}>

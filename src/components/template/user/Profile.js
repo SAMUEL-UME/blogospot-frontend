@@ -3,7 +3,6 @@ import styles from "../../../../styles/template/User/Profile.module.css";
 import profile from "../../../../public/profile.jpg";
 import Image from "next/image";
 import { useSelector } from "react-redux";
-import { Moment } from "moment/moment";
 const Profile = ({ data }) => {
   const { theme } = useSelector((state) => state.theme);
   return (

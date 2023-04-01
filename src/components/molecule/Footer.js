@@ -7,8 +7,12 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { useSelector } from "react-redux";
 
+
 const Footer = () => {
+  const { user } = useSelector((state) => state.user);
   const { theme } = useSelector((state) => state.theme);
+  console.log(user);
+
   const router = useRouter();
 
   return (

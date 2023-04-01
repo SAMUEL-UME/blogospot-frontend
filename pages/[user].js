@@ -2,7 +2,7 @@ import Profile from "../src/components/template/user/Profile";
 
 export default function Dashboard({ data }) {
   return (
-    <div>
+    <div className="bg-[#000]">
       <Profile data={data} />
     </div>
   );

@@ -1,14 +1,14 @@
 .profile {
   width: 100vw;
-  height: 100vh;
   overflow-x: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   padding-top: 3rem;
-  margin-top: 7rem;
 }
 .container {
+  margin-top: 10rem;
+  margin-bottom: 5rem;
   width: 1000px;
 }
 @media (max-width: 1000px) {
@@ -293,8 +293,8 @@
     height: 160px;
     /* left: 10px; */
   }
-  .top{
-   margin-top: 2rem;
+  .top {
+    margin-top: 2rem;
   }
   .profile_details {
     padding-right: 0rem;
