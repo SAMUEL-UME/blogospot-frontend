@@ -3,7 +3,7 @@ import moment from "moment";
 import styles from "@/styles/template/Post/posts.module.css";
 import Link from "next/link";
 import Image from "next/image";
-import Loading from "../../template/loading";
+import Loading from "./loading";
 import { TfiTag } from "react-icons/tfi";
 import { RiHeart2Line } from "react-icons/ri";
 import { TbMessageCircle2 } from "react-icons/tb";

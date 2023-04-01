@@ -34,9 +34,7 @@ a {
   height: 100vh;
   overflow-y: scroll;
 }
-.main {
-  background: var(--dark-mode);
-}
+
 .dark {
   background: var(--dark-mode);
 }
