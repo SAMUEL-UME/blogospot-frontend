@@ -193,6 +193,13 @@
   width: 100% !important;
   position: relative !important;
   height: unset !important;
+  color: var(--sub-color);
+}
+.dark .image {
+  background: var(--secondary-color);
+}
+.light .image {
+  background-color: var(--primary-color);
 }
 
 .menu {

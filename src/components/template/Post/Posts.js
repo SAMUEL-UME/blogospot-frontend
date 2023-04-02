@@ -27,7 +27,11 @@ const Posts = ({ data, theme }) => {
                   <Image src={data.image} alt="user" fill={true} />
                 </div>
                 <div>
-                  <h2>samuel</h2>
+                  <h2>
+                    <Link href={`/${data.author.username}`}>
+                      {data.author.username}
+                    </Link>
+                  </h2>
                   <p>
                     {moment(data.createdAt).format("MMMM hh")} (
                     {moment(data.createdAt).fromNow()})
@@ -77,7 +81,7 @@ const Posts = ({ data, theme }) => {
         </>
       ) : (
         <>
-          {Array(12)
+          {Array(6)
             .fill(0)
             .map((_, i) => (
               <Loading key={i} />

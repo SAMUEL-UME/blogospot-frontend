@@ -10,6 +10,9 @@
   margin-top: 10rem;
   margin-bottom: 5rem;
   width: 1000px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 @media (max-width: 1000px) {
   .container {
@@ -80,14 +83,18 @@
 .profile_img div:hover {
   border-color: var(--sub-color);
 }
-.img {
-  width: 60%;
-  color: var(--primary-color);
-}
 .image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  color: var(--sub-color);
+}
+.dark .image {
+  background: var(--secondary-color);
+  color: var(--sub-color);
+}
+.light .image {
+  background-color: var(--primary-color);
 }
 
 .profile_details {
@@ -109,7 +116,7 @@
 .profile_details h2 {
   font-size: 2.5rem;
   display: flex;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 .social_links {
   display: flex;
@@ -118,8 +125,15 @@
 .box {
   width: 30px;
   height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
   background: var(--sub-color);
+  cursor: pointer;
+}
+.box_icon {
+  color: var(--primary-color);
 }
 
 .top_2 {
@@ -184,11 +198,6 @@
 }
 .light .top_2_bio p {
   color: var(--secondary-color);
-}
-.bottom {
-  width: 100%;
-  /* animation: animate ease-in-out 400ms  infinite; */
-  background: floralwhite;
 }
 
 @media (max-width: 922px) {
@@ -299,4 +308,29 @@
   .profile_details {
     padding-right: 0rem;
   }
+}
+
+.bottom {
+  width: 100%;
+  position: relative;
+  border-radius: 20px;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  padding: 1rem 0;
+}
+.bt_aside {
+  width: 30%;
+  height: 200px;
+}
+.dark .bt_aside {
+  background-color: var(--secondary-color);
+  color: var(--primary-color) !important;
+}
+.light .bt_aside {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+.bt_post {
+  width: 65%;
 }

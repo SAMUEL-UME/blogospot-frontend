@@ -1,10 +1,8 @@
 import React from "react";
 import styles from "@/styles/home/Home.module.css";
-import { BsFacebook } from "react-icons/bs";
+import { BsFacebook, BsTwitter, BsLinkedin } from "react-icons/bs";
 import { FaPinterestP } from "react-icons/fa";
 import { AiTwotoneMail } from "react-icons/ai";
-import { BsTwitter } from "react-icons/bs";
-import { BsLinkedin } from "react-icons/bs";
 import { useSelector } from "react-redux";
 import "animate.css";
 

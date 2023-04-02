@@ -1,9 +1,17 @@
 import React from "react";
+import moment from "moment/moment";
 import styles from "../../../../styles/template/User/Profile.module.css";
 import profile from "../../../../public/profile.jpg";
+import Posts from "@/src/components/template/Post/Posts";
 import Image from "next/image";
+import { FaUserCircle } from "react-icons/fa";
+import { BsFacebook } from "react-icons/bs";
+import { BsTwitter } from "react-icons/bs";
+import { BsLinkedin } from "react-icons/bs";
 import { useSelector } from "react-redux";
-const Profile = ({ data }) => {
+import "animate.css";
+
+const Profile = ({ user, data }) => {
   const { theme } = useSelector((state) => state.theme);
   return (
     <div
@@ -13,47 +21,51 @@ const Profile = ({ data }) => {
 `}
     >
       <div className={styles.container}>
-        <div className={styles.top}>
+        <div
+          className={`${styles.top}  animate__animated animate__backInRight`}
+        >
           <div>
             <div className={styles.profile_img}>
               <div>
-                {/* <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1}
-                  stroke="currentColor"
-                  className={styles.img}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+                {user.image ? (
+                  <Image
+                    src={profile}
+                    alt="profile"
+                    className={styles.imgage}
                   />
-                </svg> */}
-                <Image src={profile} alt="profile" className={styles.imgage} />
+                ) : (
+                  <FaUserCircle className={styles.image} />
+                )}
               </div>
             </div>
             <div className={styles.profile_details}>
               <h2>
-                <span>{data.first_name}</span>
-                <span>{data.last_name}</span>
+                <span>{user.first_name}</span>
+                <span>{user.last_name}</span>
               </h2>
               <div className={styles.social_links}>
-                <div className={styles.box}></div>
-                <div className={styles.box}></div>
-                <div className={styles.box}></div>
-                <div className={styles.box}></div>
+                <div className={styles.box}>
+
+                </div>
+                <div className={styles.box}>
+                  <BsFacebook className={styles.box_icon}/>
+                </div>
+                <div className={styles.box}>
+                  <BsTwitter className={styles.box_icon}/>
+                </div>
+                <div className={styles.box}>
+                  <BsLinkedin className={styles.box_icon} />
+                </div>
               </div>
             </div>
           </div>
           <div className={styles.top_2}>
             <span>
-              Joined <span>Nov 3</span>🎉
+              Joined <span>{moment(user.createdAt).format("MMM hh y")}</span>🎉
             </span>
             <div className={styles.top_2_fp}>
               <p>2 followers</p>
-              <p>3 posts</p>
+              <p>{data.length} posts</p>
             </div>
             <div className={styles.top_2_bio}>
               <span>Bio</span>
@@ -66,7 +78,14 @@ const Profile = ({ data }) => {
             </div>
           </div>
         </div>
-        <div className={styles.bottom}></div>
+        <div className={styles.bottom}>
+          <div className={styles.bt_aside}>
+            <h1>Hellow</h1>
+          </div>
+          <div className={styles.bt_post}>
+            <Posts data={data} theme={theme} />
+          </div>
+        </div>
       </div>
     </div>
   );

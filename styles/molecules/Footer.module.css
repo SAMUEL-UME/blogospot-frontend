@@ -154,6 +154,7 @@
   .footer {
     width: 95%;
     padding: 0.1rem;
+    border-radius: 20px;
   }
 }
 @media (max-width: 768px) {
@@ -182,6 +183,8 @@
   .footer {
     padding: 3rem 0.5rem 2rem 0.5rem !important;
     color: #fcfcfc;
+    width: 100%;
+    border-radius: 10px;
   }
   .footer_content_heading {
     font-size: 1.5rem;

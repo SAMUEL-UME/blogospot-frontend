@@ -44,7 +44,8 @@
   text-transform: capitalize;
   line-height: 15px;
   width: fit-content;
-  padding: 5px 2px;
+  padding: 5px 2px; 
+  cursor: pointer;
   transition: 1px solid;
 }
 .dark .user div h2 {

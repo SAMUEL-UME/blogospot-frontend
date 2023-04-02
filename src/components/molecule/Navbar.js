@@ -110,7 +110,7 @@ export default function Navbar({
 
               <li className={styles.user} onClick={handleBurger}>
                 <div className={styles.image_container}>
-                  {user.image ? (
+                  {user !== null && user.image ? (
                     <Image
                       src={profile}
                       alt="profile"
