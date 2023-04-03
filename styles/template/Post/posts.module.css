@@ -31,12 +31,23 @@
   position: relative;
   border-radius: 50%;
   overflow: hidden;
-}
-.user img {
-  width: 100%;
-  object-fit: fill;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+.image {
+  width: 100%;
+  font-size: 3rem;
+  object-fit: fill;
+  background: #a8201a;
+}
+.dark .image {
+  color: var(--primary-color);
+}
+.light .image {
+  color: var(--secondary-color);
+}
 .user div h2 {
   /* line-height: 20px; */
   font-size: 17px !important;
@@ -44,7 +55,7 @@
   text-transform: capitalize;
   line-height: 15px;
   width: fit-content;
-  padding: 5px 2px; 
+  padding: 5px 2px;
   cursor: pointer;
   transition: 1px solid;
 }

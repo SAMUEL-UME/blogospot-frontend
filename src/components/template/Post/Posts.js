@@ -7,6 +7,7 @@ import Loading from "./loading";
 import { TfiTag } from "react-icons/tfi";
 import { RiHeart2Line } from "react-icons/ri";
 import { TbMessageCircle2 } from "react-icons/tb";
+import { FaUserCircle } from "react-icons/fa";
 
 const Posts = ({ data, theme }) => {
   const [loading, setLoading] = React.useState(false);
@@ -23,9 +24,7 @@ const Posts = ({ data, theme }) => {
           {data?.map((data) => (
             <div className={styles.blog} key={data._id}>
               <div className={styles.user}>
-                <div className={styles.user_img}>
-                  <Image src={data.image} alt="user" fill={true} />
-                </div>
+                <div className={styles.user_img}>{<FaUserCircle className={styles.image} />}</div>
                 <div>
                   <h2>
                     <Link href={`/${data.author.username}`}>

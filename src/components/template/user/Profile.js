@@ -5,9 +5,7 @@ import profile from "../../../../public/profile.jpg";
 import Posts from "@/src/components/template/Post/Posts";
 import Image from "next/image";
 import { FaUserCircle } from "react-icons/fa";
-import { BsFacebook } from "react-icons/bs";
-import { BsTwitter } from "react-icons/bs";
-import { BsLinkedin } from "react-icons/bs";
+import { BsLinkedin, BsGithub, BsTwitter, BsFacebook } from "react-icons/bs";
 import { useSelector } from "react-redux";
 import "animate.css";
 
@@ -45,13 +43,13 @@ const Profile = ({ user, data }) => {
               </h2>
               <div className={styles.social_links}>
                 <div className={styles.box}>
-
+                  <BsGithub className={styles.box_icon} />
                 </div>
                 <div className={styles.box}>
-                  <BsFacebook className={styles.box_icon}/>
+                  <BsFacebook className={styles.box_icon} />
                 </div>
                 <div className={styles.box}>
-                  <BsTwitter className={styles.box_icon}/>
+                  <BsTwitter className={styles.box_icon} />
                 </div>
                 <div className={styles.box}>
                   <BsLinkedin className={styles.box_icon} />
