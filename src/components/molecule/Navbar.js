@@ -34,7 +34,7 @@ export default function Navbar({
   const { theme, menu } = useSelector((state) => state.theme);
   const router = useRouter();
 
-  console.log(user);
+  user;
   // checks if a authenticated by getting the user Credential and token from localStorage
   useEffect(() => {
     checkUserAndToken(setGetUser, setGetToken);
@@ -177,9 +177,13 @@ export default function Navbar({
               </li>
               <li onClick={handleTheme}>
                 {theme === "true" ? (
-                  <RiSunFill className={styles.sun} />
+                  <RiSunFill
+                    className={`${styles.sun}  animate__animated animate__rotateIn`}
+                  />
                 ) : (
-                  <RiMoonFill className={styles.moon} />
+                  <RiMoonFill
+                    className={`${styles.moon} animate__animated animate__rotateIn`}
+                  />
                 )}
               </li>
               <li className={styles.ani}>

@@ -1,12 +1,22 @@
 function checkUserAndToken(setGetUser, setGetToken) {
   const user = localStorage.getItem("user");
+
   const token = localStorage.getItem("token");
+  console.log(JSON.parse(user));
   if (user && token) {
     setGetUser(true);
     setGetToken(true);
   } else {
     setGetUser(false);
     setGetToken(false);
+  }
+}
+function getUser(getUSer, getToken) {
+  const user = localStorage.getItem("user");
+  const token = localStorage.getItem("token");
+  if (user && token) {
+    getUSer(JSON.parse(user));
+    getToken(token);
   }
 }
 function deleteItem() {
@@ -29,7 +39,7 @@ function removeQuotes(str) {
   return str.replace(/['"]/g, "");
 }
 
-export { checkUserAndToken, removeQuotes, deleteItem, getTheme };
+export { checkUserAndToken, removeQuotes, deleteItem, getTheme, getUser };
 
 // import React, { useState } from "react";
 

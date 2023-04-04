@@ -1,8 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Post from "../../src/components/template/Post/Post";
 
 export default function BlogPost({ data }) {
-
   return (
     <div>
       <Post data={data} />
@@ -25,7 +24,7 @@ export async function getStaticPaths() {
   };
 }
 export async function getStaticProps(context) {
-  console.log(context);
+  context;
   const id = context.params.id;
   const { data } = await import("/data/data.json");
   const postData = data.find((post) => id === post._id);

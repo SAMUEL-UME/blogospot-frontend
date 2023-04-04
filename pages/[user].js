@@ -11,7 +11,7 @@ export default function Dashboard({ user, data }) {
 export async function getStaticPaths() {
   const { users } = await import("/data/data.json");
 
-  // console.log(users);
+  // (users);
   const userPaths = users.map((user) => {
     return {
       params: {
@@ -20,7 +20,7 @@ export async function getStaticPaths() {
     };
   });
 
-  console.log(userPaths);
+  userPaths;
   return {
     paths: userPaths,
     fallback: false,
@@ -33,7 +33,7 @@ export async function getStaticProps(context) {
   const { data } = await import("/data/data.json");
   const getUser = users.find((post) => user === post.username);
   const allPost = data.filter((posts) => user === posts.author.username);
-  console.log(allPost);
+  allPost;
   return {
     props: { user: getUser, data: allPost },
   };

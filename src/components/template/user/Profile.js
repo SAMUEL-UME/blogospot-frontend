@@ -1,16 +1,26 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import moment from "moment/moment";
 import styles from "../../../../styles/template/User/Profile.module.css";
 import profile from "../../../../public/profile.jpg";
 import Posts from "@/src/components/template/Post/Posts";
 import Image from "next/image";
-import { FaUserCircle } from "react-icons/fa";
+import { getUser } from "../../../utils";
+import { FaUserCircle, FaLessThan, FaGreaterThan } from "react-icons/fa";
+import { MdOutlineExpandLess, MdOutlineExpandMore } from "react-icons/md";
 import { BsLinkedin, BsGithub, BsTwitter, BsFacebook } from "react-icons/bs";
 import { useSelector } from "react-redux";
 import "animate.css";
+import Link from "next/link";
 
 const Profile = ({ user, data }) => {
+  const [expand, setExpand] = useState("close");
+  const [loggedInUser, setLoggedInUser] = useState();
+  const [userToken, setUserToken] = useState();
   const { theme } = useSelector((state) => state.theme);
+  useEffect(() => {
+    getUser(setLoggedInUser, setUserToken);
+  }, [user]);
+
   return (
     <div
       className={`${styles.profile} } ${
@@ -62,8 +72,15 @@ const Profile = ({ user, data }) => {
               Joined <span>{moment(user.createdAt).format("MMM hh y")}</span>🎉
             </span>
             <div className={styles.top_2_fp}>
-              <p>2 followers</p>
-              <p>{data.length} posts</p>
+              <div>
+                <p>2 followers</p>
+                <p>
+                  <Link href="#post">{data.length} posts</Link>
+                </p>
+              </div>
+              <div>
+                <span>Follow</span>
+              </div>
             </div>
             <div className={styles.top_2_bio}>
               <span>Bio</span>
@@ -77,11 +94,95 @@ const Profile = ({ user, data }) => {
           </div>
         </div>
         <div className={styles.bottom}>
-          <div className={styles.bt_aside}>
-            <h1>Hellow</h1>
+          <div className={styles.btm_show}>
+            {expand === "close" ? (
+              <p
+                className={`${styles.exp} animate__animated animate__backInLeft`}
+                onClick={() => setExpand("open")}
+              >
+                <MdOutlineExpandLess size={"1.2rem"} />
+                show more
+                <MdOutlineExpandMore size={"1.2rem"} />
+              </p>
+            ) : (
+              <p
+                className={`${styles.red} animate__animated animate__backInRight`}
+                onClick={() => setExpand("close")}
+              >
+                <FaLessThan size={"0.8rem"} />
+                Show less
+                <FaGreaterThan size={"0.8rem"} />
+              </p>
+            )}
           </div>
-          <div className={styles.bt_post}>
-            <Posts data={data} theme={theme} />
+          <div
+            className={`${
+              styles.bt_aside
+            } animate__animated animate__backInLeft  ${
+              expand === "open" && styles.aside_show
+            }`}
+          >
+            <ul className={styles.bt_aside_btm}>
+              <div>
+                {user.learning ? (
+                  <>
+                    <p>Current learning 📜</p>
+                    {user.learning &&
+                      user.learning.map((item, i) => (
+                        <li key={i}>
+                          <span>*</span> {item}
+                        </li>
+                      ))}
+                  </>
+                ) : (
+                  ""
+                )}
+              </div>
+              <div>
+                {user.building ? (
+                  <>
+                    <p>currently building 🛠</p>
+                    <li>
+                      <span>*</span> {user.building}
+                    </li>{" "}
+                  </>
+                ) : (
+                  ""
+                )}
+              </div>
+              <div>
+                {user.hobbies ? (
+                  <>
+                    <p>Hobbies 🍕</p>
+                    {user.hobbies &&
+                      user.hobbies.map((hobbie, i) => (
+                        <li key={i}>
+                          <span>*</span> {hobbie}
+                        </li>
+                      ))}
+                  </>
+                ) : (
+                  ""
+                )}
+              </div>
+            </ul>
+            <ul className={styles.bt_aside_top}>
+              <li>{user.followers} Followers</li>
+              <li>{user.following} Following</li>
+              <li>{user.comments} Comments</li>
+              {userToken && loggedInUser.username === user.username ? (
+                <li>Edit Profile</li>
+              ) : (
+                ""
+              )}
+            </ul>
+          </div>
+          <div className={styles.bt_post} id="post">
+            {data.length > 0 ? (
+              <Posts data={data} theme={theme} />
+            ) : (
+              <p className={styles.bt_post_p}>No post yet...</p>
+            )}
           </div>
         </div>
       </div>
