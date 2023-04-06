@@ -1,4 +1,4 @@
-import React, from "react";
+import React from "react";
 import styles from "@/styles/molecules/Footer.module.css";
 import Link from "next/link";
 import logo from "@/public/logo3.png";
