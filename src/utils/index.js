@@ -2,7 +2,6 @@ function checkUserAndToken(setGetUser, setGetToken) {
   const user = localStorage.getItem("user");
 
   const token = localStorage.getItem("token");
-  console.log(JSON.parse(user));
   if (user && token) {
     setGetUser(true);
     setGetToken(true);

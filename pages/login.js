@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
+import Head from "next/head";
 import LoginPage from "../src/components/template/Auth/Signin";
 import { useDispatch, useSelector } from "react-redux";
 import { signinUser } from "../src/Redux/authSlice";
 import { useRouter } from "next/router";
-
 
 export default function Login() {
   const [state, setState] = useState({
@@ -17,7 +17,6 @@ export default function Login() {
   const router = useRouter();
 
   // set theme form localStorage if it exist
-
 
   useEffect(() => {
     if (msg) {
@@ -39,13 +38,18 @@ export default function Login() {
   };
 
   return (
-    <LoginPage
-      handleInputChange={handleInputChange}
-      state={state}
-      handleSubmit={handleSubmit}
-      error={error}
-      loading={loading}
-      theme={theme}
-    />
+    <>
+      <Head>
+        <title>Sign in</title>
+      </Head>
+      <LoginPage
+        handleInputChange={handleInputChange}
+        state={state}
+        handleSubmit={handleSubmit}
+        error={error}
+        loading={loading}
+        theme={theme}
+      />
+    </>
   );
 }

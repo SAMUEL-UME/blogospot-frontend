@@ -1,5 +1,5 @@
 import styles from "@/styles/template/Post/CreateBlog.module.css";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useMemo } from "react";
 import logo from "../../../../public/blogospot-red.png";
 import dynamic from "next/dynamic";
 import Image from "next/image";
@@ -119,7 +119,8 @@ const CreateBlog = () => {
       ],
     },
     colorPickerDefaultTab: "background",
-    imageDefaultWidth: "auto",
+    imageDefaultWidth: "100%",
+    uploader: { insertImageAsBase64URI: true },
     removeButtons: [],
     disablePlugins: [],
     extraButtons: [],
@@ -364,8 +365,9 @@ const CreateBlog = () => {
               ref={editor}
               value={content}
               config={config}
-              onBlur={(newContent) => setContent(newContent)} // preferred to use only this option to update the content for performance reasons
-              onChange={(newContent) => {}}
+              onBlur={(newContent) => {
+                setContent(newContent);
+              }} // preferred to use only this option to update the content for performance reasons
             />
           </div>
           <div className={styles.submit}>

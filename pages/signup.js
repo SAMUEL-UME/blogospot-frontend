@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Head from "next/head";
 import SignupPage from "../src/components/template/Auth/Signup";
 import { useDispatch, useSelector } from "react-redux";
 import { signupUser } from "../src/Redux/authSlice";
@@ -45,14 +46,19 @@ const Signup = () => {
   };
 
   return (
-    <SignupPage
-      handleInputChange={handleInputChange}
-      handleSubmit={handleSubmit}
-      state={state}
-      error={error}
-      loading={loading}
-      theme={theme}
-    />
+    <>
+      <Head>
+        <title>Sign in</title>
+      </Head>
+      <SignupPage
+        handleInputChange={handleInputChange}
+        handleSubmit={handleSubmit}
+        state={state}
+        error={error}
+        loading={loading}
+        theme={theme}
+      />
+    </>
   );
 };
 

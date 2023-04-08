@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 const Write = () => {
   const CreateBlog = dynamic(
@@ -9,6 +10,7 @@ const Write = () => {
       ssr: false,
     }
   );
+  const router = useRouter();
 
   const [state, setState] = useState({
     title: "",
@@ -38,16 +40,21 @@ const Write = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
   };
-  const router = useRouter();
+  
 
   return (
-    <div>
-      <CreateBlog
-        handleSubmit={handleSubmit}
-        handleInputChange={handleInputChange}
-        state={state}
-      />
-    </div>
+    <>
+      <Head>
+        <title>Create Post</title>
+      </Head>
+      <div>
+        <CreateBlog
+          handleSubmit={handleSubmit}
+          handleInputChange={handleInputChange}
+          state={state}
+        />
+      </div>
+    </>
   );
 };
 

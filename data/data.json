@@ -5,7 +5,13 @@
       "_id": "63babdea3d1cf3b6cb19d3d8",
       "title": "A town hall different from bala blu, blue blu bulaba. broom broom broom brooooooooom. Bala blu blue blu bulaba.",
       "description": "A town hall different from bala blu, blue blu bulaba. broom broom broom brooooooooom. Bala blu blue blu bulaba.",
-      "author": { "_id": "636573b53aefa9d448741d1c", "username": "sam" },
+      "author": {
+        "_id": "636573b53aefa9d448741d1c",
+        "username": "sam",
+        "first_name": "Samuel",
+        "last_name": "Ume",
+        "createdAt": "2023-01-08T12:58:18.947Z"
+      },
       "state": "published",
       "reading_time": 1,
       "read_count": 0,
@@ -20,7 +26,13 @@
       "_id": "6366f1a2fc2e695935c9a69c",
       "title": "Driving The 2023 BMW 7 Series - Exceptional Luxury And Creeping Featuritis",
       "description": "The 2023 BMW 7 series is now available with a choice of 6 or 8 cylinder mild hybrid drivetrains or as an all electric i7 with up to 318 miles of range. It drives better than its 3-ton mass would suggest, but perhaps has too many features",
-      "author": { "_id": "6364ab2ac194766c15931e95", "username": "sam" },
+      "author": {
+        "_id": "6364ab2ac194766c15931e95",
+        "username": "sam",
+        "first_name": "Samuel",
+        "last_name": "Ume",
+        "createdAt": "2023-01-08T12:58:18.947Z"
+      },
       "state": "published",
       "reading_time": 1,
       "read_count": 3,
@@ -35,7 +47,13 @@
       "_id": "6366efcafc2e695935c9a697",
       "title": "Getting started with backend technologies",
       "description": "Guide on starting web development",
-      "author": { "_id": "636573b53aefa9d448741d1c", "username": "sam" },
+      "author": {
+        "_id": "636573b53aefa9d448741d1c",
+        "username": "sam",
+        "first_name": "Samuel",
+        "last_name": "Ume",
+        "createdAt": "2023-01-08T12:58:18.947Z"
+      },
       "state": "published",
       "reading_time": 1,
       "read_count": 2,
@@ -50,7 +68,13 @@
       "_id": "6366ef2dfc2e695935c9a694",
       "title": "Welocme to my blog",
       "description": "Guide on starting web development",
-      "author": { "_id": "636573b53aefa9d448741d1c", "username": "sam" },
+      "author": {
+        "_id": "636573b53aefa9d448741d1c",
+        "username": "sam",
+        "first_name": "Samuel",
+        "last_name": "Ume",
+        "createdAt": "2023-01-08T12:58:18.947Z"
+      },
       "state": "published",
       "reading_time": 1,
       "read_count": 7,
@@ -65,7 +89,13 @@
       "_id": "63660b8eb712e126c68023c3",
       "title": "Coding like a pro",
       "description": "Coding like a pro",
-      "author": { "_id": "636573b53aefa9d448741d1c", "username": "sam" },
+      "author": {
+        "_id": "636573b53aefa9d448741d1c",
+        "username": "sam",
+        "first_name": "Samuel",
+        "last_name": "Ume",
+        "createdAt": "2023-01-08T12:58:18.947Z"
+      },
       "state": "published",
       "reading_time": 1,
       "read_count": 14,
@@ -80,7 +110,13 @@
       "_id": "63660b8eb712e126cuns8783c3",
       "title": "Today",
       "description": "Never underestimate the power you have to take your life in a new direction",
-      "author": { "_id": "636573b53aefa9d448741d1c", "username": "sam" },
+      "author": {
+        "_id": "636573b53aefa9d448741d1c",
+        "username": "sam",
+        "first_name": "Samuel",
+        "last_name": "Ume",
+        "createdAt": "2023-01-08T12:58:18.947Z"
+      },
       "state": "published",
       "reading_time": 1,
       "read_count": 5,
@@ -95,7 +131,13 @@
       "_id": "63660b8eb71wia8a6c63483c3",
       "title": "Animals as an agreeable friend",
       "description": "Until one has loved an animal, a part of one's soul remains unawakened.",
-      "author": { "_id": "636573b53aefa9d448741d1c", "username": "Arofawaz" },
+      "author": {
+        "_id": "636573b53aefa9d448741d1c",
+        "username": "arofawaz",
+        "first_name": "Fawaz",
+        "last_name": "Aro",
+        "createdAt": "2023-07-05T23:28:34.559Z"
+      },
       "state": "published",
       "reading_time": 1,
       "read_count": 7,
@@ -110,7 +152,13 @@
       "_id": "63660b8eb892e126c63483c3",
       "title": "Happy mother's Day",
       "description": "Mother-love is the great, surging, divine current that plays forever through humanity.",
-      "author": { "_id": "636573b53aefa9d448741d1c", "username": "Arofawaz" },
+      "author": {
+        "_id": "636573b53aefa9d448741d1c",
+        "username": "arofawaz",
+        "first_name": "Fawaz",
+        "last_name": "Aro",
+        "createdAt": "2023-07-05T23:28:34.559Z"
+      },
       "state": "published",
       "reading_time": 1,
       "read_count": 12,
@@ -125,7 +173,13 @@
       "_id": "63660b8eb712e126c65783c3",
       "title": "Sunset is the opening music of the night.",
       "description": "Sunsets are proof that no matter what happens, every day can end beautifully.",
-      "author": { "_id": "636573b53aefa9d448741d1c", "username": "Arofawaz" },
+      "author": {
+        "_id": "636573b53aefa9d448741d1c",
+        "username": "arofawaz",
+        "first_name": "Fawaz",
+        "last_name": "Aro",
+        "createdAt": "2023-07-05T23:28:34.559Z"
+      },
       "state": "published",
       "reading_time": 1,
       "read_count": 5,
@@ -140,7 +194,13 @@
       "_id": "62360b8eb712e126c63483c3",
       "title": "A place like never before",
       "description": " Some beautiful paths can't be discovered without getting lost.",
-      "author": { "_id": "636573b53aefa9d448741d1c", "username": "Arofawaz" },
+      "author": {
+        "_id": "636573b53aefa9d448741d1c",
+        "username": "arofawaz",
+        "first_name": "Fawaz",
+        "last_name": "Aro",
+        "createdAt": "2023-07-05T23:28:34.559Z"
+      },
       "state": "published",
       "reading_time": 1,
       "read_count": 2,
@@ -155,7 +215,13 @@
       "_id": "63660a9eb712e126c63483c3",
       "title": "Frenship and everything between",
       "description": "Make friends who will force you to lever yourself up.",
-      "author": { "_id": "636573b53aefa9d448741d1c", "username": "omaah" },
+      "author": {
+        "_id": "636573b53aefa9d448741d1c",
+        "username": "omaah",
+        "first_name": "Tosin",
+        "last_name": "Opeyemi",
+        "createdAt": "2022-11-04T06:03:22.899Z"
+      },
       "state": "published",
       "reading_time": 1,
       "read_count": 5,
@@ -170,7 +236,13 @@
       "_id": "63660b8eb712e126c65683c3",
       "title": "Self-love for a functional,successful life",
       "description": "You alone are enough, you have nothing to prove to anybody.",
-      "author": { "_id": "636573b53aefa9d448741d1c", "username": "Arofawaz" },
+      "author": {
+        "_id": "636573b53aefa9d448741d1c",
+        "username": "arofawaz",
+        "first_name": "Fawaz",
+        "last_name": "Aro",
+        "createdAt": "2023-07-05T23:28:34.559Z"
+      },
       "state": "published",
       "reading_time": 1,
       "read_count": 9,
@@ -185,7 +257,13 @@
       "_id": "63660b8eb712e736c63483c3",
       "title": "Teamwork is always a better option",
       "description": "Alone we can do so little; together we can do so much.",
-      "author": { "_id": "636573b53aefa9d448741d1c", "username": "Arofawaz" },
+      "author": {
+        "_id": "636573b53aefa9d448741d1c",
+        "username": "arofawaz",
+        "first_name": "Fawaz",
+        "last_name": "Aro",
+        "createdAt": "2023-07-05T23:28:34.559Z"
+      },
       "state": "published",
       "reading_time": 1,
       "read_count": 3,
@@ -200,7 +278,13 @@
       "_id": "63660b8eb712e126c65483c3",
       "title": "Leadership in my light",
       "description": " Leadership is the capacity to translate vision into reality.",
-      "author": { "_id": "636573b53aefa9d448741d1c", "username": "Arofawaz" },
+      "author": {
+        "_id": "636573b53aefa9d448741d1c",
+        "username": "arofawaz",
+        "first_name": "Fawaz",
+        "last_name": "Aro",
+        "createdAt": "2023-07-05T23:28:34.559Z"
+      },
       "state": "published",
       "reading_time": 1,
       "read_count": 5,
@@ -215,7 +299,13 @@
       "_id": "63660b8eb712e130b63483c3",
       "title": "This new day",
       "description": "It's a new dawn, It's a new day, It's a new life for me. And I'm feeling good.",
-      "author": { "_id": "636573b53aefa9d448741d1c", "username": "Arofawaz" },
+      "author": {
+        "_id": "636573b53aefa9d448741d1c",
+        "username": "arofawaz",
+        "first_name": "Fawaz",
+        "last_name": "Aro",
+        "createdAt": "2023-07-05T23:28:34.559Z"
+      },
       "state": "published",
       "reading_time": 1,
       "read_count": 9,
@@ -230,7 +320,13 @@
       "_id": "63660b8eb712e126c63484c3",
       "title": "Travelling,the healthiest addiction",
       "description": "Travel is an investment in yourself.",
-      "author": { "_id": "636573b53aefa9d448741d1c", "username": "omaah" },
+      "author": {
+        "_id": "636573b53aefa9d448741d1c",
+        "username": "omaah",
+        "first_name": "Tosin",
+        "last_name": "Opeyemi",
+        "createdAt": "2022-11-04T06:03:22.899Z"
+      },
       "state": "published",
       "reading_time": 1,
       "read_count": 7,
@@ -245,7 +341,13 @@
       "_id": "63660b8eb71aisn8726c63483c3",
       "title": "The best of meals ,healthy living",
       "description": "I really don't have a favorite meal. I eat anything.",
-      "author": { "_id": "636573b53aefa9d448741d1c", "username": "omaah" },
+      "author": {
+        "_id": "636573b53aefa9d448741d1c",
+        "username": "omaah",
+        "first_name": "Tosin",
+        "last_name": "Opeyemi",
+        "createdAt": "2022-11-04T06:03:22.899Z"
+      },
       "state": "published",
       "reading_time": 1,
       "read_count": 3,
@@ -260,7 +362,13 @@
       "_id": "63660b8eb702e126c63483c0",
       "title": "Blood makes you related, loyalty makes you family.",
       "description": "Your triumphs and victories make your family stronger and proud.",
-      "author": { "_id": "636573b53aefa9d448741d1c", "username": "Arofawaz" },
+      "author": {
+        "_id": "636573b53aefa9d448741d1c",
+        "username": "arofawaz",
+        "first_name": "Fawaz",
+        "last_name": "Aro",
+        "createdAt": "2023-07-05T23:28:34.559Z"
+      },
       "state": "published",
       "reading_time": 1,
       "read_count": 7,
@@ -275,7 +383,13 @@
       "_id": "636600kwj8b712e126c63483c3",
       "title": "Music is moonlight in the gloomy night of life.",
       "description": "Those who dream by day are cognizant of many things which escape those who dream only by night.",
-      "author": { "_id": "636573b53aefa9d448741d1c", "username": "Arofawaz" },
+      "author": {
+        "_id": "636573b53aefa9d448741d1c",
+        "username": "arofawaz",
+        "first_name": "Fawaz",
+        "last_name": "Aro",
+        "createdAt": "2023-07-05T23:28:34.559Z"
+      },
       "state": "published",
       "reading_time": 1,
       "read_count": 7,
@@ -290,7 +404,13 @@
       "_id": "63660b8eb712e173c63583c3",
       "title": "Hope a powerful force",
       "description": "Hope is the thing with feathers that perches in the soul and sings the tune without the words and never stops at all.",
-      "author": { "_id": "636573b53aefa9d448741d1c", "username": "Arofawaz" },
+      "author": {
+        "_id": "636573b53aefa9d448741d1c",
+        "username": "arofawaz",
+        "first_name": "Fawaz",
+        "last_name": "Aro",
+        "createdAt": "2023-07-05T23:28:34.559Z"
+      },
       "state": "published",
       "reading_time": 1,
       "read_count": 6,
@@ -305,7 +425,13 @@
       "_id": "63660b8eb7ak9e126c63483c3",
       "title": "The time is now !!",
       "description": "The time for action is now. It's never too late to do something.",
-      "author": { "_id": "636573b53aefa9d448741d1c", "username": "omaah" },
+      "author": {
+        "_id": "636573b53aefa9d448741d1c",
+        "username": "omaah",
+        "first_name": "Tosin",
+        "last_name": "Opeyemi",
+        "createdAt": "2022-11-04T06:03:22.899Z"
+      },
       "state": "published",
       "reading_time": 1,
       "read_count": 7,
@@ -320,7 +446,13 @@
       "_id": "63660b8eb712f226c63483c3",
       "title": "That feeling",
       "description": "The way I drive, the way I handle a car, is an expression of my inner feelings.",
-      "author": { "_id": "636573b53aefa9d448741d1c", "username": "omaah" },
+      "author": {
+        "_id": "636573b53aefa9d448741d1c",
+        "username": "omaah",
+        "first_name": "Tosin",
+        "last_name": "Opeyemi",
+        "createdAt": "2022-11-04T06:03:22.899Z"
+      },
       "state": "published",
       "reading_time": 1,
       "read_count": 17,
@@ -335,7 +467,13 @@
       "_id": "63660b8eb712e15hc63483c3",
       "title": "The good times of today can be the sad thoughts of tomorrow.",
       "description": "Life moves so fast. You gotta document the good times",
-      "author": { "_id": "636573b53aefa9d448741d1c", "username": "omaah" },
+      "author": {
+        "_id": "636573b53aefa9d448741d1c",
+        "username": "omaah",
+        "first_name": "Tosin",
+        "last_name": "Opeyemi",
+        "createdAt": "2022-11-04T06:03:22.899Z"
+      },
       "state": "published",
       "reading_time": 1,
       "read_count": 7,
@@ -350,7 +488,13 @@
       "_id": "63660e4eb712e126c63553c3",
       "title": "Happiness a direction,not a place",
       "description": "Happiness depends upon ourselves.",
-      "author": { "_id": "636573b53aefa9d448741d1c", "username": "Arofawaz" },
+      "author": {
+        "_id": "636573b53aefa9d448741d1c",
+        "username": "arofawaz",
+        "first_name": "Fawaz",
+        "last_name": "Aro",
+        "createdAt": "2023-07-05T23:28:34.559Z"
+      },
       "state": "published",
       "reading_time": 1,
       "read_count": 10,
@@ -365,7 +509,13 @@
       "_id": "63660b8eb712e126c68483c3",
       "title": "Goodmorning,this morning",
       "description": "Smile in the mirror. Do that every morning and you'll start to see a big difference in your life.",
-      "author": { "_id": "636573b53aefa9d448741d1c", "username": "Arofawaz" },
+      "author": {
+        "_id": "636573b53aefa9d448741d1c",
+        "username": "arofawaz",
+        "first_name": "Fawaz",
+        "last_name": "Aro",
+        "createdAt": "2023-07-05T23:28:34.559Z"
+      },
       "state": "published",
       "reading_time": 1,
       "read_count": 5,
@@ -380,7 +530,13 @@
       "_id": "63660b9lb712e126c63483c3",
       "title": "Struggles and decision we made",
       "description": "Where there is no struggle, there is no strength.",
-      "author": { "_id": "636573b53aefa9d448741d1c", "username": "sam" },
+      "author": {
+        "_id": "636573b53aefa9d448741d1c",
+        "username": "sam",
+        "first_name": "Samuel",
+        "last_name": "Ume",
+        "createdAt": "2023-01-08T12:58:18.947Z"
+      },
       "state": "published",
       "reading_time": 1,
       "read_count": 13,
@@ -395,7 +551,13 @@
       "_id": "64760b8eb712e126c63483c3",
       "title": "The life i hoped for",
       "description": "We regret the chances we didn't take that could of made us happy.",
-      "author": { "_id": "636573b53aefa9d448741d1c", "username": "sam" },
+      "author": {
+        "_id": "636573b53aefa9d448741d1c",
+        "username": "sam",
+        "first_name": "Samuel",
+        "last_name": "Ume",
+        "createdAt": "2023-01-08T12:58:18.947Z"
+      },
       "state": "published",
       "reading_time": 1,
       "read_count": 14,
@@ -410,7 +572,13 @@
       "_id": "63660b8eb713e126c63483c3",
       "title": "Roads were made for journeys, not destinations.",
       "description": "It's not the destination, it's the journey.",
-      "author": { "_id": "636573b53aefa9d448741d1c", "username": "Arofawaz" },
+      "author": {
+        "_id": "636573b53aefa9d448741d1c",
+        "username": "arofawaz",
+        "first_name": "Fawaz",
+        "last_name": "Aro",
+        "createdAt": "2023-07-05T23:28:34.559Z"
+      },
       "state": "published",
       "reading_time": 1,
       "read_count": 11,
@@ -425,7 +593,13 @@
       "_id": "63678b8eb712e896c63483c3",
       "title": "Exhibiting Accountability",
       "description": "Being held accountable is an act of generosity and compassion.",
-      "author": { "_id": "636573b53aefa9d448741d1c", "username": "sam" },
+      "author": {
+        "_id": "636573b53aefa9d448741d1c",
+        "username": "sam",
+        "first_name": "Samuel",
+        "last_name": "Ume",
+        "createdAt": "2023-01-08T12:58:18.947Z"
+      },
       "state": "published",
       "reading_time": 1,
       "read_count": 11,
@@ -440,7 +614,13 @@
       "_id": "63660b8eb712e776c63483c3",
       "title": "A day in my life",
       "description": "This Special day.",
-      "author": { "_id": "636573b53aefa9d448741d1c", "username": "sam" },
+      "author": {
+        "_id": "636573b53aefa9d448741d1c",
+        "username": "sam",
+        "first_name": "Samuel",
+        "last_name": "Ume",
+        "createdAt": "2023-01-08T12:58:18.947Z"
+      },
       "state": "published",
       "reading_time": 1,
       "read_count": 7,
@@ -455,7 +635,13 @@
       "_id": "63660b8eb723e126c63483c3",
       "title": "Peace begins with a smile.",
       "description": "Share your smile with the world.",
-      "author": { "_id": "636573b53aefa9d448741d1c", "username": "omaah" },
+      "author": {
+        "_id": "636573b53aefa9d448741d1c",
+        "username": "omaah",
+        "first_name": "Tosin",
+        "last_name": "Opeyemi",
+        "createdAt": "2022-11-04T06:03:22.899Z"
+      },
       "state": "published",
       "reading_time": 1,
       "read_count": 7,
@@ -470,7 +656,13 @@
       "_id": "63660b8eb712e126d53483c3",
       "title": "Home is where the heart is",
       "description": "Ther's no place like home.",
-      "author": { "_id": "636573b53aefa9d448741d1c", "username": "omaah" },
+      "author": {
+        "_id": "636573b53aefa9d448741d1c",
+        "username": "omaah",
+        "first_name": "Tosin",
+        "last_name": "Opeyemi",
+        "createdAt": "2022-11-04T06:03:22.899Z"
+      },
       "state": "published",
       "reading_time": 1,
       "read_count": 7,
@@ -485,7 +677,13 @@
       "_id": "63660b8eb712e133c63483c3",
       "title": "What we seek",
       "description": "Look up to the happy times, for they are what we seek!.",
-      "author": { "_id": "636573b53aefa9d448741d1c", "username": "Arofawaz" },
+      "author": {
+        "_id": "636573b53aefa9d448741d1c",
+        "username": "arofawaz",
+        "first_name": "Fawaz",
+        "last_name": "Aro",
+        "createdAt": "2023-07-05T23:28:34.559Z"
+      },
       "state": "published",
       "reading_time": 1,
       "read_count": 7,
@@ -529,9 +727,9 @@
     },
     {
       "_id": "641344379f290e3cd6e466e2",
-      "first_name": "Aro",
-      "last_name": "Fawaz",
-      "username": "Arofawaz",
+      "first_name": "Fawaz",
+      "last_name": "Aro",
+      "username": "arofawaz",
       "comments": 20,
       "learning": ["React js", "Typescript"],
       "hobbies": ["Coding", "Poker"],

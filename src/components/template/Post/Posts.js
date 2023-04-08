@@ -4,6 +4,7 @@ import styles from "@/styles/template/Post/posts.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import Loading from "./loading";
+
 import { TfiTag } from "react-icons/tfi";
 import { RiHeart2Line } from "react-icons/ri";
 import { TbMessageCircle2 } from "react-icons/tb";
@@ -30,11 +31,31 @@ const Posts = ({ data, theme }) => {
                     {<FaUserCircle className={styles.image} />}
                   </div>
                   <div>
-                    <h2>
-                      <Link href={`/${data.author.username}`}>
-                        {data.author.username}
-                      </Link>
-                    </h2>
+                    <div className={styles.hover_me}>
+                      <h2>
+                        <Link href={`/${data.author.username}`}>
+                          {data.author.username}
+                        </Link>
+                      </h2>
+                      <div className={styles.hover_me_box}>
+                        <div className={styles.hover_me_user}>
+                          <div className={styles.hover_me_image}>
+                            {<FaUserCircle className={styles.hover_image} />}
+                          </div>
+                          <h1>
+                            {data.author.first_name} {data.author.last_name}
+                          </h1>
+                        </div>
+                        <span>Follow</span>
+                        <div>
+                          Joined{" "}
+                          <span>
+                            {moment(data.author.createdAt).format("MMM hh y")}
+                          </span>
+                          🎊
+                        </div>
+                      </div>
+                    </div>
                     <p>
                       {moment(data.createdAt).format("MMMM hh")} (
                       {moment(data.createdAt).fromNow()})

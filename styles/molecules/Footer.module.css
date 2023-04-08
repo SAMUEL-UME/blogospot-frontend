@@ -4,6 +4,7 @@
   margin: auto;
   border-radius: 30px;
 }
+
 .hide {
   display: none;
 }
@@ -198,5 +199,10 @@
   }
   .term {
     margin-top: 1.5rem;
+  }
+}
+@media (min-width: 1200px) {
+  .footer {
+    max-width: 1150px;
   }
 }

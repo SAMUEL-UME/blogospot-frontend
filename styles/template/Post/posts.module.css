@@ -23,6 +23,7 @@
   align-items: center;
   gap: 5px;
   padding-bottom: 10px;
+  position: relative;
 }
 .user_img {
   width: 40px;
@@ -81,6 +82,90 @@
 }
 .light .user div p:nth-of-type(1) {
   color: var(--secondary-color);
+}
+
+.hover_me_box {
+  min-width: 250px;
+  box-shadow: 0px 0px 10px #a8211a90;
+  padding: 0rem 1rem 1rem 1rem;
+  background: #171717;
+  border-radius: 10px;
+  margin: 3rem 1rem !important;
+  position: absolute;
+  left: 30px;
+  bottom: 0px;
+  z-index: 99;
+  display: none;
+}
+.light .hover_me_box {
+  background: var(--primary-color);
+}
+.dark .hover_me_box {
+  background: var(--secondary-color);
+}
+.hover_me:hover .hover_me_box,
+.hover_me_box:hover .hover_me_box {
+  display: block;
+}
+
+.hover_me_image {
+  border-radius: 50%;
+  overflow: hidden;
+}
+.hover_image {
+  width: 50px;
+  height: 50px;
+  background: #a8201a;
+}
+.hover_me_user {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  letter-spacing: 1px;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  padding: 0.5rem 0px;
+}
+.hover_me_user h1 {
+  font-size: 20px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+.light .hover_me_user h1 {
+  color: var(--secondary-color);
+}
+.dark .hover_me_user h1 {
+  color: var(--primary-color);
+}
+
+.hover_me_box > span {
+  display: block;
+  width: 100%;
+  margin: 0.5rem auto 1rem auto;
+  background: blueviolet;
+  text-align: center;
+  padding: 0.4rem 0;
+  border-radius: 5px;
+  transition: all 0.8s ease;
+  cursor: pointer;
+}
+
+.hover_me_box > span:hover {
+  text-decoration: underline;
+  background: rgba(137, 43, 226, 0.781);
+  color: #fff;
+}
+.hover_me_box div:nth-of-type(2) {
+  color: #a8201a;
+}
+.light .hover_me_box div:nth-of-type(2) span {
+  color: var(--secondary-color);
+  font-weight: 500;
+}
+.dark .hover_me_box div:nth-of-type(2) span {
+  color: var(--primary-color);
+  font-size: 500;
 }
 .content {
   padding: 0 0 0 40px;
