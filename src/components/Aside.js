@@ -70,10 +70,10 @@ const Aside = () => {
             <Link href={"/"}>Code of conduct</Link>
           </li>
           <li>
-            <Link href={"/"}>Terms of service</Link>
+            <Link href={"/terms"}>Terms of service</Link>
           </li>
           <li>
-            <Link href={"/"}>Privacy policy</Link>
+            <Link href={"/privacy"}>Privacy policy</Link>
           </li>
         </ul>
       </div>
