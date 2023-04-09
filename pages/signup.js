@@ -18,7 +18,7 @@ const Signup = () => {
   const { theme } = useSelector((state) => state.theme);
   const dispatch = useDispatch();
   const router = useRouter();
-  const { error, loading, msg } = useSelector((state) => state.user);
+  const { error, loading, msg } = useSelector((state) => state.auth);
 
   if (error) {
     removeQuotes(error);

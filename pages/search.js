@@ -5,11 +5,10 @@ import { useSelector } from "react-redux";
 
 export default function Search() {
   const { search } = useSelector((state) => state.search);
-  console.log(search);
   return (
     <>
       <Head>
-        <title>{search ? search : "search"}</title>
+        <title>search</title>
       </Head>
       <div className={styles.container}>
         <h1 style={{ color: "#fff", paddingTop: "4rem" }}>{search}</h1>

@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-
+const API_URL = process.env.NEXT_PUBLIC_API_KEY;
 const initialState = {
   msg: false,
   user: "",
@@ -8,50 +8,43 @@ const initialState = {
   error: "",
 };
 
-//*****************Singup users*****************//
-export const signupUser = createAsyncThunk("signupuser", async (body) => {
-  const res = await fetch(
-    "https://misty-cowboy-hat-crow.cyclic.app/api/v1/blogospot/signup",
-    {
-      method: "post",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(body),
-    }
-  );
-
-  return await res.json();
+export const signupUser = createAsyncThunk("auth/signupUser", async (body) => {
+  const res = await fetch(`${API_URL}/signup`, {
+    method: "post",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(body),
+  });
+  return res.json();
 });
 
-//*****************Singin user*****************//
-export const signinUser = createAsyncThunk("signinuser", async (body) => {
-  const res = await fetch(
-    "https://misty-cowboy-hat-crow.cyclic.app/api/v1/blogospot/login",
-    {
-      method: "post",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(body),
-    }
-  );
-  return await res.json();
+export const signinUser = createAsyncThunk("auth/signinUser", async (body) => {
+  const res = await fetch(`${API_URL}/login`, {
+    method: "post",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(body),
+  });
+  return res.json();
 });
 
 const authSlice = createSlice({
-  name: "user",
+  name: "auth",
   initialState,
   reducers: {
-    addToken: (state) => {
+    setToken: (state, action) => {
+      // state.token = action.payload;
       state.token = localStorage.getItem("token");
     },
-    addUser: (state) => {
+    setUser: (state, action) => {
+      // state.user = action.payload;
       state.user = localStorage.getItem("user");
     },
     logout: (state) => {
-      state.token = null;
-      state.user = null;
+      state.token = "";
+      state.user = "";
       state.msg = false;
       localStorage.removeItem("user");
       localStorage.removeItem("token");
@@ -60,48 +53,49 @@ const authSlice = createSlice({
       state.error = null;
     },
   },
-  extraReducers: {
-    //Signin user  *********************************
-    [signinUser.pending]: (state) => {
-      state.loading = true;
-    },
-    [signinUser.fulfilled]: (state, { payload: { error, token, user } }) => {
-      state.loading = false;
-      if (error) {
-        state.error = error;
-      } else {
-        state.token = token;
-        state.user = user;
-        state.msg = true;
-        localStorage.setItem("user", JSON.stringify(user));
-        localStorage.setItem("token", token);
-      }
-    },
-    [signinUser.rejected]: (state) => {
-      state.loading = false;
-    },
-    //signup user ************************
-    [signupUser.pending]: (state) => {
-      state.loading = true;
-    },
-    [signupUser.fulfilled]: (state, { payload: { error, token, user } }) => {
-      state.loading = false;
-
-      if (error) {
-        state.error = error;
-      } else {
-        state.token = token;
-        state.user = user;
-        state.msg = true;
-        localStorage.setItem("user", JSON.stringify(user));
-        localStorage.setItem("token", token);
-      }
-    },
-    [signupUser.rejected]: (state) => {
-      state.loading = false;
-    },
+  extraReducers: (builder) => {
+    builder
+      .addCase(signupUser.pending, (state) => {
+        state.loading = true;
+      })
+      .addCase(signupUser.fulfilled, (state, action) => {
+        state.loading = false;
+        const { error, token, user } = action.payload;
+        if (error) {
+          state.error = error;
+        } else {
+          state.token = token;
+          state.user = user;
+          state.msg = true;
+          localStorage.setItem("user", JSON.stringify(user));
+          localStorage.setItem("token", token);
+        }
+      })
+      .addCase(signupUser.rejected, (state) => {
+        state.loading = false;
+      })
+      .addCase(signinUser.pending, (state) => {
+        state.loading = true;
+      })
+      .addCase(signinUser.fulfilled, (state, action) => {
+        state.loading = false;
+        const { error, token, user } = action.payload;
+        if (error) {
+          state.error = error;
+        } else {
+          state.token = token;
+          state.user = user;
+          state.msg = true;
+          localStorage.setItem("user", JSON.stringify(user));
+          localStorage.setItem("token", token);
+        }
+      })
+      .addCase(signinUser.rejected, (state) => {
+        state.loading = false;
+      });
   },
 });
 
-export const { addToken, addUser, logout, cleanup } = authSlice.actions;
+export const { setToken, setUser, logout, cleanup } = authSlice.actions;
+
 export default authSlice.reducer;

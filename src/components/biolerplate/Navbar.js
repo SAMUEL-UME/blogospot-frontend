@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import "animate.css";
+import React, { useState, useEffect, useCallback } from "react";
+
 import {
   RiCloseLine,
   RiMoonFill,
@@ -21,21 +21,33 @@ import { useSelector } from "react-redux";
 
 import { checkUserAndToken } from "../../utils/index";
 
-export default function Navbar({
-  handleTheme,
-  handleLogout,
-  handleBurger,
-  toggleMenu,
-  sideMenu,
-}) {
+export default function Navbar(props) {
   const [getuser, setGetUser] = useState(null);
   const [gettoken, setGetToken] = useState(null);
-  const { user } = useSelector((state) => state.user);
+  const { user } = useSelector((state) => state.auth);
   const { theme, menu } = useSelector((state) => state.theme);
   const router = useRouter();
 
-  user;
-  // checks if a authenticated by getting the user Credential and token from localStorage
+  const { handleTheme, handleLogout, handleBurger, toggleMenu, sideMenu } =
+    props;
+
+  const memoizedHandleTheme = useCallback(() => {
+    handleTheme();
+  }, [handleTheme]);
+
+  const memoizedHandleLogout = useCallback(() => {
+    handleLogout();
+  }, [handleLogout]);
+
+  const memoizedHandleBurger = useCallback(() => {
+    handleBurger();
+  }, [handleBurger]);
+
+  const memoizedSideMenu = useCallback(() => {
+    sideMenu();
+  }, [sideMenu]);
+
+  // checks if authenticated by getting the user credential and token from localStorage
   useEffect(() => {
     checkUserAndToken(setGetUser, setGetToken);
   }, [user, theme, menu]);
@@ -51,7 +63,10 @@ export default function Navbar({
       <div className={styles.navbar}>
         <div className={styles.navbar_logo}>
           {router.pathname == "/" ? (
-            <div className={styles.navbar_logo_sidemenu} onClick={sideMenu}>
+            <div
+              className={styles.navbar_logo_sidemenu}
+              onClick={memoizedSideMenu}
+            >
               <RiCloseLine
                 className={`${styles.navbar_logo_menu} ${
                   menu === "open" ? styles.display : ""
@@ -93,7 +108,7 @@ export default function Navbar({
                 <Link href={"/write"}>create post</Link>
               </li>
               {toggleMenu ? (
-                <li onClick={handleTheme}>
+                <li onClick={memoizedHandleTheme}>
                   {theme === "true" ? (
                     <RiSunFill
                       className={`${styles.sun} animate__animated animate__rotateIn`}
@@ -108,7 +123,7 @@ export default function Navbar({
                 ""
               )}
 
-              <li className={styles.user} onClick={handleBurger}>
+              <li className={styles.user} onClick={memoizedHandleBurger}>
                 <div className={styles.image_container}>
                   {user !== null && user.image ? (
                     <Image
@@ -156,7 +171,7 @@ export default function Navbar({
                         </Link>
                       </div>
                       <div className={styles.bottom}>
-                        <span onClick={handleLogout}>
+                        <span onClick={memoizedHandleLogout}>
                           <FiLogOut className={`${styles.center_icon} `} />
                           Sign out
                         </span>
@@ -175,7 +190,7 @@ export default function Navbar({
               <li>
                 <Link href={"/login"}>Sign in</Link>
               </li>
-              <li onClick={handleTheme}>
+              <li onClick={memoizedHandleTheme}>
                 {theme === "true" ? (
                   <RiSunFill
                     className={`${styles.sun}  animate__animated animate__rotateIn`}

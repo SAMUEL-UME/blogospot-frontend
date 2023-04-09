@@ -13,7 +13,7 @@ export default function Login() {
 
   const { theme } = useSelector((state) => state.theme);
   const dispatch = useDispatch();
-  const { error, loading, msg } = useSelector((state) => state.user);
+  const { error, loading, msg } = useSelector((state) => state.auth);
   const router = useRouter();
 
   // set theme form localStorage if it exist

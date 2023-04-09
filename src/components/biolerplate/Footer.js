@@ -8,10 +8,7 @@ import { useRouter } from "next/router";
 import { useSelector } from "react-redux";
 
 const Footer = () => {
-  const { user } = useSelector((state) => state.user);
   const { theme } = useSelector((state) => state.theme);
-  user;
-
   const router = useRouter();
 
   return (
@@ -24,7 +21,7 @@ const Footer = () => {
         <div className={styles.footer_heading}>
           <Link href="/" passHref>
             {theme === "true" ? (
-              <Image
+              <Image  
                 src={logo}
                 width="120"
                 height="120"

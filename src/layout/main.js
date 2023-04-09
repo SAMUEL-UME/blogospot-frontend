@@ -1,69 +1,62 @@
-import React, { useState, useEffect } from "react";
-import Footer from "../components/molecule/Footer";
-import Navbar from "../components/molecule/Navbar";
+import React, { useState, useEffect, useCallback } from "react";
+import Footer from "../components/biolerplate/Footer";
+import Navbar from "@/src/components/biolerplate/Navbar";
 import { useRouter } from "next/router";
 import { useSelector, useDispatch } from "react-redux";
 import { deleteItem } from "../utils";
+import "animate.css";
 import { addTheme, toggle, sideBar } from "../Redux/themeSlice";
-import { logout, addToken, addUser, cleanup } from "../Redux/authSlice";
-
-
-
+import { logout, setToken, setUser, cleanup } from "../Redux/authSlice";
 
 const MainLayout = ({ children }) => {
-  const [toggleMenu, setToggleMenu] = useState(false);
-  const { theme, menu } = useSelector((state) => state.theme);
-
-  const router = useRouter();
+  const { theme} = useSelector(({ theme }) => theme);
   const dispatch = useDispatch();
+
+  const [toggleMenu, setToggleMenu] = useState(false);
+  const router = useRouter();
+
+  const handleRouteChange = useCallback(() => {
+    setToggleMenu(false);
+    dispatch(sideBar("close"));
+    dispatch(cleanup());
+  }, [dispatch]);
 
   useEffect(() => {
     dispatch(addTheme());
-    dispatch(addToken());
-    dispatch(addUser());
+    dispatch(setToken());
+    dispatch(setUser());
     deleteItem();
-  });
+  }, [dispatch]);
 
-  // Closes navbar menu or page reload or navigate
   useEffect(() => {
-    const handleRouteChange = () => {
-      setToggleMenu(false);
-      return dispatch(cleanup());
-    };
     router.events.on("routeChangeStart", handleRouteChange);
     return () => {
       router.events.off("routeChangeStart", handleRouteChange);
     };
-  });
+  }, [router.events, handleRouteChange]);
 
-  //DISPATCH SIDEBAR MENU ACTION
-  const sideMenu = () => {
+  const sideMenu = useCallback(() => {
     setToggleMenu(false);
     dispatch(sideBar());
-  };
+  }, [dispatch]);
 
-  // handle the toggle dispatch to change theme
-  const handleTheme = () => {
+  const handleTheme = useCallback(() => {
     dispatch(toggle());
-  };
-  //calls the logoutreducer to clear the user crendentials and cookie
-  const handleLogout = () => {
+  }, [dispatch]);
+
+  const handleLogout = useCallback(() => {
     dispatch(logout());
-  };
-  //toggle burger menu
-  const handleBurger = () => {
-    //closes sidebar menu when burger menu is opened
-    if (menu === "open") {
-      dispatch(sideBar("close"));
-    }
-    if (toggleMenu === false) {
-      return setToggleMenu(true);
-    } else {
-      return setToggleMenu(false);
-    }
-  };
+  }, [dispatch]);
+
+  const handleBurger = useCallback(() => {
+    dispatch(sideBar("close"));
+    setToggleMenu((prev) => !prev);
+  }, [dispatch]);
+
+  if (!children) return null;
+
   return (
-    <div className={`${theme === "true" ? "dark" : "light"} pb-8`}>
+    <>
       <Navbar
         handleTheme={handleTheme}
         handleLogout={handleLogout}
@@ -71,9 +64,11 @@ const MainLayout = ({ children }) => {
         handleBurger={handleBurger}
         sideMenu={sideMenu}
       />
-      <main className="main">{children}</main>
+      <main className={`main ${theme === "true" ? "dark" : "light"}`}>
+        {children}
+      </main>
       <Footer className="px-3" />
-    </div>
+    </>
   );
 };
 

@@ -9,7 +9,6 @@ import { FaUserCircle, FaLessThan, FaGreaterThan } from "react-icons/fa";
 import { MdOutlineExpandLess, MdOutlineExpandMore } from "react-icons/md";
 import { BsLinkedin, BsGithub, BsTwitter, BsFacebook } from "react-icons/bs";
 import { useSelector } from "react-redux";
-import "animate.css";
 import Link from "next/link";
 
 const Profile = ({ user, data }) => {
