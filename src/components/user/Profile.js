@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import moment from "moment/moment";
-import styles from "../../../../styles/template/User/Profile.module.css";
-import profile from "../../../../public/profile.jpg";
-import Posts from "@/src/components/template/Post/Posts";
+import styles from "@/styles/user/Profile.module.css";
+import profile from "@/public/profile.jpg";
+import Posts from "@/src/components/Post/Posts";
 import Image from "next/image";
-import { getUser } from "../../../utils";
+import { getUser } from "@/src/utils";
 import { FaUserCircle, FaLessThan, FaGreaterThan } from "react-icons/fa";
 import { MdOutlineExpandLess, MdOutlineExpandMore } from "react-icons/md";
 import { BsLinkedin, BsGithub, BsTwitter, BsFacebook } from "react-icons/bs";

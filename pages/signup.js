@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Head from "next/head";
-import SignupPage from "../src/components/template/Auth/Signup";
+import SignupPage from "../src/components/Auth/Signup";
 import { useDispatch, useSelector } from "react-redux";
 import { signupUser } from "../src/Redux/authSlice";
 import { useRouter } from "next/router";
@@ -23,27 +23,28 @@ const Signup = () => {
   if (error) {
     removeQuotes(error);
   }
-  //Checks if a user is signed up (if not redirect to home page)
-  useEffect(() => {
-    if (msg) {
-      router.push("/");
-    }
-  }, [msg, theme]);
 
-  //Handle user input
-  const handleInputChange = (event) => {
+  const handleInputChange = useCallback((event) => {
     const { name, value } = event.target;
     setState((prevProps) => ({
       ...prevProps,
       [name]: value,
     }));
-  };
+  }, []);
 
-  //handle submit (calls dispatch function to signup user)
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    dispatch(signupUser(state));
-  };
+  const handleSubmit = useCallback(
+    (event) => {
+      event.preventDefault();
+      dispatch(signupUser(state));
+    },
+    [dispatch, state]
+  );
+
+  useEffect(() => {
+    if (msg) {
+      router.push("/");
+    }
+  }, [msg, router, theme]);
 
   return (
     <>

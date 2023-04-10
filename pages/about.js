@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import styles from "@/styles/template/About.module.css";
+import styles from "@/styles/About.module.css";
 import { useSelector } from "react-redux";
 
 const Aboutus = () => {

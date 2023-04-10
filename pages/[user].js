@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Profile from "../src/components/template/user/Profile";
+import Profile from "../src/components/user/Profile";
 
 export default function Dashboard({ user, data, name }) {
   return (

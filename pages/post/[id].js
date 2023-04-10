@@ -1,5 +1,5 @@
 import React from "react";
-import Post from "../../src/components/template/Post/Post";
+import Post from "../../src/components/Post/Post";
 
 export default function BlogPost({ data }) {
   return (

@@ -11,7 +11,11 @@ import { BiHome, BiUsb } from "react-icons/bi";
 const Aside = () => {
   const { menu } = useSelector((state) => state.theme);
   return (
-    <div className={`${styles.aside} ${menu === "open" ? styles.open : ""} animate__animated animate__backInDown`}>
+    <div
+      className={`${styles.aside} ${
+        menu === "open" ? styles.open : ""
+      } animate__animated animate__backInLeft`}
+    >
       <div className={styles.social}>
         <div className={`${styles.top} animate__animated animate__backInLeft`}>
           <div>

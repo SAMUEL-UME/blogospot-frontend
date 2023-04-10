@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useCallback } from "react";
-
 import {
   RiCloseLine,
   RiMoonFill,
@@ -31,6 +30,11 @@ export default function Navbar(props) {
   const { handleTheme, handleLogout, handleBurger, toggleMenu, sideMenu } =
     props;
 
+  // checks if authenticated by getting the user credential and token from localStorage
+  useEffect(() => {
+    checkUserAndToken(setGetUser, setGetToken);
+  }, [user, theme, menu]);
+
   const memoizedHandleTheme = useCallback(() => {
     handleTheme();
   }, [handleTheme]);
@@ -46,11 +50,6 @@ export default function Navbar(props) {
   const memoizedSideMenu = useCallback(() => {
     sideMenu();
   }, [sideMenu]);
-
-  // checks if authenticated by getting the user credential and token from localStorage
-  useEffect(() => {
-    checkUserAndToken(setGetUser, setGetToken);
-  }, [user, theme, menu]);
 
   return (
     <div
@@ -141,11 +140,9 @@ export default function Navbar(props) {
                   >
                     <div className={styles.menu_con}>
                       <div className={styles.top}>
-                        <Link href={`/${JSON.parse(user).username}`}>
-                          <span>{`${JSON.parse(user).first_name} ${
-                            JSON.parse(user).last_name
-                          }`}</span>
-                          <span>@{JSON.parse(user).username}</span>
+                        <Link href={`/${getuser.username}`}>
+                          <span>{`${getuser.first_name} ${getuser.last_name}`}</span>
+                          <span>@{getuser.username}</span>
                         </Link>
                       </div>
                       <div className={styles.center}>

@@ -1,10 +1,11 @@
+import { useCallback } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useDispatch } from "react-redux";
 import { getInput } from "@/src/Redux/searchSlice";
 import styles from "@/styles/home/Home.module.css";
-import Posts from "@/src/components/template/Post/Posts";
-import SearchBar from "@/src/components/template/Post/SearchBar";
+import Posts from "@/src/components/Post/Posts";
+import SearchBar from "@/src/components/Post/SearchBar";
 import Aside from "@/src/components/Aside";
 import { useSelector } from "react-redux";
 
@@ -13,12 +14,15 @@ export default function Home({ data }) {
   const dispatch = useDispatch();
   const router = useRouter();
 
-  const handleSearch = (searchValue) => {
-    if (searchValue.length >= 1) {
-      dispatch(getInput(searchValue));
-      router.push("/search");
-    }
-  };
+  const handleSearch = useCallback(
+    (searchValue) => {
+      if (searchValue.length >= 1) {
+        dispatch(getInput(searchValue));
+        router.push("/search");
+      }
+    },
+    [dispatch, router]
+  );
 
   return (
     <>

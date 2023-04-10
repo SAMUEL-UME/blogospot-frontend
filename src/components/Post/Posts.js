@@ -1,6 +1,6 @@
 import React from "react";
 import moment from "moment";
-import styles from "@/styles/template/Post/posts.module.css";
+import styles from "@/styles/Post/posts.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import Loading from "./loading";
@@ -16,8 +16,14 @@ const Posts = ({ data, theme }) => {
   React.useEffect(() => {
     setTimeout(() => {
       setLoading(true);
-    }, 5000);
+    }, 3000);
   }, []);
+
+  const formatDate = React.useMemo(
+    () => (date) =>
+      moment(date).format("MMMM hh") + " (" + moment(date).fromNow() + ")",
+    []
+  );
   return (
     <div className={`${theme === "true" ? styles.dark : styles.light}`}>
       {loading ? (
@@ -56,10 +62,7 @@ const Posts = ({ data, theme }) => {
                         </div>
                       </div>
                     </div>
-                    <p>
-                      {moment(data.createdAt).format("MMMM hh")} (
-                      {moment(data.createdAt).fromNow()})
-                    </p>
+                    <p>{formatDate(data.createdAt)}</p>
                   </div>
                 </div>
                 <div className={styles.content}>
@@ -107,8 +110,8 @@ const Posts = ({ data, theme }) => {
         <>
           {Array(6)
             .fill(0)
-            .map((_, i) => (
-              <Loading key={i} />
+            .map((_, index) => (
+              <Loading key={index} />
             ))}
         </>
       )}

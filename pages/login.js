@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Head from "next/head";
-import LoginPage from "../src/components/template/Auth/Signin";
+import LoginPage from "../src/components/Auth/Signin";
 import { useDispatch, useSelector } from "react-redux";
 import { signinUser } from "../src/Redux/authSlice";
 import { useRouter } from "next/router";
@@ -16,26 +16,27 @@ export default function Login() {
   const { error, loading, msg } = useSelector((state) => state.auth);
   const router = useRouter();
 
-  // set theme form localStorage if it exist
-
   useEffect(() => {
     if (msg) {
       router.push("/");
     }
-  }, [msg]);
+  }, [msg, router]);
 
-  const handleInputChange = (event) => {
+  const handleInputChange = useCallback((event) => {
     const { name, value } = event.target;
     setState((prevProps) => ({
       ...prevProps,
       [name]: value,
     }));
-  };
+  }, []);
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    dispatch(signinUser(state));
-  };
+  const handleSubmit = useCallback(
+    (event) => {
+      event.preventDefault();
+      dispatch(signinUser(state));
+    },
+    [dispatch, state]
+  );
 
   return (
     <>

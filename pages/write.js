@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+  import React, { useEffect, useState, useCallback } from "react";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
 import Head from "next/head";
 
 const Write = () => {
   const CreateBlog = dynamic(
-    () => import("../src/components/template/Post/CreatePost"),
+    () => import("../src/components/Post/CreatePost"),
     {
       ssr: false,
     }
@@ -19,28 +19,29 @@ const Write = () => {
     tags: "",
   });
 
-  function getUserAndToken() {
+  const getUserAndToken = useCallback(() => {
     const user = localStorage.getItem("user");
     const token = localStorage.getItem("token");
     if (!user || !token) {
       router.push("/login");
     }
-  }
+  }, [router]);
+
   useEffect(() => {
     getUserAndToken();
-  });
-  const handleInputChange = (event) => {
+  }, [getUserAndToken]);
+
+  const handleInputChange = useCallback((event) => {
     const { name, value } = event.target;
     setState((prevProps) => ({
       ...prevProps,
       [name]: value,
     }));
-  };
+  }, []);
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = useCallback(async (event) => {
     event.preventDefault();
-  };
-  
+  }, []);
 
   return (
     <>

@@ -103,15 +103,16 @@
   font-size: 1.4rem;
   color: var(--sub-color);
 }
-.aside div ul li:hover {
-  background: #3a2828;
-  text-decoration: underline;
-}
 .dark .aside div ul li {
   color: var(--primary-color);
 }
 .light .aside div ul li {
   color: var(--secondary-color);
+}
+.aside div ul li:hover {
+  background: #503d3d88;
+  color: var(--primary-color);
+  text-decoration: underline;
 }
 .social {
   width: 100%;
