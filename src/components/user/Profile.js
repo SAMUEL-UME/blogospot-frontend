@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import moment from "moment/moment";
-import styles from "@/styles/user/Profile.module.css";
+import styles from "@/styles/User/Profile.module.css";
 import profile from "@/public/profile.jpg";
 import Posts from "@/src/components/Post/Posts";
 import Image from "next/image";
