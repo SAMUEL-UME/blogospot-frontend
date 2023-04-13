@@ -20,6 +20,21 @@ import { useSelector } from "react-redux";
 
 import { checkUserAndToken } from "../../utils/index";
 
+const NavbarSideMenu = ({ memoizedSideMenu, sideBarMenu }) => (
+  <div className={styles.navbar_logo_sidemenu} onClick={memoizedSideMenu}>
+    <RiCloseLine
+      className={`${styles.navbar_logo_menu} ${
+        sideBarMenu ? styles.display : ""
+      }`}
+    />
+    <FiMenu
+      className={`${styles.navbar_logo_menu} ${
+        !sideBarMenu ? styles.display : ""
+      }`}
+    />
+  </div>
+);
+
 export default function Navbar(props) {
   const [getuser, setGetUser] = useState(null);
   const [gettoken, setGetToken] = useState(null);
@@ -27,8 +42,14 @@ export default function Navbar(props) {
   const { theme, menu } = useSelector((state) => state.theme);
   const router = useRouter();
 
-  const { handleTheme, handleLogout, handleBurger, toggleMenu, sideMenu } =
-    props;
+  const {
+    handleTheme,
+    handleLogout,
+    handleBurger,
+    toggleMenu,
+    sideMenu,
+    sideBarMenu,
+  } = props;
 
   // checks if authenticated by getting the user credential and token from localStorage
   useEffect(() => {
@@ -61,25 +82,10 @@ export default function Navbar(props) {
     >
       <div className={styles.navbar}>
         <div className={styles.navbar_logo}>
-          {router.pathname == "/" ? (
-            <div
-              className={styles.navbar_logo_sidemenu}
-              onClick={memoizedSideMenu}
-            >
-              <RiCloseLine
-                className={`${styles.navbar_logo_menu} ${
-                  menu === "open" ? styles.display : ""
-                }`}
-              />
-              <FiMenu
-                className={`${styles.navbar_logo_menu} ${
-                  menu === "close" ? styles.display : ""
-                }`}
-              />
-            </div>
-          ) : (
-            ""
-          )}
+          <NavbarSideMenu
+            memoizedSideMenu={memoizedSideMenu}
+            sideBarMenu={sideBarMenu}
+          />
           <Link href="/" passHref>
             {theme === "true" ? (
               <Image

@@ -29,7 +29,7 @@ const Posts = ({ data, theme }) => {
       {loading ? (
         <>
           {data
-            ?.sort(() => Math.random() - 0.5)
+            
             .map((data) => (
               <div className={styles.blog} key={data._id}>
                 <div className={styles.user}>

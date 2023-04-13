@@ -326,5 +326,29 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 316px) {
+  .content_int .int_two {
+    gap: 0.2rem;
+  }
+  .user div p:nth-of-type(1) {
+    font-size: 13px;
+    line-height: 16px;
+  }
+  .content_tag {
+    flex-wrap: wrap !important;
+    gap: 0.56rem;
+  }
+  .content {
+    padding: 0px;
+  }
+  .content h1 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 287px) {
+  .int_two p {
+    display: none;
+  }
 }

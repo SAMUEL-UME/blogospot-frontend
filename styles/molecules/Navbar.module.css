@@ -34,9 +34,8 @@
 .navbar_logo {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.5rem;
   justify-content: center;
-  padding-left: 1rem;
 }
 .navbar_logo_sidemenu {
   transition: all 0.035s ease;
@@ -386,5 +385,42 @@ span:hover > .center_icon {
   .sun,
   .moon {
     font-size: 1.2rem;
+  }
+}
+@media (max-width: 360px) {
+  .ani a {
+    font-size: 0.7rem;
+    padding: 0.7rem;
+  }
+}
+@media (max-width: 350px) {
+  .navbar_usigned ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13px !important;
+  }
+
+  .sun {
+    font-size: 1rem;
+    z-index: 999;
+    cursor: pointer;
+    color: var(--primary-color);
+    transition: all 0.4s ease;
+  }
+  .moon {
+    font-size: 1rem;
+    z-index: 999;
+    cursor: pointer;
+    color: var(--secondary-color);
+  }
+  .navbar_logo {
+    gap: 0rem;
+  }
+}
+
+@media (max-width: 290px) {
+  .sun, .moon{
+    display: none;
   }
 }

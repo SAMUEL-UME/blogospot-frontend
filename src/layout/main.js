@@ -9,10 +9,12 @@ import { addTheme, toggle, sideBar } from "../Redux/themeSlice";
 import { logout, setToken, setUser, cleanup } from "../Redux/authSlice";
 
 const MainLayout = ({ children }) => {
-  const { theme} = useSelector(({ theme }) => theme);
+  const { theme } = useSelector(({ theme }) => theme);
+
   const dispatch = useDispatch();
 
   const [toggleMenu, setToggleMenu] = useState(false);
+  const [sideBarMenu, setSideBarMenu] = useState(false);
   const router = useRouter();
 
   const handleRouteChange = useCallback(() => {
@@ -38,6 +40,7 @@ const MainLayout = ({ children }) => {
   const sideMenu = useCallback(() => {
     setToggleMenu(false);
     dispatch(sideBar());
+    setSideBarMenu((prev) => !prev);
   }, [dispatch]);
 
   const handleTheme = useCallback(() => {
@@ -50,6 +53,7 @@ const MainLayout = ({ children }) => {
 
   const handleBurger = useCallback(() => {
     dispatch(sideBar("close"));
+    setSideBarMenu(false);
     setToggleMenu((prev) => !prev);
   }, [dispatch]);
 
@@ -62,6 +66,7 @@ const MainLayout = ({ children }) => {
         handleLogout={handleLogout}
         toggleMenu={toggleMenu}
         handleBurger={handleBurger}
+        sideBarMenu={sideBarMenu}
         sideMenu={sideMenu}
       />
       <main className={`main ${theme === "true" ? "dark" : "light"}`}>
