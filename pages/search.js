@@ -21,7 +21,12 @@ export default function Search({ data }) {
         <title>search</title>
       </Head>
       <div className={`${search_container} ${theme === "true" ? dark : light}`}>
-        <SearchPage search={search} sideMenu={sideMenu} data={data} theme={theme} />
+        <SearchPage
+          search={search}
+          sideMenu={sideMenu}
+          data={data}
+          theme={theme}
+        />
       </div>
     </>
   );

@@ -124,9 +124,9 @@
 }
 
 @media (max-width: 640px) {
-  /* .container_footer {
-    max-width: 640px;
-  } */
+  .container_footer {
+    max-width: 98% !important;
+  }
   .footer_content {
     flex-wrap: nowrap;
   }
@@ -171,7 +171,7 @@
     opacity: 1;
   }
   .container_footer {
-    max-width: 768px;
+    max-width: 98% !important;
     padding: 2rem 1rem 2rem 1rem !important;
   }
   .footer_content {
@@ -189,10 +189,8 @@
     width: 100%;
     border-radius: 10px;
   }
-
   .footer_content_heading {
     font-size: 1rem;
-
     letter-spacing: 2px;
     line-height: 30px;
   }

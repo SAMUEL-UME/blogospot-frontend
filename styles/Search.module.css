@@ -84,6 +84,7 @@
 
 .category ul li {
   font-size: 1.2rem;
+  cursor: pointer;    
 }
 .category ul li:hover {
   color: var(--primary-color);
