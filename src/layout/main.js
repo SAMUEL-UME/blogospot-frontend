@@ -63,7 +63,7 @@ const MainLayout = ({ children }) => {
     <>
       <Navbar
         handleTheme={handleTheme}
-        handleLogout={handleLogout}
+        handleLogout={handleLogout}   
         toggleMenu={toggleMenu}
         handleBurger={handleBurger}
         sideBarMenu={sideBarMenu}
